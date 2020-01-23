@@ -3,7 +3,11 @@
         h3 {{ nombreAño }}
 
         tabla-horarios(:nombreAño="nombreAño")
-        curso(v-for="(curso, n) in año" :key="n" :curso="curso" :nombreAño="nombreAño")
+        curso(v-for="(curso, nombre) in año" :key="nombre"
+            :curso="curso"
+            :nombreAño="nombreAño"
+            :nombreCurso="nombre")
+
     //
 </template>
 

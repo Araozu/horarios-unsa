@@ -56,28 +56,6 @@
 </script>
 
 <style scoped lang="sass">
-    $duracionTransicion: 100ms
-
-    .celda
-        white-space: pre
-        font-family: "Fira Code", monospace
-        cursor: pointer
-        user-select: none
-        transition: background-color $duracionTransicion linear, color $duracionTransicion linear
-
-    .celda__teoria
-        color: var(--colorTeoria)
-
-    .celda__teoria:hover, .celda__teoria--resaltado, .celda__teoria--activo
-        background-color: var(--colorTeoria)
-        color: white
-
-    .celda__lab
-        color: var(--colorLab)
-
-    .celda__lab:hover, .celda__lab--resaltado, .celda__lab--activo
-        background-color: var(--colorLab)
-        color: white
 
 //
 </style>

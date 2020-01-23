@@ -5,7 +5,8 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
     state: {
-        celdas: {}
+        celdas: {},
+        horarioUsuario: {}
     },
     mutations: {
         registrarCelda(state, idCelda) {
@@ -13,6 +14,12 @@ export default new Vuex.Store({
         },
         agregarACelda(state, {idCelda, datos}) {
             state.celdas[idCelda].push(datos);
+        },
+        agregarCursoAMiHorario(state, {nombre, datos} ) {
+            if (!state.horarioUsuario[nombre]) {
+                state.horarioUsuario[nombre] = datos;
+                state.horarioUsuario = Object.assign({}, state.horarioUsuario);
+            }
         }
     },
     actions: {

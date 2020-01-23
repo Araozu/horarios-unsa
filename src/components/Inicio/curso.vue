@@ -1,29 +1,32 @@
 <template lang="pug">
     div.info_curso
-        h4.titulo_curso(@mouseenter="resaltarTodasCeldas" @mouseleave="quitarResaltadoCeldas")
+        h4.titulo_curso(@mouseenter="resaltarTodasCeldas" @mouseleave="quitarResaltadoCeldas"
+            title="Agregar curso a mi horario."
+            @click="agregarCursoAMiHorario"
+        )
             span.ancho {{ curso.abreviado }} >&nbsp;
             | {{ curso.nombre }}
         table.datos
             tr
-                td(v-for="(grupos, profesor) in teoria")
-                    span.ancho |&nbsp;
-                    | {{ profesor }}
-                    span.ancho.cursor_click.ancho__teoria(
-                        v-for="grupo in grupos"
-                        @mouseenter="resaltarCeldasGrupo(grupo, false)"
-                        @mouseleave="quitarResaltadoGrupo(grupo, false)")
-                        |  {{ grupo }}&nbsp;
+                bloque(v-for="(grupos, profesor) in teoria"
+                    :grupos="grupos"
+                    :profesor="profesor"
+                    :nombreAño="nombreAño"
+                    :abreviado="curso.abreviado"
+                    :key="profesor"
+                )
 
             tr
                 template(v-if="!laboratorioVacio")
-                    td(v-for="(grupos, profesor) in laboratorio")
-                        span.ancho |&nbsp;
-                        | {{ profesor }}
-                        span.ancho.cursor_click.ancho__lab(
-                            v-for="grupo in grupos"
-                            @mouseenter="resaltarCeldasGrupo(grupo, true)"
-                            @mouseleave="quitarResaltadoGrupo(grupo, true)")
-                            |  L{{ grupo }}&nbsp;
+                    bloque(v-for="(grupos, profesor) in laboratorio"
+                        :grupos="grupos"
+                        :profesor="profesor"
+                        :esLab="true"
+                        :nombreAño="nombreAño"
+                        :abreviado="curso.abreviado"
+                        :key="profesor"
+                    )
+
                 template(v-else)
                     td
                         span.ancho | _
@@ -32,15 +35,27 @@
 </template>
 
 <script lang="coffee">
-    import { resaltarCurso, removerResaltadoCurso, resaltarGrupoCurso, removerResaltadoGrupo } from "./tablaHorarios/funcionesResaltado.coffee"
+    import {
+        resaltarCurso
+        removerResaltadoCurso
+        resaltarGrupoCurso
+        removerResaltadoGrupo
+        obtenerClaseGrupoCurso
+    } from "./tablaHorarios/funcionesResaltado.coffee"
+
+    import bloque from "./curso/bloque"
 
     export default
         name: "curso"
+        components: { bloque }
         props:
             curso:
                 type: Object
                 required: true
             nombreAño:
+                type: String
+                required: true
+            nombreCurso:
                 type: String
                 required: true
         computed:
@@ -72,6 +87,14 @@
 
                 estaVacio
         methods:
+            agregarCursoAMiHorario: ->
+                nombre = @nombreCurso
+                datos = @curso
+                @$store.commit "agregarCursoAMiHorario", { nombre, datos }
+
+            obtenerClase: (grupo, esLab) ->
+                obtenerClaseGrupoCurso @nombreAño, @curso.abreviado, grupo, esLab
+
             procesarTeoria: () ->
                 nombreAño = @nombreAño
                 cursoAbreviado = @curso.abreviado
@@ -91,14 +114,12 @@
                         idCelda = nombreStore + horaId
 
                         @$store.commit "agregarACelda", {idCelda, datos}
+
             resaltarTodasCeldas: () ->
                 resaltarCurso @nombreAño, @curso.abreviado
+
             quitarResaltadoCeldas: () ->
                 removerResaltadoCurso @nombreAño, @curso.abreviado
-            resaltarCeldasGrupo: (grupo, esLab) ->
-                resaltarGrupoCurso @nombreAño, @curso.abreviado, grupo, esLab
-            quitarResaltadoGrupo: (grupo, esLab) ->
-                removerResaltadoGrupo @nombreAño, @curso.abreviado, grupo, esLab
 
         mounted: ->
             @procesarTeoria()
@@ -110,7 +131,7 @@
 
     .titulo_curso
         display: inline-block
-        cursor: default
+        cursor: pointer
         &:hover
             text-decoration: underline
 
@@ -131,17 +152,8 @@
             family: "Fira Code", monospace
         user-select: none
 
-    .cursor_click
-        cursor: pointer
 
 
-    .ancho__teoria:hover
-        background-color: var(--colorTeoria)
-        color: white
-
-    .ancho__lab:hover
-        background-color: var(--colorLab)
-        color: white
 
 //
 </style>

@@ -1,6 +1,22 @@
 titulo: Horarios 2018-2, Ingeniería de Sistemas.
 años:
   1er año:
+    Realidad Nacional:
+      nombre: Realidad Nacional
+      abreviado: RN
+      Teoria:
+        A:
+          Docente: "?"
+          Horas:
+            - Ma0700
+            - Ma0750
+            - Ma0850
+        B:
+          Docente: "?"
+          Horas:
+            - Lu1400
+            - Lu1450
+            - Lu1550
     Calculo 1:
       nombre: Cálculo en 1 variable
       abreviado: C1V
@@ -165,22 +181,6 @@ años:
             - Ma1450
             - Ju1400
             - Ju1450
-    Realidad Nacional:
-      nombre: Realidad Nacional
-      abreviado: RN
-      Teoria:
-        A:
-          Docente: "?"
-          Horas:
-            - Ma0700
-            - Ma0750
-            - Ma0850
-        B:
-          Docente: "?"
-          Horas:
-            - Lu1400
-            - Lu1450
-            - Lu1550
   2do año:
     Ecologia:
       nombre: Ecologia y Medio Ambiente
@@ -390,14 +390,22 @@ años:
             - Mi1740
             - Mi1830
   3er año:
-    Construccion de Software->CS: {}
-    Redes y Comunicacion de Datos-> RCD: {}
-    Tecnologia de Objetos->TO: {}
+    Construccion de Software->CS:
+      nombre: Construcción de Software
+    Redes y Comunicacion de Datos-> RCD:
+      nombre: Redes y Comunicacion de Datos
+    Tecnologia de Objetos->TO:
+      nombre: Tecnologia de Objetos
+    Sistemas Operativos:
+      nombre: Sistemas Operativos
   4to año:
-    Aspectos Formales de Verif. y Esp.->AFVE: {}
-    Gestion de Proyectos de Software->GPS: {}
+    Aspectos Formales de Verif. y Esp.->AFVE:
+      nombre: Aspectos Formales de Verif. y Esp
+    Gestion de Proyectos de Software->GPS:
+      nombre: Gestion de Proyectos de Software
   5to año:
-    Topicos Avanzados en Ing. de Software->TAIS: {}
+    Topicos Avanzados en Ing. de Software->TAIS:
+      nombre: Topicos Avanzados en Ing. de Software
     Practicas Pre-Profesionales:
       nombre: Practicas Pre-Profesionales
       abreviado: PPP
