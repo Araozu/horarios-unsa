@@ -1,0 +1,413 @@
+titulo: Horarios 2018-2, Ingeniería de Sistemas.
+años:
+  1er año:
+    Calculo 1:
+      nombre: Cálculo en 1 variable
+      abreviado: C1V
+      Teoria:
+        A:
+          Docente: Doris Tupacyupanqui
+          Horas:
+            - Ma1130
+            - Ma1220
+            - Ma1310
+            - Mi0850
+            - Mi0940
+            - Vi0700
+            - Vi0750
+        B:
+          Docente: Pablo Quicaño
+          Horas:
+            - Lu1640
+            - Ma1740
+            - Ma1830
+            - Ma1920
+            - Ju1740
+            - Ju1920
+            - Ju1830
+    Discretas 2:
+      nombre: Estructuras Discretas 2
+      abreviado: ED2
+      Teoria:
+        A:
+          Docente: Olha Sharhorodska
+          Horas:
+            - Mi1220
+            - Mi1310
+            - Ju1220
+            - Ju1310
+        B:
+          Docente: Olha Sharhorodska
+          Horas:
+            - Mi1400
+            - Mi1450
+            - Vi1550
+            - Vi1640
+    Web 1:
+      nombre: Programacion Web 1
+      abreviado: PW1
+      Teoria:
+        A:
+          Docente: Richart Escobedo
+          Horas:
+            - Ma0940
+            - Ma1040
+        B:
+          Docente: Carlo Corrales
+          Horas:
+            - Lu1220
+            - Lu1310
+      Laboratorio:
+        A:
+          Docente: Richart Escobedo
+          Horas:
+            - Ma1130
+            - Ma1220
+            - Mi0850
+            - Mi0940
+        B:
+          Docente: Carlo Corrales
+          Horas:
+            - Lu1400
+            - Lu1450
+            - Mi1550
+            - Mi1640
+        C:
+          Docente: Richart Escobedo
+          Horas:
+            - Ma1550
+            - Ma1640
+            - Lu1740
+            - Lu1830
+        D:
+          Docente: Carlo Corrales
+          Horas:
+            - Lu1740
+            - Lu1830
+            - Mi1740
+            - Mi1830
+        E:
+          Docente: Carlo Corrales
+          Horas:
+            - Lu1550
+            - Lu1640
+            - Ma1740
+            - Ma1830
+    FP2:
+      nombre: Fundamentos de Programacion 2
+      abreviado: FP2
+      Teoria:
+        A:
+          Docente: Marco Aedo
+          Horas:
+            - Lu0850
+            - Lu0940
+            - Vi1220
+            - Vi1310
+        B:
+          Docente: Marco Aedo
+          Horas:
+            - Ju1550
+            - Ju1640
+            - Vi1400
+            - Vi1450
+      Laboratorio:
+        A:
+          Docente: Marco Aedo
+          Horas:
+            - Lu1040
+            - Lu1130
+            - Ju1040
+            - Ju1130
+        B:
+          Docente: Marco Aedo
+          Horas:
+            - Ju1400
+            - Ju1450
+            - Vi1550
+            - Vi1640
+        C:
+          Docente: Marco Aedo
+          Horas:
+            - Ju0850
+            - Ju0940
+            - Vi1040
+            - Vi1130
+        D:
+          Docente: Karim Guevara
+          Horas:
+            - Vi0850
+            - Vi0940
+            - Ju0850
+            - Ju0940
+        E:
+          Docente: Ernesto Suarez
+          Horas:
+            - Mi1040
+            - Mi1130
+            - Ju0700
+            - Ju0750
+    Comunicacion Integral:
+      nombre: Comunicacion Integral
+      abreviado: CI
+      Teoria:
+        A:
+          Docente: "?"
+          Horas:
+            - Lu0700
+            - Lu0750
+            - Mi0700
+            - Mi0750
+        B:
+          Docente: "?"
+          Horas:
+            - Ma1400
+            - Ma1450
+            - Ju1400
+            - Ju1450
+    Realidad Nacional:
+      nombre: Realidad Nacional
+      abreviado: RN
+      Teoria:
+        A:
+          Docente: "?"
+          Horas:
+            - Ma0700
+            - Ma0750
+            - Ma0850
+        B:
+          Docente: "?"
+          Horas:
+            - Lu1400
+            - Lu1450
+            - Lu1550
+  2do año:
+    Ecologia:
+      nombre: Ecologia y Medio Ambiente
+      abreviado: ECA
+      Teoria:
+        A:
+          Docente: "?"
+          Horas:
+            - Lu0700
+            - Lu0750
+            - Lu0850
+        B:
+          Docente: "?"
+          Horas:
+            - Mi1400
+            - Mi1450
+            - Mi1550
+    Estadistica:
+      nombre: Estadistica y Matematica
+      abreviado: EMAT
+      Teoria:
+        A:
+          Docente: Antonia Quispe
+          Horas:
+            - Mi0700
+            - Mi0750
+            - Vi0850
+            - Vi0940
+        B:
+          Docente: Esther Yanapa
+          Horas:
+            - Ma1550
+            - Ma1640
+            - Ju1830
+            - Ju1920
+      Laboratorio:
+        A:
+          Docente: Antonia Quispe
+          Horas:
+            - Mi0850
+            - Mi0940
+        B:
+          Docente: Esther Yanapa
+          Horas:
+            - Ma1740
+            - Ma1830
+        C:
+          Docente: Esther Yanapa
+          Horas:
+            - Ma0700
+            - Ma0750
+        D:
+          Docente: Esther Yanapa
+          Horas:
+            - Ma0850
+            - Ma0940
+    Arquitectura de Computadoras:
+      nombre: Arquitectura de Computadoras
+      abreviado: AC
+      Teoria:
+        A:
+          Docente: Pedro Rodriguez Gonzales
+          Horas:
+            - Ju0850
+            - Ju0940
+            - Vi1040
+        B:
+          Docente: Pedro Rodriguez Gonzales
+          Horas:
+            - Ju1550
+            - Ju1640
+            - Ju1740
+      Laboratorio:
+        A:
+          Docente: Pedro Rodriguez Gonzales
+          Horas:
+            - Ju0700
+            - Ju0750
+        B:
+          Docente: Pedro Rodriguez Gonzales
+          Horas:
+            - Vi1220
+            - Vi1310
+        C:
+          Docente: Pedro Rodriguez Gonzales
+          Horas:
+            - Vi0700
+            - Vi0750
+        D:
+          Docente: Pedro Rodriguez Gonzales
+          Horas:
+            - Vi0850
+            - Vi0940
+    Metodos de Investigacion y Redaccion:
+      nombre: Metodos de Investigacion y Redaccion
+      abreviado: MIR
+      Teoria:
+        A:
+          Docente: Jesus Zuniga Cueva
+          Horas:
+            - Mi1040
+            - Mi1130
+            - Mi1220
+        B:
+          Docente: Jesus Zuniga Cueva
+          Horas:
+            - Lu1220
+            - Lu1310
+            - Mi1310
+        C:
+          Docente: Jesus Zuniga Cueva
+          Horas:
+            - Ma1040
+            - Ma1130
+            - Ma1220
+    Interaccion Humano Computador->IHC:
+      nombre: Interaccion Humano Computador
+      abreviado: IHC
+      Teoria:
+        A:
+          Docente: Olha Sharhorodska
+          Horas:
+            - Ju1040
+            - Ju1130
+            - Vi1220
+            - Vi1310
+        B:
+          Docente: Olha Sharhorodska
+          Horas:
+            - Ju1400
+            - Ju1450
+            - Vi1400
+            - Vi1450
+      Laboratorio:
+        A:
+          Docente: Richart Escobedo
+          Horas:
+            - Lu1040
+            - Lu1130
+        B:
+          Docente: Richart Escobedo
+          Horas:
+            - Lu1550
+            - Lu1640
+        C:
+          Docente: Richart Escobedo
+          Horas:
+            - Ma1740
+            - Ma1830
+        D:
+          Docente: Juan Ramirez Ticona
+          Horas:
+            - Lu1550
+            - Lu1640
+    Enfoque Empresarial->EE:
+      nombre: Enfoque Empresarial
+      abreviado: EE
+      Teoria:
+        A:
+          Docente: Juan C. Juarez Bueno
+          Horas:
+            - Lu0940
+            - Ma0850
+            - Ma0940
+            - Ju1220
+            - Ju1310
+        B:
+          Docente: Juan C. Juarez Bueno
+          Horas:
+            - Ma1310
+            - Ma1400
+            - Ma1450
+            - Vi1550
+            - Vi1640
+    Analisis y Disenio de Algoritmos->ADA:
+      nombre: Analisis y Diseño de Algoritmos
+      abreviado: ADA
+      Teoria:
+        A:
+          Docente: Atencio Torres Carlos
+          Horas:
+            - Lu1400
+            - Lu1450
+            - Vi0700
+            - Vi0750
+        B:
+          Docente: Atencio Torres Carlos
+          Horas:
+            - Lu1740
+            - Lu1830
+            - Vi1740
+            - Vi1830
+      Laboratorio:
+        A:
+          Docente: Christian Portugal
+          Horas:
+            - Lu1400
+            - Lu1450
+        B:
+          Docente: Christian Portugal
+          Horas:
+            - Mi1550
+            - Mi1640
+        C:
+          Docente: Christian Portugal
+          Horas:
+            - Mi1740
+            - Mi1830
+  3er año:
+    Construccion de Software->CS: {}
+    Redes y Comunicacion de Datos-> RCD: {}
+    Tecnologia de Objetos->TO: {}
+  4to año:
+    Aspectos Formales de Verif. y Esp.->AFVE: {}
+    Gestion de Proyectos de Software->GPS: {}
+  5to año:
+    Topicos Avanzados en Ing. de Software->TAIS: {}
+    Practicas Pre-Profesionales:
+      nombre: Practicas Pre-Profesionales
+      abreviado: PPP
+      Teoria:
+        A:
+          Docente: Ernesto Suarez
+          Horas:
+            - Ma1550
+            - Ma1640
+            - Mi0700
+            - Mi0750
+            - Ju0850
+            - Ju0940

@@ -1,0 +1,125 @@
+titulo: Horarios 2019-2, Ingeniería de Sistemas.
+años:
+  2do año:
+    Estadistica:
+      nombre: Estadistica Matemática, Probabilidades y Métodos Empíricos
+      abreviado: EMAT
+      Teoria:
+        A:
+          Docente: Antonia Quispe
+          Horas:
+            - Lu0850
+            - Lu0940
+            - Ju0700
+            - Ju0750
+        B:
+          Docente: Antonia Quispe
+          Horas:
+            - Ma1040
+            - Ma1130
+            - Ju1640
+            - Ju1740
+      Laboratorio:
+        A:
+          Docente: Antonia Quispe
+          Horas:
+            - Ma0850
+            - Ma0940
+        B:
+          Docente: Antonia Quispe
+          Horas:
+            - Lu1040
+            - Lu1130
+        C:
+          Docente: Antonia Quispe
+          Horas:
+            - Ju0850
+            - Ju0940
+        D:
+          Docente: Antonia Quispe
+          Horas:
+            - Vi1040
+            - Vi1130
+    Analisis y Diseño de Algoritmos:
+      nombre: Analisis y Diseño de Algoritmos
+      abreviado: ADA
+      Teoria:
+        A:
+          Docente: O. Ramirez
+          Horas:
+            - Lu1400
+            - Lu1450
+            - Mi1550
+            - Mi1640
+        B:
+          Docente: O. Ramirez
+          Horas:
+            - Lu1550
+            - Lu1640
+            - Mi1740
+            - Mi1830
+      Laboratorio:
+        A:
+          Docente: Cristian Portugal
+          Horas:
+            - Lu1400
+            - Lu1450
+        B:
+          Docente: Cristian Portugal
+          Horas:
+            - Lu1550
+            - Lu1640
+        C:
+          Docente: Cristian Portugal
+          Horas:
+            - Lu1740
+            - Lu1830
+    Enfoque Empresarial:
+      nombre: Enfoque Empresarial
+      abreviado: EE
+      Teoria:
+        A:
+          Docente: Juan C. Juarez
+          Horas:
+            - Lu1040
+            - Lu1130
+            - Lu1220
+            - Mi0850
+            - Mi0940
+        B:
+          Docente: Edward Zarate
+          Horas:
+            - Lu1830
+            - Ma1400
+            - Ma1450
+            - Vi1550
+            - Vi1640
+  3er año:
+    Construccion de Software:
+      nombre: Construcción de Software
+      abreviado: CS
+      Teoria:
+        A:
+          Docente: V. Cornejo
+          Horas:
+            - Lu0850
+            - Lu0940
+    Sistemas Operativos:
+      nombre: Sistemas Operativos
+      abreviado: SO
+      Teoria:
+        A:
+          Docente: Karim Guevara
+          Horas:
+            - Ma0700
+            - Ma0750
+            - Ju0700
+            - Ju0750
+        B:
+          Docente: Karim Guevara
+          Horas:
+            - Ju1400
+            - Ju1450
+            - Vi1400
+            - Vi1450
+

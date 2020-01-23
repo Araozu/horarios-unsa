@@ -1,32 +1,37 @@
-<template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+<template lang="pug">
+    div.contenedor
+        barra-lateral
+        div.der(:style="'max-height: ' + alto + 'px;'")
+            router-view
+
+    //
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script lang="coffee">
+    import barraLateral from "./components/App/barra-lateral.vue"
 
-#nav {
-  padding: 30px;
+    export default
+        name: "App"
+        components: { barraLateral }
+        data: ->
+            alto: window.innerHeight
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+#
+</script>
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+<style lang="sass">
+
+    .contenedor
+        display: grid
+        grid-template-columns: 400px auto
+
+    .der
+        position: relative
+        top: 0
+        right: 0
+        overflow-y: scroll
+        overflow-x: hidden
+
+
+//
 </style>
