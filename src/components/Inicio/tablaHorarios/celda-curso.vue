@@ -10,7 +10,7 @@
 </template>
 
 <script lang="coffee">
-    import { resaltarGrupoCurso, removerResaltadoGrupo } from "./funcionesResaltado.coffee"
+    import { resaltarGrupoCurso, removerResaltadoGrupo, activarGrupoCurso } from "./funcionesResaltado.coffee"
 
     export default
         name: "celda-curso"
@@ -44,21 +44,12 @@
             nombreGrupo: -> @datos.nombreGrupo
             esLab: -> @datos.esLab
         methods:
-            resaltarCeldasGrupo: () ->
+            resaltarCeldasGrupo: ->
                 resaltarGrupoCurso @nombreAño, @cursoAbreviado, @nombreGrupo, @esLab
-            quitarResaltadoGrupo: () ->
+            quitarResaltadoGrupo: ->
                 removerResaltadoGrupo @nombreAño, @cursoAbreviado, @nombreGrupo, @esLab
-            activarGrupo: () ->
-                resaltarGrupoCurso @nombreAño, @cursoAbreviado, @nombreGrupo, @esLab
-            desactivarGrupo: () ->
-                removerResaltadoGrupo @nombreAño, @cursoAbreviado, @nombreGrupo, @esLab
-            # TODO: Hacer que el state se almacene en los elementos HTML en si
-            toggleActivo: () ->
-                @celdaCursoActiva = !@celdaCursoActiva
-                if @celdaCursoActiva
-                    @activarGrupo()
-                else
-                    @desactivarGrupo()
+            toggleActivo: ->
+                activarGrupoCurso @nombreAño, @cursoAbreviado, @nombreGrupo, @esLab
 
 
 #
