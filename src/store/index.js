@@ -15,11 +15,18 @@ export default new Vuex.Store({
         agregarACelda(state, {idCelda, datos}) {
             state.celdas[idCelda].push(datos);
         },
+        quitarDeCelda(state) {
+
+        },
         agregarCursoAMiHorario(state, {nombre, datos} ) {
             if (!state.horarioUsuario[nombre]) {
                 state.horarioUsuario[nombre] = datos;
                 state.horarioUsuario = Object.assign({}, state.horarioUsuario);
             }
+        },
+        removerCursoMiHorario(state, nombre) {
+            delete state.horarioUsuario[nombre];
+            state.horarioUsuario = Object.assign({}, state.horarioUsuario);
         }
     },
     actions: {

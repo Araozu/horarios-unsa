@@ -2,8 +2,9 @@
     div.info_curso
         h4.titulo_curso(@mouseenter="resaltarTodasCeldas" @mouseleave="quitarResaltadoCeldas"
             title="Agregar curso a mi horario."
-            @click="agregarCursoAMiHorario"
+            @click.stop="agregarCursoAMiHorario"
         )
+            input.marcador_curso(type="checkbox" v-model="cursoAgregado")
             span.ancho {{ curso.abreviado }} >&nbsp;
             | {{ curso.nombre }}
         table.datos
@@ -48,6 +49,8 @@
     export default
         name: "curso"
         components: { bloque }
+        data: ->
+            cursoAgregado: no
         props:
             curso:
                 type: Object
@@ -88,9 +91,14 @@
                 estaVacio
         methods:
             agregarCursoAMiHorario: ->
-                nombre = @nombreCurso
-                datos = @curso
-                @$store.commit "agregarCursoAMiHorario", { nombre, datos }
+                if @cursoAgregado
+                    @cursoAgregado = false
+                    @$store.commit "removerCursoMiHorario", @nombreCurso
+                else
+                    @cursoAgregado = true
+                    nombre = @nombreCurso
+                    datos = @curso
+                    @$store.commit "agregarCursoAMiHorario", { nombre, datos }
 
             obtenerClase: (grupo, esLab) ->
                 obtenerClaseGrupoCurso @nombreAño, @curso.abreviado, grupo, esLab
@@ -128,6 +136,12 @@
 </script>
 
 <style scoped lang="sass">
+
+    .marcador_curso
+        display: inline-block
+        margin-right: 0.45rem
+        font-size: 1rem
+
 
     .titulo_curso
         display: inline-block
