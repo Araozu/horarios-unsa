@@ -9,7 +9,7 @@
                 @mouseleave="quitarResaltadoGrupo(grupo)"
                 @click="toggleActivo(grupo)"
         )
-            |  L{{ grupo }}&nbsp;
+            |  {{ esLab? 'T': 'G' }}{{ grupo }}&nbsp;
 
     //
 </template>

@@ -1,12 +1,12 @@
 <template lang="pug">
     div.info_curso
         h4.titulo_curso(@mouseenter="resaltarTodasCeldas" @mouseleave="quitarResaltadoCeldas"
-            title="Agregar curso a mi horario."
+            :title="cursoAgregado? 'Remover de mi horario': 'Agregar curso a mi horario'"
             @click.stop="agregarCursoAMiHorario"
         )
             input.marcador_curso(type="checkbox" v-model="cursoAgregado")
             span.ancho {{ curso.abreviado }} >&nbsp;
-            | {{ curso.nombre }}
+            | {{ curso.nombre }} {{ nombreCurso }}
         table.datos
             tr
                 bloque(v-for="(grupos, profesor) in teoria"
@@ -49,8 +49,6 @@
     export default
         name: "curso"
         components: { bloque }
-        data: ->
-            cursoAgregado: no
         props:
             curso:
                 type: Object
@@ -62,6 +60,7 @@
                 type: String
                 required: true
         computed:
+            esMiHorario: -> @nombreAño is "Mi horario"
             teoria: ->
                 vm = this
                 profesores = {}
@@ -89,25 +88,38 @@
                     break
 
                 estaVacio
+            nombreAñoMin: ->
+                nombreAño = @nombreAño
+                nombreAño.substring 0, nombreAño.indexOf " "
+            idCurso: ->
+                if @nombreAñoMin is "Mi"
+                    @nombreCurso
+                else
+                    "_" + @nombreAñoMin + @curso.abreviado
+            cursoAgregado: ->
+                cursosUsuario = @$store.state.horarioUsuario
+
+                for idCurso, _ of cursosUsuario
+                    if idCurso is @idCurso then return true
+
+                false
         methods:
             agregarCursoAMiHorario: ->
                 if @cursoAgregado
-                    @cursoAgregado = false
-                    @$store.commit "removerCursoMiHorario", @nombreCurso
+                    @$store.commit "removerCursoMiHorario", @idCurso
                 else
-                    @cursoAgregado = true
+                    idCurso = @idCurso
                     nombre = @nombreCurso
                     datos = @curso
-                    @$store.commit "agregarCursoAMiHorario", { nombre, datos }
+                    @$store.commit "agregarCursoAMiHorario", { nombre: idCurso, datos: datos }
 
             obtenerClase: (grupo, esLab) ->
                 obtenerClaseGrupoCurso @nombreAño, @curso.abreviado, grupo, esLab
 
             procesarTeoria: () ->
-                nombreAño = @nombreAño
                 cursoAbreviado = @curso.abreviado
                 curso = @curso
-                nombreStore = "_" + (nombreAño.substring 0, nombreAño.indexOf " ")
+                nombreStore = "_" + @nombreAñoMin
 
                 for nombreGrupo, { Horas } of curso.Teoria
                     for horaId in Horas
@@ -123,6 +135,25 @@
 
                         @$store.commit "agregarACelda", {idCelda, datos}
 
+            desprocesarTeoria: () ->
+                cursoAbreviado = @curso.abreviado
+                curso = @curso
+                nombreStore = "_" + @nombreAñoMin
+
+                for nombreGrupo, { Horas } of curso.Teoria
+                    for horaId in Horas
+                        datos = { cursoAbreviado, nombreGrupo, esLab: no }
+                        idCelda = nombreStore + horaId
+
+                        @$store.commit "quitarDeCelda", idCelda
+
+                for nombreGrupo, { Horas } of curso.Laboratorio
+                    for horaId in Horas
+                        datos = { cursoAbreviado, nombreGrupo, esLab: yes }
+                        idCelda = nombreStore + horaId
+
+                        @$store.commit "quitarDeCelda", idCelda
+
             resaltarTodasCeldas: () ->
                 resaltarCurso @nombreAño, @curso.abreviado
 
@@ -131,6 +162,9 @@
 
         mounted: ->
             @procesarTeoria()
+
+        beforeDestroy: ->
+            @desprocesarTeoria()
 
 #
 </script>

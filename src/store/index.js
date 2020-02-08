@@ -15,8 +15,9 @@ export default new Vuex.Store({
         agregarACelda(state, {idCelda, datos}) {
             state.celdas[idCelda].push(datos);
         },
-        quitarDeCelda(state) {
-
+        quitarDeCelda(state, idCelda) {
+            const ref = state.celdas[idCelda];
+            while (ref.length > 0) ref.pop()
         },
         agregarCursoAMiHorario(state, {nombre, datos} ) {
             if (!state.horarioUsuario[nombre]) {
