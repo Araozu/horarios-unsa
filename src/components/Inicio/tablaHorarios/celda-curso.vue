@@ -55,7 +55,10 @@
 #
 </script>
 
-<style scoped lang="sass">
+<style lang="sass">
+
+    .elementoOpaco
+        opacity: 0.3
 
 //
 </style>

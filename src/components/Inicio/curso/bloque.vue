@@ -4,7 +4,7 @@
         | {{ profesor }}
         span.ancho.cursor_click(
             v-for="grupo in grupos"
-                :class="obtenerClase(grupo)"
+                :class="[obtenerClase(grupo), obtenerClaseGeneral()]"
                 @mouseenter="resaltarCeldasGrupo(grupo)"
                 @mouseleave="quitarResaltadoGrupo(grupo)"
                 @click="toggleActivo(grupo)"
@@ -43,6 +43,10 @@
         methods:
             obtenerClase: (grupo) ->
                 obtenerClaseGrupoCurso @nombreAño, @abreviado, grupo, @esLab
+
+            obtenerClaseGeneral: () ->
+                nombreAñoF = @nombreAño.substring 0, (@nombreAño.indexOf " ")
+                "_#{ nombreAñoF }_#{ @abreviado }"
 
             resaltarCeldasGrupo: (grupo) ->
                 resaltarGrupoCurso @nombreAño, @abreviado, grupo, @esLab

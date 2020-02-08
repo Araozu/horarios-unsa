@@ -38,6 +38,18 @@ resaltarElemento = (elemento, esLab, etiqueta = "resaltado") =>
 
 
 
+opacarElemento = (elemento) =>
+    elemento.className += " elementoOpaco"
+
+
+desopacarElemento = (elemento) =>
+    clases = elemento.className
+    clasesNueva = clases.replace "elementoOpaco", ""
+
+    elemento.className = clasesNueva
+
+
+
 export obtenerClaseGrupoCurso = (nombreAño, cursoAbreviado, grupo, esLab) =>
     nombreAñoF = nombreAño.substring 0, (nombreAño.indexOf " ")
     "_#{ nombreAñoF }_#{ cursoAbreviado }_#{ (if esLab then 'L' else '') + grupo }"
@@ -86,17 +98,55 @@ export desregistrarCurso = (nombreAño, cursoAbreviado, grupo, esLab) =>
 
 
 export activarGrupoCurso = (nombreAño, cursoAbreviado, grupo, esLab) =>
-    clase = obtenerClaseGrupoCurso nombreAño, cursoAbreviado, grupo, esLab
+    claseObjetivo = obtenerClaseGrupoCurso nombreAño, cursoAbreviado, grupo, esLab
+    claseGeneral = do =>
+        nombreAñoF = nombreAño.substring 0, (nombreAño.indexOf " ")
+        "_#{ nombreAñoF }_#{ cursoAbreviado }"
 
-    elementos = document.getElementsByClassName clase
+    elementos = document.getElementsByClassName claseGeneral
+
+    elementosObjetivo = []
+    elementosAOpacar = []
 
     for elemento in elementos
+        clases = elemento.classList
+        i = 0
+        agregarAOpaco = no
+        while i < clases.length
+            claseActual = clases[i]
+
+            if claseActual is claseObjetivo
+                elementosObjetivo.push elemento
+                agregarAOpaco = no
+                break
+            else
+                if esLab and claseActual is "celda__lab"
+                    agregarAOpaco = yes
+                else if !esLab and claseActual is "celda__teoria"
+                    agregarAOpaco = yes
+
+            i++
+
+        if agregarAOpaco then elementosAOpacar.push elemento
+
+    console.log elementosObjetivo
+    console.log elementosAOpacar
+
+    opacarElementos = no
+
+    for elemento in elementosObjetivo
+
         estaActivo = ((elemento.getAttribute "activo") ? "no") is "si"
         if estaActivo
             removerResaltadoElemento elemento, "activo"
             elemento.setAttribute "activo", "no"
         else
+            opacarElementos = yes
             resaltarElemento elemento, esLab, "activo"
             elemento.setAttribute "activo", "si"
 
-
+    for elemento in elementosAOpacar
+        if opacarElementos
+            opacarElemento elemento
+        else
+            desopacarElemento elemento

@@ -25,7 +25,7 @@
             horarioUsuario: -> @$store.state.horarioUsuario
         created: ->
             vm = this
-            resRaw = await fetch "/horarios/2018_2_fps_epis.yaml"
+            resRaw = await fetch "/horarios/2019_2_fps_epis.yaml"
             res = YAML.parse await resRaw.text()
             vm.datos = res
 

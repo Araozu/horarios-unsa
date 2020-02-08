@@ -6,7 +6,7 @@
         )
             input.marcador_curso(type="checkbox" v-model="cursoAgregado")
             span.ancho {{ curso.abreviado }} >&nbsp;
-            | {{ curso.nombre }} {{ nombreCurso }}
+            | {{ curso.nombre }}
         table.datos
             tr
                 bloque(v-for="(grupos, profesor) in teoria"
