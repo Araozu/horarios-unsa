@@ -13,5 +13,11 @@ module.exports = {
             disableHostCheck: true
         }
     },
-    productionSourceMap: false
+    productionSourceMap: false,
+    pwa: {
+        workboxPluginMode: "InjectManifest",
+        workboxOptions: {
+            swSrc: __dirname + "/public/service-worker.js"
+        }
+    }
 };

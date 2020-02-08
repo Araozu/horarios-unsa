@@ -14,7 +14,7 @@
         resaltarGrupoCurso
         removerResaltadoGrupo
         activarGrupoCursoStr
-        obtenerClaseCursoGeneral
+        obtenerClaseGrupoCurso
     } from "./funcionesResaltado.coffee"
 
     export default
@@ -49,13 +49,14 @@
             nombreGrupo: -> @datos.nombreGrupo
             esLab: -> @datos.esLab
             claseCursoGeneral: ->
-                obtenerClaseCursoGeneral @nombreAño, @cursoAbreviado, @nombreGrupo, @esLab
+                obtenerClaseGrupoCurso @nombreAño, @cursoAbreviado, @nombreGrupo, @esLab
         methods:
             resaltarCeldasGrupo: ->
                 resaltarGrupoCurso @nombreAño, @cursoAbreviado, @nombreGrupo, @esLab
             quitarResaltadoGrupo: ->
                 removerResaltadoGrupo @nombreAño, @cursoAbreviado, @nombreGrupo, @esLab
             toggleActivo: ->
+                console.log "Toggling... ´#{@claseCursoGeneral}´"
                 activarGrupoCursoStr @claseCursoGeneral
 
 
