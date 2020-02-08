@@ -10,7 +10,12 @@
 </template>
 
 <script lang="coffee">
-    import { resaltarGrupoCurso, removerResaltadoGrupo, activarGrupoCurso } from "./funcionesResaltado.coffee"
+    import {
+        resaltarGrupoCurso
+        removerResaltadoGrupo
+        activarGrupoCursoStr
+        obtenerClaseCursoGeneral
+    } from "./funcionesResaltado.coffee"
 
     export default
         name: "celda-curso"
@@ -43,13 +48,15 @@
             cursoAbreviado: -> @datos.cursoAbreviado
             nombreGrupo: -> @datos.nombreGrupo
             esLab: -> @datos.esLab
+            claseCursoGeneral: ->
+                obtenerClaseCursoGeneral @nombreAño, @cursoAbreviado, @nombreGrupo, @esLab
         methods:
             resaltarCeldasGrupo: ->
                 resaltarGrupoCurso @nombreAño, @cursoAbreviado, @nombreGrupo, @esLab
             quitarResaltadoGrupo: ->
                 removerResaltadoGrupo @nombreAño, @cursoAbreviado, @nombreGrupo, @esLab
             toggleActivo: ->
-                activarGrupoCurso @nombreAño, @cursoAbreviado, @nombreGrupo, @esLab
+                activarGrupoCursoStr @claseCursoGeneral
 
 
 #

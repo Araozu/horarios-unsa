@@ -56,6 +56,16 @@ export obtenerClaseGrupoCurso = (nombreAño, cursoAbreviado, grupo, esLab) =>
 
 
 
+export obtenerClaseCursoGeneral = (claseGrupoCurso) =>
+    posPrimerRaya = claseGrupoCurso.indexOf "_"
+    primerRaya = claseGrupoCurso.substr (posPrimerRaya + 1)
+    posSegundaRaya = primerRaya.indexOf "_"
+    segundaRaya = primerRaya.substr (posSegundaRaya + 1)
+    posFinal = (segundaRaya.indexOf "_") + posPrimerRaya + posSegundaRaya + 2
+    claseGrupoCurso.substr 0, posFinal
+
+
+
 export resaltarGrupoCurso = (nombreAño, cursoAbreviado, grupo, esLab) =>
     clase = obtenerClaseGrupoCurso nombreAño, cursoAbreviado, grupo, esLab
 
@@ -97,11 +107,55 @@ export desregistrarCurso = (nombreAño, cursoAbreviado, grupo, esLab) =>
 
 
 
+cursosActivos = {}
+
+
+obtenerNombreAño = (claseObjetivo) =>
+    primerRaya = claseObjetivo.substr 1
+    res = primerRaya.indexOf "_"
+    claseObjetivo.substring 0, (res + 1)
+
+
+
+registrarCursoActivo = (claseObjetivo) =>
+    nombreAño = obtenerNombreAño claseObjetivo
+
+    unless cursosActivos[nombreAño]?
+        cursosActivos[nombreAño] = new Set()
+
+    cursosActivos[nombreAño].add(claseObjetivo)
+
+
+
+desregistrarCursoActivo = (claseObjetivo) =>
+    nombreAño = obtenerNombreAño claseObjetivo
+
+    if cursosActivos[nombreAño]?
+        cursosActivos[nombreAño].delete(claseObjetivo)
+
+
+
+export reiniciarTabla = (nombreAño) =>
+    datos = cursosActivos[nombreAño]
+    if datos?
+        ```
+        for (const nombre of datos) {
+            activarGrupoCursoStr(nombre);
+        }
+        ```
+        datos.clear()
+
+
+
 export activarGrupoCurso = (nombreAño, cursoAbreviado, grupo, esLab) =>
     claseObjetivo = obtenerClaseGrupoCurso nombreAño, cursoAbreviado, grupo, esLab
-    claseGeneral = do =>
-        nombreAñoF = nombreAño.substring 0, (nombreAño.indexOf " ")
-        "_#{ nombreAñoF }_#{ cursoAbreviado }"
+    activarGrupoCursoStr claseObjetivo
+
+
+
+export activarGrupoCursoStr = (claseObjetivo) =>
+    claseGeneral = obtenerClaseCursoGeneral claseObjetivo
+    esLab = (claseObjetivo.substr -2, 1) is "L"
 
     elementos = document.getElementsByClassName claseGeneral
 
@@ -122,15 +176,16 @@ export activarGrupoCurso = (nombreAño, cursoAbreviado, grupo, esLab) =>
             else
                 if esLab and claseActual is "celda__lab"
                     agregarAOpaco = yes
+                else if esLab and claseActual is "celda__teoria"
+                    break
                 else if !esLab and claseActual is "celda__teoria"
                     agregarAOpaco = yes
+                else if !esLab and claseActual is "celda__lab"
+                    break
 
             i++
 
         if agregarAOpaco then elementosAOpacar.push elemento
-
-    console.log elementosObjetivo
-    console.log elementosAOpacar
 
     opacarElementos = no
 
@@ -145,8 +200,15 @@ export activarGrupoCurso = (nombreAño, cursoAbreviado, grupo, esLab) =>
             resaltarElemento elemento, esLab, "activo"
             elemento.setAttribute "activo", "si"
 
-    for elemento in elementosAOpacar
-        if opacarElementos
+    if opacarElementos
+        registrarCursoActivo claseObjetivo
+        for elemento in elementosAOpacar
             opacarElemento elemento
-        else
+
+    else
+        desregistrarCursoActivo claseObjetivo
+        for elemento in elementosAOpacar
             desopacarElemento elemento
+
+
+

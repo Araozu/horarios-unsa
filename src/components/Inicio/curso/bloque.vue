@@ -4,12 +4,12 @@
         | {{ profesor }}
         span.ancho.cursor_click(
             v-for="grupo in grupos"
-                :class="[obtenerClase(grupo), obtenerClaseGeneral()]"
+                :class="obtenerClase(grupo)"
                 @mouseenter="resaltarCeldasGrupo(grupo)"
                 @mouseleave="quitarResaltadoGrupo(grupo)"
                 @click="toggleActivo(grupo)"
         )
-            |  {{ esLab? 'T': 'G' }}{{ grupo }}&nbsp;
+            |  {{ esLab? 'L': 'T' }}{{ grupo }}&nbsp;
 
     //
 </template>
@@ -20,6 +20,7 @@
         resaltarGrupoCurso
         removerResaltadoGrupo
         activarGrupoCurso
+        obtenerClaseCursoGeneral
     } from "../tablaHorarios/funcionesResaltado.coffee"
 
     export default
@@ -42,11 +43,10 @@
                 required: true
         methods:
             obtenerClase: (grupo) ->
-                obtenerClaseGrupoCurso @nombreAño, @abreviado, grupo, @esLab
+                claseEspecifica = obtenerClaseGrupoCurso @nombreAño, @abreviado, grupo, @esLab
+                claseGeneral = obtenerClaseCursoGeneral claseEspecifica
 
-            obtenerClaseGeneral: () ->
-                nombreAñoF = @nombreAño.substring 0, (@nombreAño.indexOf " ")
-                "_#{ nombreAñoF }_#{ @abreviado }"
+                [claseEspecifica, claseGeneral]
 
             resaltarCeldasGrupo: (grupo) ->
                 resaltarGrupoCurso @nombreAño, @abreviado, grupo, @esLab
