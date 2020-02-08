@@ -1,8 +1,19 @@
 <template lang="pug">
     div.contenedor
-        barra-lateral
-        div.der(:style="'max-height: ' + alto + 'px;'")
-            router-view
+        template(v-if="ancho > 500")
+            barra-lateral
+            div.der(:style="'max-height: ' + alto + 'px;'")
+                router-view
+        template(v-else)
+            br
+            div
+                h1 Horarios UNSA
+                p Parece que estás usando un celular.
+                p Rota tu celular para poder usar el sistema de horarios.
+                p.
+                    Recomendamos un computador o laptop para obtener
+                    el funcionamiento completo.
+
 
     //
 </template>
@@ -13,8 +24,9 @@
     export default
         name: "App"
         components: { barraLateral }
-        data: ->
-            alto: window.innerHeight
+        computed:
+            alto: -> @$store.state.altoPantalla
+            ancho: -> @$store.state.anchoPantalla
 
 #
 </script>
@@ -31,6 +43,16 @@
         right: 0
         overflow-y: scroll
         overflow-x: hidden
+
+
+    @media only screen and (max-width: 1370px)
+        .contenedor
+            grid-template-columns: 200px auto
+
+
+    @media only screen and (max-width: 1000px)
+        .contenedor
+            grid-template-columns: 1.75rem auto
 
 
 //

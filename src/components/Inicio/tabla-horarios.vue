@@ -6,7 +6,9 @@
                 td(v-for="dia in dias") {{ dia }}
         tbody
             tr(v-for="hora in horas")
-                td {{ hora }}
+                td
+                    span {{ hora.substring(0, 5) }}
+                    span.ocultar-en-movil {{ hora.substr(5) }}
                 celda(v-for="(dia, i) in dias" :key="i"
                     :dia="dia"
                     :hora="hora"
@@ -67,6 +69,13 @@
             text-align: center
             td:first-child
                 width: 8rem
+
+
+
+    @media only screen and (max-width: 700px)
+        .ocultar-en-movil
+            display: none
+
 
 
 //

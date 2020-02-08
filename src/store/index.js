@@ -3,10 +3,12 @@ import Vuex from 'vuex';
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
+const store = new Vuex.Store({
     state: {
         celdas: {},
-        horarioUsuario: {}
+        horarioUsuario: {},
+        anchoPantalla: window.innerWidth,
+        altoPantalla: window.innerHeight
     },
     mutations: {
         registrarCelda(state, idCelda) {
@@ -28,9 +30,19 @@ export default new Vuex.Store({
         removerCursoMiHorario(state, nombre) {
             delete state.horarioUsuario[nombre];
             state.horarioUsuario = Object.assign({}, state.horarioUsuario);
+        },
+        registrarListenerTamanoPantalla(state) {
+            window.addEventListener("resize", (ev) => {
+                state.anchoPantalla = window.innerWidth;
+                state.altoPantalla  = window.innerHeight
+            });
         }
     },
     actions: {
 
     }
 });
+
+store.commit("registrarListenerTamanoPantalla");
+
+export default store;

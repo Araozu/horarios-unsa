@@ -56,7 +56,6 @@
             quitarResaltadoGrupo: ->
                 removerResaltadoGrupo @nombreAño, @cursoAbreviado, @nombreGrupo, @esLab
             toggleActivo: ->
-                console.log "Toggling... ´#{@claseCursoGeneral}´"
                 activarGrupoCursoStr @claseCursoGeneral
 
 
@@ -64,6 +63,11 @@
 </script>
 
 <style lang="sass">
+
+    .celda
+        display: inline-block
+
+
 
     .elementoOpaco
         opacity: 0.3
