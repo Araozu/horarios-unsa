@@ -1,0 +1,78 @@
+Ingenierías:
+  fip:
+    nombre: Facultad de Ingeniería de Procesos
+    escuelas:
+      ingquimica:
+        nombre: Ingeniería Química
+      ingambiental:
+        nombre: Ingeniería Ambiental
+      ingmateriales:
+        nombre: Ingeniería de Materiales
+      ingmetalurgica:
+        nombre: Ingeniería Metalúrgica
+      ingalimentarias:
+        nombre: Ing. de Industrias Alimentarias
+  fips:
+    nombre: Facultad de Ingeniería de Producción y Servicios
+    escuelas:
+      ingenieriadesistemas:
+        nombre: Ingeniería de Sistemas
+      ingenierialectrica:
+        nombre: Ingeniería Eléctrica
+      ingenieriaelectronica:
+        nombre: Ingeniería Electrónica
+      ingenieriamecanica:
+        nombre: Ingeniería Mecánica
+      ingenieriaindustrial:
+        nombre: Ingeniería Industrial
+      cienciadelacomputacion:
+        nombre: Ciencias de la Computacion
+      telecomunicaciones:
+        nombre: Ing. de Telecomunicaciones
+  fggm:
+    nombre: Facultad de Geología, Geofísica y Minas
+    escuelas:
+      inggeofisica:
+        nombre: Ingeniería Geofísica
+      inggeologica:
+        nombre: Ingeniería Geológica
+      ingminas:
+        nombre: Ingeniería de Minas
+  fic:
+    nombre: Facultad de Ingeniería Civil
+    escuelas:
+      ingcivil:
+        nombre: Ingeniería Civil
+      ingsanitaria:
+        nombre: Ingeniería Sanitaria
+  fcnf:
+    nombre: Facultad de Ciencias Naturales y Formales
+    escuelas:
+      fisica:
+        nombre: Física
+      matematica:
+        nombre: Matemáticas
+      quimica:
+        nombre: Química
+  fau:
+    nombre: Facultad de Arquitectura y Urbanismo
+    escuelas: []
+Biomédicas:
+  fcb:
+    nombre: Facultad de Ciencias Biológicas
+    escuelas:
+      biologia:
+        nombre: Biología
+      nutricion:
+        nombre: Ciencias de la Nutrición
+      pesquera:
+        nombre: Ingeniería Pesquera
+  fmd:
+    nombre: Facultad de Medicina
+    escuelas: []
+  fen:
+    nombre: Facultad de Enfermería
+    escuelas: []
+  fagr:
+    nombre: Facultad de Agronomía
+    escuelas: []

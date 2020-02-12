@@ -20,6 +20,7 @@
 
 <script lang="coffee">
     import barraLateral from "./components/App/barra-lateral.vue"
+    import YAML from "yaml"
 
     export default
         name: "App"
@@ -27,6 +28,15 @@
         computed:
             alto: -> @$store.state.altoPantalla
             ancho: -> @$store.state.anchoPantalla
+            año: -> @$store.state.año
+            periodo: -> @$store.state.periodo
+            facultad: -> @$store.state.facultad
+            escuela: -> @$store.state.escuela
+        created: ->
+            vm = this
+            resRaw = await fetch "/horarios/#{@año}_#{@periodo}_#{@facultad}_#{@escuela}.yaml"
+            res = YAML.parse await resRaw.text()
+            @$store.commit "cambiarDatos", res
 
 #
 </script>

@@ -7,12 +7,38 @@
             br
             br
             div.info
-                p 2019-2
-                p Facultad de Producción y Servicios
-                p Escuela Profesional de Ingeniería de Sistemas
+                p
+                    i Solo algunos horarios están implementados*
+                // p {{ año }}-{{ periodo }}
+                div
+                    select(v-model.number="añoSeleccionado")
+                        option 2018
+                        option 2019
+                        option 2020
+                    select(v-model.number="periodoSeleccionado")
+                        option 1
+                        option 2
+
+                // p {{ datos.facultad? datos.facultad.nombre: facultad }}
+                div
+                    select(v-model="areaSeleccionada")
+                        option(v-for="(_, nombre) in escuelas") {{ nombre }}
+
+                div
+                    select(v-model="facultadSeleccionada")
+                        option(v-for="(facultad, nombre) in escuelas[areaSeleccionada]" :value="nombre") {{ facultad.nombre }}
+
+                div(v-if="escuelas[areaSeleccionada][facultadSeleccionada]")
+                    select(v-model="escuelaSeleccionada")
+                        option(v-for="(escuela, nombre) in escuelas[areaSeleccionada][facultadSeleccionada].escuelas" :value="nombre")
+                            | {{ escuela.nombre }}
+
+                div
+                    a(:href="urlEscuela" target="_blank") Página de la escuela
+                // p {{ datos.escuela? datos.escuela.nombre: escuela }}
             br
             br
-            modo-color
+            // modo-color
             h2 Inicio
             h2 Otros
 
@@ -21,13 +47,28 @@
 
 <script lang="coffee">
     import modoColor from "./modo-color.vue"
+    escuelas = require "json-loader!yaml-loader!../../assets/escuelas.yaml"
 
     export default
         name: "barra-lateral"
         components: { modoColor }
+        data: ->
+            escuelas: escuelas
+            añoSeleccionado: 2018
+            periodoSeleccionado: 2
+            areaSeleccionada: "Ingenierías"
+            facultadSeleccionada: "fips"
+            escuelaSeleccionada: "ingenieriadesistemas"
         computed:
             alto: -> @$store.state.altoPantalla
-    
+            año: -> @$store.state.año
+            periodo: -> @$store.state.periodo
+            facultad: -> @$store.state.facultad
+            escuela: -> @$store.state.escuela
+            datos: -> @$store.state.datos
+            urlEscuela: ->
+                "http://" + @facultadSeleccionada + ".unsa.edu.pe/" + @escuelaSeleccionada + "/"
+
 #
 </script>
 
@@ -46,18 +87,15 @@
             vertical-align: middle
 
 
-    .barra
-        position: absolute
-        right: 2rem
-
-
 
     .lateral
         display: block
         position: relative
         top: 0
-        box-shadow: 2px 0 10px 0 lightgray
-        overflow-y: scroll
+        box-shadow: 2px 0 5px 0 rgb(122, 122, 122)
+        z-index: 1
+        margin-right: 0.5rem
+
 
     h1
         text-align: center
@@ -66,9 +104,20 @@
         margin: 0
         padding: 15px 10px
 
-    .info p
-        margin: 10px 20px
-        font-family: "Product Sans", Roboto, sans-serif
+    .info
+        p, div
+            margin: 10px 20px
+            font-family: "Product Sans", Roboto, sans-serif
+
+
+
+    @media only screen and (max-width: 1000px)
+        .barra
+            position: absolute
+            right: 2rem
+
+        .lateral
+            overflow-y: scroll
 
 //
 </style>

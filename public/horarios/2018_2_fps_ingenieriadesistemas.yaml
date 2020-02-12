@@ -1,4 +1,12 @@
 titulo: Horarios 2018-2, Ingeniería de Sistemas.
+año: 2018
+periodo: 2
+facultad:
+  id: fps
+  nombre: Facultad de Producción y Servicios
+escuela:
+  id: epis
+  nombre: Escuela Profesional de Ingeniería de Sistemas
 años:
   1er año:
     Realidad Nacional:

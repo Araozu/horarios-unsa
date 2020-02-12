@@ -17,17 +17,9 @@
     export default
         name: 'home'
         components: { anio }
-        data: ->
-            datos:
-                titulo: "Cargando..."
-                años: {}
         computed:
             horarioUsuario: -> @$store.state.horarioUsuario
-        created: ->
-            vm = this
-            resRaw = await fetch "/horarios/2018_2_fps_epis.yaml"
-            res = YAML.parse await resRaw.text()
-            vm.datos = res
+            datos: -> @$store.state.datos
 
 
 #

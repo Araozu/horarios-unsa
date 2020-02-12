@@ -8,7 +8,15 @@ const store = new Vuex.Store({
         celdas: {},
         horarioUsuario: {},
         anchoPantalla: window.innerWidth,
-        altoPantalla: window.innerHeight
+        altoPantalla: window.innerHeight,
+        año: 2018,
+        periodo: 2,
+        facultad: "fps",
+        escuela: "ingenieriadesistemas",
+        datos: {
+            titulo: "Cargando...",
+            años: {}
+        }
     },
     mutations: {
         registrarCelda(state, idCelda) {
@@ -36,6 +44,9 @@ const store = new Vuex.Store({
                 state.anchoPantalla = window.innerWidth;
                 state.altoPantalla  = window.innerHeight
             });
+        },
+        cambiarDatos(state, datos) {
+            state.datos = datos;
         }
     },
     actions: {

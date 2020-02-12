@@ -175,6 +175,7 @@
         display: inline-block
         margin-right: 0.45rem
         font-size: 1rem
+        cursor: pointer
 
 
     .titulo_curso
