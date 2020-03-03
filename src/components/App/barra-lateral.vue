@@ -6,7 +6,11 @@
             h1 Horarios UNSA
             br
             br
-            div.info
+            p Algún dia implementaré las demas facultades/escuelas...
+            p.
+                No coloqué 1er año porque me da flojera... E igual los cachimbos no
+                pueden escoger horario.
+            // div.info
                 p
                     i Solo algunos horarios están implementados*
                 // p {{ año }}-{{ periodo }}
@@ -38,9 +42,11 @@
                 // p {{ datos.escuela? datos.escuela.nombre: escuela }}
             br
             br
+            a(href="https://github.com/Araozu/horarios-unsa" target="_blank" style="color: white;").
+                Código fuente en GitHub
             // modo-color
-            h2 Inicio
-            h2 Otros
+            // h2 Inicio
+            // h2 Otros
 
     //
 </template>
@@ -68,6 +74,9 @@
             datos: -> @$store.state.datos
             urlEscuela: ->
                 "http://" + @facultadSeleccionada + ".unsa.edu.pe/" + @escuelaSeleccionada + "/"
+        watch:
+            escuelaSeleccionada: (n) ->
+                console.log "Cambiado a #{n}"
 
 #
 </script>

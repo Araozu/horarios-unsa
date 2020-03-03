@@ -1,0 +1,512 @@
+titulo: Horarios 2020-1, Ingeniería de Sistemas.
+años:
+  2do año:
+    RAII:
+      nombre: Redacción de Artículos e Informes de Investigación
+      abreviado: RAII
+      Teoria:
+        A:
+          Docente: E. Vidal
+          Horas:
+            - Lu0750
+            - Lu0850
+        B:
+          Docente: "?"
+          Horas:
+            - Lu1640
+            - Lu1740
+        C:
+          Docente: E. Vidal
+          Horas:
+            - Lu0940
+            - Lu1040
+    Calculo:
+      nombre: Cálculo en Varias Variables
+      abreviado: CVV
+      Teoria:
+        A:
+          Docente: Doris Tupacyupanqui
+          Horas:
+            - Vi0700
+            - Vi0750
+            - Ma0850
+            - Ma0940
+            - Ma1040
+            - Ju1040
+            - Ju1130
+        B:
+          Docente: J. Tarqui
+          Horas:
+            - Lu1830
+            - Lu1920
+            - Ju1640
+            - Ju1740
+            - Ju1830
+            - Vi1830
+            - Vi1920
+        C:
+          Docente: Doris Tupacyupanqui
+          Horas:
+            - Lu1130
+            - Lu1220
+            - Lu1310
+            - Ma1130
+            - Ma1220
+            - Ju1220
+            - Ju1310
+    Ciudadania:
+      nombre: Ciudadania e Interculturalidad
+      abreviado: CI
+      Teoria:
+        A:
+          Docente: "?"
+          Horas:
+            - Lu1400
+            - Lu1450
+            - Lu1550
+        B:
+          Docente: "?"
+          Horas:
+            - Vi1550
+            - Vi1640
+            - Vi1740
+    EDAT:
+      nombre: Estructuras de Datos y Algoritmos
+      abreviado: EDAT
+      Teoria:
+        A:
+          Docente: Karim Guevara
+          Horas:
+            - Ma0700
+            - Ma0750
+            - Ju0700
+            - Ju0750
+        B:
+          Docente: Karim Guevara
+          Horas:
+            - Ma1400
+            - Ma1450
+            - Ju1400
+            - Ju1450
+    Liderazgo:
+      nombre: Taller de Liderazgo y Colaboración
+      abreviado: TLC
+      Teoria:
+        A:
+          Docente: V. Cornejo
+          Horas:
+            - Mi0850
+            - Mi0940
+        B:
+          Docente: V. Cornejo
+          Horas:
+            - Ma1640
+            - Ma1740
+    Innovacion Y Creatividad:
+      nombre: Innovación y Creatividad
+      abreviado: IC
+      Teoria:
+        A:
+          Docente: Norka Bedregal
+          Horas:
+            - Mi1040
+            - Mi1130
+            - Ju0850
+            - Ju0940
+        B:
+          Docente: V. Cornejo
+          Horas:
+            - Ma1830
+            - Ma1920
+            - Mi1740
+            - Mi1830
+    Web2:
+      nombre: Programación Web 2
+      abreviado: PW2
+      Teoria:
+        A:
+          Docente: A. Paz
+          Horas:
+            - Vi0850
+            - Vi0940
+        B:
+          Docente: A. Paz
+          Horas:
+            - Vi1400
+            - Vi1450
+    Psicologia:
+      nombre: Taller de Psicología
+      abreviado: PSI
+      Teoria:
+        A:
+          Docente: S. Avendaño
+          Horas:
+            - Mi0700
+            - Mi0750
+        B:
+          Docente: S. Avendaño
+          Horas:
+            - Mi1400
+            - Mi1450
+  3er año:
+    Ingenieria de Procesos:
+      nombre: Ingeniería y Procesos de Software
+      abreviado: IPS
+      Teoria:
+        A:
+          Docente: "?"
+          Horas:
+            - Lu0700
+            - Lu0750
+            - Vi0700
+            - Vi0750
+            - Vi0850
+        B:
+          Docente: "?"
+          Horas:
+            - Mi1400
+            - Mi1450
+            - Ju1740
+            - Ju1830
+            - Ju1920
+    Investigacion de Operaciones:
+      nombre: Investigación de Operaciones
+      abreviado: IO
+      Teoria:
+        A:
+          Docente: Olha Sharhorodska
+          Horas:
+            - Lu1040
+            - Lu1130
+            - Vi1130
+            - Vi1220
+        B:
+          Docente: Olha Sharhorodska
+          Horas:
+            - Lu1400
+            - Lu1450
+            - Vi1550
+            - Vi1640
+    Organizacion y Metodos:
+      nombre: Organización y Métodos
+      abreviado: OM
+      Teoria:
+        A:
+          Docente: Juan C. Juarez
+          Horas:
+            - Ju1040
+            - Ju1130
+            - Ju1220
+        B:
+          Docente: Juan C. Juarez
+          Horas:
+            - Lu1550
+            - Lu1640
+            - Lu1740
+    Teoria de la Computacion:
+      nombre: Teoría de la Computación
+      abreviado: TC
+      Teoria:
+        A:
+          Docente: "?"
+          Horas:
+            - Ma0700
+            - Ma0750
+            - Ma0850
+        B:
+          Docente: "?"
+          Horas:
+            - Mi1740
+            - Mi1830
+            - Mi1920
+    Base de Datos:
+      nombre: Base de Datos
+      abreviado: BD
+      Teoria:
+        A:
+          Docente: C. Baluarte
+          Horas:
+            - Mi0850
+            - Mi0940
+            - Ju0850
+            - Ju0940
+        B:
+          Docente: C. Baluarte
+          Horas:
+            - Ma1550
+            - Ma1640
+            - Ju1550
+            - Ju1640
+    Programacion de Sistemas:
+      nombre: Programación de Sistemas
+      abreviado: PS
+      Teoria:
+        A:
+          Docente: O. Ramirez
+          Horas:
+            - Mi0700
+            - Mi0750
+        B:
+          Docente: O. Ramirez
+          Horas:
+            - Mi1550
+            - Mi1640
+  4to año:
+    Sistemas Distribuidos:
+      nombre: Sistemas Distribuidos
+      abreviado: SD
+      Teoria:
+        A:
+          Docente: J. Silva
+          Horas:
+            - Lu0700
+            - Lu0750
+            - Mi0700
+            - Mi0750
+        B:
+          Docente: "?"
+          Horas:
+            - Ma1400
+            - Ma1450
+            - Ju1550
+            - Ju1640
+    Inteligencia Artificial:
+      nombre: Inteligencia Artificial
+      abreviado: IA
+      Teoria:
+        A:
+          Docente: "?"
+          Horas:
+            - Ma0850
+            - Ma0940
+            - Ju0850
+            - Ju0940
+            - Ju1040
+        B:
+          Docente: "?"
+          Horas:
+            - Lu1550
+            - Lu1640
+            - Lu1740
+            - Mi1550
+            - Mi1640
+        C:
+          Docente: "?"
+          Horas:
+            - Ma1040
+            - Ma1130
+            - Vi0850
+            - Vi0940
+    Ingles:
+      nombre: Inglés
+      abreviado: ING
+      Teoria:
+        A:
+          Docente: "?"
+          Horas:
+            - Ju1130
+            - Ju1220
+            - Ju1310
+        B:
+          Docente: "?"
+          Horas:
+            - Ma1740
+            - Ma1830
+            - Ma1920
+    Ing De Requerimientos:
+      nombre: Ingeniería de Requerimientos
+      abreviado: IR
+      Teoria:
+        A:
+          Docente: P. Huertas
+          Horas:
+            - Lu0850
+            - Lu0940
+            - Mi0850
+            - Mi0940
+        B:
+          Docente: P. Huertas
+          Horas:
+            - Ju1400
+            - Ju1450
+            - Vi1400
+            - Vi1450
+    Pruebas de Software:
+      nombre: Pruebas de Software
+      abreviado: PS
+      Teoria:
+        A:
+          Docente: P. Huertas
+          Horas:
+            - Lu1040
+            - Lu1130
+        B:
+          Docente: P. Huertas
+          Horas:
+            - Ma1550
+            - Ma1640
+    Tecnologias de Informacion:
+      nombre: Tecnologías de Información
+      abreviado: TI
+      Teoria:
+        A:
+          Docente: J. Silva
+          Horas:
+            - Ma0700
+            - Ma0750
+            - Ju0700
+            - Ju0750
+        B:
+          Docente: "?"
+          Horas:
+            - Lu1400
+            - Lu1450
+            - Vi1550
+            - Vi1640
+
+    Fisica Computacional:
+      nombre: Física Computacional
+      abreviado: FC
+      Teoria:
+        A:
+          Docente: E. Llamoca
+          Horas:
+            - Vi0700
+            - Vi0750
+        B:
+          Docente: E. Llamoca
+          Horas:
+            - Mi1400
+            - Mi1450
+  5to año:
+    Proyecto de Tesis:
+      nombre: Proyecto de Tesis
+      abreviado: PT
+      Teoria:
+        A:
+          Docente: E. Castro
+          Horas:
+            - Ma0700
+            - Ma0750
+            - Mi0700
+            - Mi0750
+            - Ju0700
+            - Ju0750
+        B:
+          Docente: L. Alfaro
+          Horas:
+            - Lu1040
+            - Lu1130
+            - Lu1220
+            - Vi1040
+            - Vi1130
+            - Vi1220
+        C:
+          Docente: V. Cornejo
+          Horas:
+            - Mi1040
+            - Mi1130
+            - Mi1220
+            - Ju1040
+            - Ju1130
+            - Ju1220
+        D:
+          Docente: J. Zuñiga
+          Horas:
+            - Mi1040
+            - Mi1130
+            - Mi1220
+            - Vi1040
+            - Vi1130
+            - Vi1220
+    Proyecto de Sw 1:
+      nombre: Proyecto de Ingeniería de Software 1
+      abreviado: PS1
+      Teoria:
+        A:
+          Docente: F. Gonzales
+          Horas:
+            - Lu0700
+            - Lu0750
+        B:
+          Docente: F. Gonzales
+          Horas:
+            - Ju0850
+            - Ju0940
+    Sistemas de Seguridad Critica:
+      nombre: Sistemas de Seguridad Crítica
+      abreviado: SSC
+      Teoria:
+        A:
+          Docente: L. Delgado
+          Horas:
+            - Lu0850
+            - Lu0940
+            - Mi0850
+            - Mi0940
+        B:
+          Docente: "?"
+          Horas:
+            - Ma0940
+            - Ma1040
+            - Vi0850
+            - Vi0940
+    Gestion Sw:
+      nombre: Gestion de Emprendimiento de Software
+      abreviado: GES
+      Teoria:
+        A:
+          Docente: J. Sulla
+          Horas:
+            - Ma0850
+            - Vi0700
+            - Vi0750
+        B:
+          Docente: J. Sulla
+          Horas:
+            - Lu1450
+            - Lu1550
+            - Lu1640
+    Mantenimiento:
+      nombre: Mantenimiento, Configuración y Evolución de Software
+      abreviado: MCES
+      Teoria:
+        A:
+          Docente: "?"
+          Horas:
+            - Ma1130
+            - Ma1220
+            - Ma1310
+        B:
+          Docente: "?"
+          Horas:
+            - Mi1400
+            - Mi1450
+            - Mi1550
+    Multimedia:
+      nombre: Multimedia y Realidad Virtual (e)
+      abreviado: MRVe
+      Teoria:
+        A:
+          Docente: "?"
+          Horas:
+            - Ma1400
+            - Ma1450
+    Gestion Sis:
+      nombre: Gestión de Sistemas y Tecnologías de Informacion (e)
+      abreviado: GSTIe
+      Teoria:
+        A:
+          Docente: "?"
+          Horas:
+            - Ma1550
+            - Ma1640
+    Desarrollo Plat:
+      nombre: Desarrollo de Nuevas Plataformas Avanzado (e)
+      abreviado: DNPAe
+      Teoria:
+        A:
+          Docente: "?"
+          Horas:
+            - Ju1550
+            - Ju1640

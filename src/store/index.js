@@ -9,8 +9,8 @@ const store = new Vuex.Store({
         horarioUsuario: {},
         anchoPantalla: window.innerWidth,
         altoPantalla: window.innerHeight,
-        año: 2018,
-        periodo: 2,
+        año: 2020,
+        periodo: 1,
         facultad: "fps",
         escuela: "ingenieriadesistemas",
         datos: {
