@@ -5,15 +5,16 @@
                 td Hora
                 td(v-for="dia in dias") {{ dia }}
         tbody
-            tr(v-for="hora in horas")
-                td
-                    span {{ hora.substring(0, 5) }}
-                    span.ocultar-en-movil {{ hora.substr(5) }}
-                celda(v-for="(dia, i) in dias" :key="i"
-                    :dia="dia"
-                    :hora="hora"
-                    :nombreAño="nombreAño"
-                    :nombreStore="nombreStore")
+            template(v-for="hora in horas")
+                tr(v-show="!(horasDescanso.find(x => x === hora)) || $store.state.mostrarDescansos")
+                    td
+                        span {{ hora.substring(0, 5) }}
+                        span.ocultar-en-movil {{ hora.substr(5) }}
+                    celda(v-for="(dia, i) in dias" :key="i"
+                        :dia="dia"
+                        :hora="hora"
+                        :nombreAño="nombreAño"
+                        :nombreStore="nombreStore")
     
     //
 </template>
@@ -46,6 +47,12 @@
                 "17:40 - 18:30"
                 "18:30 - 19:20"
                 "19:20 - 20:10"
+            ]
+            horasDescanso: [
+                "08:40 - 08:50"
+                "10:30 - 10:40"
+                "15:40 - 15:50"
+                "17:30 - 17:40"
             ]
         props:
             nombreAño:

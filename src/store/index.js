@@ -16,7 +16,8 @@ const store = new Vuex.Store({
         datos: {
             titulo: "Cargando...",
             años: {}
-        }
+        },
+        mostrarDescansos: true
     },
     mutations: {
         registrarCelda(state, idCelda) {
@@ -47,6 +48,9 @@ const store = new Vuex.Store({
         },
         cambiarDatos(state, datos) {
             state.datos = datos;
+        },
+        cambiarMostrarDescansos(state, dato) {
+            state.mostrarDescansos = !!dato
         }
     },
     actions: {
