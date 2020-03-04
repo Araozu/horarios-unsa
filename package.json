@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --modern",
-    "deploy": "vue-cli-service build --modern & cd dist & surge"
+    "deploy": "vue-cli-service build --modern & cd dist & surge",
+    "test": "vue-cli-service build --modern"
   },
   "dependencies": {
     "core-js": "^3.3.2",

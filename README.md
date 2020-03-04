@@ -1,5 +1,7 @@
 # Horarios UNSA
 
+[![Build Status](https://travis-ci.com/Araozu/horarios-unsa.svg?branch=master)](https://travis-ci.com/Araozu/horarios-unsa)
+
 ## ¿Horario erroneo/desactualizado?
 
 Sigue los pasos a continuación para corregirlo en tu entorno local,
@@ -71,7 +73,7 @@ Por ejemplo, si queremos referirnos a la primera hora del lunes
 Para referirnos a las 15:50 del Jueves, usamos `Ju1550`.
 
 Las horas están en formato de 24h, divididas en secciones de 50 m,
-y incluyen los descansos de 10m.
+e incluyen los descansos de 10m.
 
 ## Herramientas usadas
 
@@ -85,4 +87,3 @@ y incluyen los descansos de 10m.
 
 ¿Por qué pug/coffee/sass? Porque odio las llaves/punto y coma/parentesis.
 
-*-- gg ez Corrales --*

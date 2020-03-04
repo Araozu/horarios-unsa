@@ -6,10 +6,8 @@
             h1 Horarios UNSA
             br
             br
-            p Algún dia implementaré las demas facultades/escuelas...
-            p.
-                No coloqué 1er año porque me da flojera... E igual los cachimbos no
-                pueden escoger horario.
+            p Algún dia este proceso será automático, y tendra las otras escuelas...
+            p Laboratorios aún no disponibles.
             // div.info
                 p
                     i Solo algunos horarios están implementados*
