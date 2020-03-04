@@ -1,5 +1,155 @@
 titulo: Horarios 2020-1, Ingeniería de Sistemas.
 años:
+  1er año:
+    Matematica Basica:
+      nombre: Matemática Básica
+      abreviado: MB
+      Teoria:
+        A:
+          Docente: M. Hurtado
+          Horas:
+            - Lu0700
+            - Lu0750
+            - Mi0700
+            - Mi0750
+            - Ju0700
+            - Ju0750
+        B:
+          Docente: M. Hurtado
+          Horas:
+            - Lu1400
+            - Lu1450
+            - Lu1550
+            - Ju1550
+            - Ju1640
+            - Ju1740
+        C:
+          Docente: M. Hurtado
+          Horas:
+            - Ma0700
+            - Ma0750
+            - Ma0850
+            - Vi0700
+            - Vi0750
+            - Vi0850
+    Metodologia:
+      nombre: Metodología del Trabajo Int. Universitario
+      abreviado: MTU
+      Teoria:
+        A:
+          Docente: "?"
+          Horas:
+            - Lu0850
+            - Lu0940
+            - Ju1040
+            - Ju1130
+        B:
+          Docente: "?"
+          Horas:
+            - Lu1830
+            - Lu1920
+            - Mi1830
+            - Mi1920
+    FP1:
+      nombre: Fundamentos de la Programación 1
+      abreviado: FP1
+      Teoria:
+        A:
+          Docente: Marco Aedo
+          Horas:
+            - Lu1040
+            - Lu1130
+            - Ju0850
+            - Ju0940
+        B:
+          Docente: Marco Aedo
+          Horas:
+            - Ma1550
+            - Ma1640
+            - Vi1550
+            - Vi1640
+        C:
+          Docente: Richard Escobedo
+          Horas:
+            - Ma1400
+            - Ma1450
+            - Ju1830
+            - Ju1920
+    Discretas1:
+      nombre: Estructuras Discretas 1
+      abreviado: ED1
+      Teoria:
+        A:
+          Docente: Olha Sharhorodska
+          Horas:
+            - Lu1220
+            - Lu1310
+            - Ju1220
+            - Ju1310
+        B:
+          Docente: Olha Sharhorodska
+          Horas:
+            - Ju1400
+            - Ju1450
+            - Vi1400
+            - Vi1450
+    Razonamiento:
+      nombre: Razonamiento Lógico Matemático
+      abreviado: RM
+      Teoria:
+        A:
+          Docente: A. Mamani
+          Horas:
+            - Ma0940
+            - Ma1040
+            - Mi0850
+            - Mi0940
+        B:
+          Docente: A. Mamani
+          Horas:
+            - Ma1130
+            - Ma1220
+            - Vi1830
+            - Vi1920
+        C:
+          Docente: F. Torres
+          Horas:
+            - Lu1640
+            - Lu1740
+            - Mi1640
+            - Mi1740
+    Introduccion A Computacion:
+      nombre: Introducción a la Computación
+      abreviado: IC
+      Teoria:
+        A:
+          Docente: A. Paz
+          Horas:
+            - Vi1040
+            - Vi1130
+            - Vi1220
+        B:
+          Docente: "?"
+          Horas:
+            - Ma1740
+            - Ma1830
+            - Ma1920
+    Relaciones Humanas:
+      nombre: Relaciones Humanas en Empresas de Desarrollo de Software
+      abreviado: RH
+      Teoria:
+        A:
+          Docente: Juan C. Juarez
+          Horas:
+            - Mi1040
+            - Mi1130
+            - Mi1220
+        B:
+          Docente: Juan C. Juarez
+          Horas:
+            - Mi1400
+            - Mi1450
+            - Mi1550
   2do año:
     RAII:
       nombre: Redacción de Artículos e Informes de Investigación
