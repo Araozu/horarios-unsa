@@ -28,6 +28,7 @@
     "pug-plain-loader": "^1.0.0",
     "sass": "^1.19.0",
     "sass-loader": "^8.0.0",
+    "vue-gtag": "^1.6.2",
     "vue-template-compiler": "^2.6.10",
     "yaml-loader": "^0.5.0"
   },

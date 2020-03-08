@@ -1,6 +1,6 @@
 # Horarios UNSA
 
-[![Build Status](https://travis-ci.com/Araozu/horarios-unsa.svg?branch=master)](https://travis-ci.com/Araozu/horarios-unsa)
+[![Build Status](https://travis-ci.org/Araozu/horarios-unsa.svg?branch=master)](https://travis-ci.com/Araozu/horarios-unsa)
 
 ## ¿Horario erroneo/desactualizado?
 
