@@ -1,13 +1,15 @@
 <template lang="pug">
     div
-        h3 {{ nombreAño }}
+        v-checkbox(:txt="''" v-model="abierto")
+        h3.titulo_anio {{ nombreAño }}
             div.reiniciar(@click="reiniciarTablaVue") Reiniciar
 
-        tabla-horarios(:nombreAño="nombreAño")
-        curso(v-for="(curso, nombre) in año" :key="nombre"
-            :curso="curso"
-            :nombreAño="nombreAño"
-            :nombreCurso="nombre")
+        div(v-show="abierto")
+            tabla-horarios(:nombreAño="nombreAño")
+            curso(v-for="(curso, nombre) in año" :key="nombre"
+                :curso="curso"
+                :nombreAño="nombreAño"
+                :nombreCurso="nombre")
 
     //
 </template>
@@ -15,11 +17,14 @@
 <script lang="coffee">
     import curso from "./curso.vue"
     import tablaHorarios from "./tabla-horarios.vue"
+    import vCheckbox from "../v-checkbox.vue"
     import { reiniciarTabla } from "./tablaHorarios/funcionesResaltado.coffee"
 
     export default
         name: "Anio"
-        components: { curso, tablaHorarios }
+        components: { curso, tablaHorarios, vCheckbox }
+        data: ->
+            abierto: true
         props:
             año:
                 type: Object
@@ -36,6 +41,11 @@
 </script>
 
 <style scoped lang="sass">
+
+    .titulo_anio
+        position: relative
+        left: 35px
+
 
     .reiniciar
         margin-left: 1rem
