@@ -6,7 +6,7 @@
             h1 Horarios UNSA
             br
             br
-            p Algún dia este proceso será automático, y tendra las otras escuelas...
+            p Ultima actualización: 09/03/20 00:19, con los datos del sistema académico oficial.
             p Laboratorios aún no disponibles.
             // div.info
                 p

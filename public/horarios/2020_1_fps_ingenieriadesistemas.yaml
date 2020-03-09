@@ -93,6 +93,13 @@ años:
             - Ju1450
             - Vi1400
             - Vi1450
+        C:
+          Docente: "?"
+          Horas:
+            - Ju1400
+            - Ju1450
+            - Vi1400
+            - Vi1450
     Razonamiento:
       nombre: Razonamiento Lógico Matemático
       abreviado: RM
@@ -284,6 +291,11 @@ años:
           Horas:
             - Vi1400
             - Vi1450
+        C:
+          Docente: "?"
+          Horas:
+            - Vi1040
+            - Vi1130
     Psicologia:
       nombre: Taller de Psicología
       abreviado: PSI
@@ -319,6 +331,14 @@ años:
             - Ju1740
             - Ju1830
             - Ju1920
+        C:
+          Docente: "?"
+          Horas:
+            - Vi0940
+            - Vi1040
+            - Mi1040
+            - Mi1130
+            - Mi1220
     Investigacion de Operaciones:
       nombre: Investigación de Operaciones
       abreviado: IO
@@ -401,6 +421,11 @@ años:
           Horas:
             - Mi1550
             - Mi1640
+        C:
+          Docente: "?"
+          Horas:
+            - Ju0700
+            - Ju0750
   4to año:
     Sistemas Distribuidos:
       nombre: Sistemas Distribuidos
@@ -445,6 +470,7 @@ años:
           Horas:
             - Ma1040
             - Ma1130
+            - Ma1220
             - Vi0850
             - Vi0940
     Ingles:
@@ -642,6 +668,11 @@ años:
           Horas:
             - Ma1400
             - Ma1450
+        B:
+          Docente: "?"
+          Horas:
+            - Vi1400
+            - Vi1450
     Gestion Sis:
       nombre: Gestión de Sistemas y Tecnologías de Informacion (e)
       abreviado: GSTIe
@@ -651,6 +682,11 @@ años:
           Horas:
             - Ma1550
             - Ma1640
+        B:
+          Docente: "?"
+          Horas:
+            - Ju1400
+            - Ju1450
     Desarrollo Plat:
       nombre: Desarrollo de Nuevas Plataformas Avanzado (e)
       abreviado: DNPAe
@@ -660,3 +696,8 @@ años:
           Horas:
             - Ju1550
             - Ju1640
+        B:
+          Docente: "?"
+          Horas:
+            - Vi1550
+            - Vi1640
