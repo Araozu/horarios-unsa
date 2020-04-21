@@ -6,6 +6,7 @@ import store from './store'
 import './registerServiceWorker'
 import "normalize-css"
 import "./sass/Global.sass"
+import "./sass/colores.sass"
 
 Vue.config.productionTip = false;
 

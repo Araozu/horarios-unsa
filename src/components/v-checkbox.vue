@@ -33,11 +33,12 @@
         position: relative
         padding-left: 35px
         cursor: pointer
-        font-size: 22px
+        font-size: 1rem
         -webkit-user-select: none
         -moz-user-select: none
         -ms-user-select: none
         user-select: none
+        color: var(--colorTexto)
 
 
     /* Hide the browser's default checkbox */
@@ -56,13 +57,13 @@
         left: 0
         height: 25px
         width: 25px
-        background-color: #eee
+        background-color: var(--colorTexto)
         transition: background-color 150ms
         border-radius: 50%
 
 
     /* On mouse-over, add a grey background color */
-    .container:hover input ~ .checkmark
+    // .container:hover input ~ .checkmark
         background-color: #ccc
 
 

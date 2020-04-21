@@ -45,7 +45,10 @@
 
     .contenedor
         display: grid
-        grid-template-columns: 400px auto
+        grid-template-columns: 20rem auto
+        background-color: var(--colorFondo)
+        color: var(--colorTexto)
+        transition: background-color 250ms
 
     .der
         position: relative
@@ -57,7 +60,7 @@
 
     @media only screen and (max-width: 1370px)
         .contenedor
-            grid-template-columns: 200px auto
+            grid-template-columns: 16rem auto
 
 
     @media only screen and (max-width: 1000px)

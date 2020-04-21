@@ -3,6 +3,29 @@ import Vuex from 'vuex';
 
 Vue.use(Vuex);
 
+
+const cambiarModoColor = modo => {
+    const clases = document.body.classList;
+
+    bucle: for (const pos in clases) {
+        if (clases.hasOwnProperty(pos)) {
+            const clase =  clases[pos];
+
+            switch (clase) {
+                case "tema-claro":
+                case "tema-oscuro": {
+                    clases.remove(clase);
+                    break bucle;
+                }
+            }
+
+        }
+    }
+
+    clases.add(modo);
+};
+
+
 const store = new Vuex.Store({
     state: {
         celdas: {},
@@ -17,7 +40,12 @@ const store = new Vuex.Store({
             titulo: "Cargando...",
             años: {}
         },
-        mostrarDescansos: true
+        mostrarDescansos: true,
+        color: (() => {
+            const modo = localStorage.getItem("color") || "oscuro";
+            cambiarModoColor(`tema-${ modo }`);
+            return modo
+        })()
     },
     mutations: {
         registrarCelda(state, idCelda) {
@@ -51,6 +79,11 @@ const store = new Vuex.Store({
         },
         cambiarMostrarDescansos(state, dato) {
             state.mostrarDescansos = !!dato
+        },
+        cambiarColor (state, valor) {
+            state.color = valor;
+            cambiarModoColor(`tema-${valor}`);
+            localStorage.setItem("color", valor);
         }
     },
     actions: {

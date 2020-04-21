@@ -6,8 +6,11 @@
             h1 Horarios UNSA
             br
             br
-            p Ultima actualización: 09/03/20 00:19, con los datos del sistema académico oficial.
-            p Laboratorios aún no disponibles.
+            p RIP laboratorios
+            br
+            v-check-box(txt="Mostrar descansos de 10m" v-model="mostrarDescansos")
+            br
+            v-check-box(txt="Tema oscuro" v-model="temaOscuro")
             // div.info
                 p
                     i Solo algunos horarios están implementados*
@@ -40,7 +43,7 @@
                 // p {{ datos.escuela? datos.escuela.nombre: escuela }}
             br
             br
-            a(href="https://github.com/Araozu/horarios-unsa" target="_blank" style="color: white;").
+            a.link_github(href="https://github.com/Araozu/horarios-unsa" target="_blank").
                 Código fuente en GitHub
             // modo-color
             // h2 Inicio
@@ -50,12 +53,12 @@
 </template>
 
 <script lang="coffee">
-    import modoColor from "./modo-color.vue"
+    import vCheckBox from "../v-checkbox.vue"
     escuelas = require "json-loader!yaml-loader!../../assets/escuelas.yaml"
 
     export default
         name: "barra-lateral"
-        components: { modoColor }
+        components: { vCheckBox }
         data: ->
             escuelas: escuelas
             añoSeleccionado: 2018
@@ -72,6 +75,16 @@
             datos: -> @$store.state.datos
             urlEscuela: ->
                 "http://" + @facultadSeleccionada + ".unsa.edu.pe/" + @escuelaSeleccionada + "/"
+            mostrarDescansos:
+                get: -> @$store.state.mostrarDescansos
+                set: (value) -> @$store.commit "cambiarMostrarDescansos", value
+            temaOscuro:
+                get: -> @$store.state.color == "oscuro"
+                set: (value) ->
+                    @$store.commit "cambiarColor",
+                        if value == true then "oscuro"
+                        else "claro"
+
         watch:
             escuelaSeleccionada: (n) ->
                 console.log "Cambiado a #{n}"
@@ -80,6 +93,10 @@
 </script>
 
 <style scoped lang="sass">
+
+    .link_github
+        color: var(--colorTexto)
+
 
     .boton-lateral
         position: absolute
@@ -102,6 +119,9 @@
         box-shadow: 2px 0 5px 0 rgb(122, 122, 122)
         z-index: 1
         margin-right: 0.5rem
+        background-color: var(--colorFondo)
+        color: var(--colorTexto)
+        transition: background-color 250ms
 
 
     h1
