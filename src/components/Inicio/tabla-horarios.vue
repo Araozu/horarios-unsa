@@ -6,7 +6,7 @@
                 td(v-for="dia in dias") {{ dia }}
         tbody
             template(v-for="hora in horas")
-                tr(v-show="!(horasDescanso.find(x => x === hora)) || $store.state.mostrarDescansos")
+                tr.fila(v-show="!(horasDescanso.find(x => x === hora)) || $store.state.mostrarDescansos")
                     td
                         span {{ hora.substring(0, 5) }}
                         span.ocultar-en-movil {{ hora.substr(5) }}
@@ -66,6 +66,10 @@
 </script>
 
 <style scoped lang="sass">
+
+    .fila:hover
+        background-color: var(--colorFondoFila)
+
 
     .tabla_horario
         width: 100%
