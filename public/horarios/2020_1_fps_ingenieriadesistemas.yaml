@@ -389,6 +389,22 @@ años:
             - Mi1740
             - Mi1830
             - Mi1920
+      Laboratorio:
+        A:
+          Docente: "M. Galarza"
+          Horas:
+            - Mi0850
+            - Mi0940
+        B:
+          Docente: "M. Galarza"
+          Horas:
+            - Lu1400
+            - Lu1450
+        C:
+          Docente: "M. Galarza"
+          Horas:
+            - Mi1040
+            - Mi1130
     Base de Datos:
       nombre: Base de Datos
       abreviado: BD

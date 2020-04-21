@@ -6,7 +6,9 @@
             h1 Horarios UNSA
             br
             br
-            p RIP laboratorios
+            p Agregado horarios de laborotario de Teoria de la Computación.
+            p Si sabes el horario del laboratorio de algun curso, abre
+                | un issue en GitHub y lo añadiré.
             br
             v-check-box(txt="Mostrar descansos de 10m" v-model="mostrarDescansos")
             br
