@@ -75,6 +75,49 @@ años:
             - Ma1450
             - Ju1830
             - Ju1920
+      Laboratorio:
+        A:
+          Docente: Marco Aedo
+          Horas:
+            - Lu0850
+            - Lu0940
+            - Ju1040
+            - Ju1130
+        B:
+          Docente: Marco Aedo
+          Horas:
+            - Ma1400
+            - Ma1450
+            - Vi1400
+            - Vi1450
+        C:
+          Docente: Richard Escobedo
+          Horas:
+            - Ma1740
+            - Ma1830
+            - Mi1550
+            - Mi1640
+        D:
+          Docente: L. Laura
+          Horas:
+            - Mi1400
+            - Mi1450
+            - Ju1400
+            - Ju1450
+        E:
+          Docente: L. Laura
+          Horas:
+            - Lu1400
+            - Lu1450
+            - Mi1550
+            - Mi1640
+        F:
+          Docente: R. Apaza
+          Horas:
+            - Mi1040
+            - Mi1130
+            - Ju1220
+            - Ju1310
     Discretas1:
       nombre: Estructuras Discretas 1
       abreviado: ED1
@@ -245,6 +288,32 @@ años:
             - Ma1450
             - Ju1400
             - Ju1450
+      Laboratorio:
+        A:
+          Docente: Karim Guevara
+          Horas:
+            - Ju0850
+            - Ju0940
+        B:
+          Docente: T. Ramirez
+          Horas:
+            - Lu0700
+            - Lu0750
+        C:
+          Docente: J. Cardenaz
+          Horas:
+            - Lu1400
+            - Lu1450
+        D:
+          Docente: T. Ramirez
+          Horas:
+            - Mi0700
+            - Mi0750
+        E:
+          Docente: J. Cardenaz
+          Horas:
+            - Ju1220
+            - Ju1310
     Liderazgo:
       nombre: Taller de Liderazgo y Colaboración
       abreviado: TLC
@@ -296,6 +365,42 @@ años:
           Horas:
             - Vi1040
             - Vi1130
+      Laboratorio:
+        A:
+          Docente: A. Paz
+          Horas:
+            - Lu1040
+            - Lu1130
+            - Ju1040
+            - Ju1130
+        B:
+          Docente: A. Paz
+          Horas:
+            - Lu1400
+            - Lu1450
+            - Ju1400
+            - Ju1450
+        C:
+          Docente: Carlo Corrales
+          Horas:
+            - Ju0850
+            - Ju0940
+            - Vi0700
+            - Vi0750
+        D:
+          Docente: Carlo Corrales
+          Horas:
+            - Ma1400
+            - Ma1450
+            - Ju1400
+            - Ju1450
+        E:
+          Docente: Carlo Corrales
+          Horas:
+            - Ju1040
+            - Ju1130
+            - Vi0850
+            - Vi0940
     Psicologia:
       nombre: Taller de Psicología
       abreviado: PSI
@@ -357,6 +462,22 @@ años:
             - Lu1450
             - Vi1550
             - Vi1640
+      Laboratorio:
+        A:
+          Docente: JT. Ramirez
+          Horas:
+            - Mi1040
+            - Mi1130
+        B:
+          Docente: JT. Ramirez
+          Horas:
+            - Vi1040
+            - Vi1130
+        C:
+          Docente: JT. Ramirez
+          Horas:
+            - Mi1400
+            - Mi1450
     Organizacion y Metodos:
       nombre: Organización y Métodos
       abreviado: OM
@@ -373,6 +494,12 @@ años:
             - Lu1550
             - Lu1640
             - Lu1740
+      Laboratorio:
+        C:
+          Docente: T. Ramires (?)
+          Horas:
+            - Ju0700
+            - Ju0750
     Teoria de la Computacion:
       nombre: Teoría de la Computación
       abreviado: TC
@@ -396,15 +523,15 @@ años:
             - Mi0850
             - Mi0940
         B:
-          Docente: "M. Galarza"
+          Docente: R. Apaza
           Horas:
-            - Lu1400
-            - Lu1450
+            - Ma1550
+            - Ma1640
         C:
           Docente: "M. Galarza"
           Horas:
-            - Mi1040
-            - Mi1130
+            - Lu1040
+            - Lu1130
     Base de Datos:
       nombre: Base de Datos
       abreviado: BD
@@ -423,6 +550,27 @@ años:
             - Ma1640
             - Ju1550
             - Ju1640
+      Laboratorio:
+        A:
+          Docente: E. Suarez
+          Horas:
+            - Vi0850
+            - Vi0940
+        B:
+          Docente: E. Suarez
+          Horas:
+            - Lu1220
+            - Lu1310
+        C:
+          Docente: E. Suarez
+          Horas:
+            - Lu1040
+            - Lu1130
+        D:
+          Docente: E. Suarez
+          Horas:
+            - Vi1220
+            - Vi1310
     Programacion de Sistemas:
       nombre: Programación de Sistemas
       abreviado: PS
@@ -437,11 +585,28 @@ años:
           Horas:
             - Mi1550
             - Mi1640
-        C:
-          Docente: "?"
+      Laboratorio:
+        A:
+          Docente: O. Ramirez
           Horas:
-            - Ju0700
-            - Ju0750
+            - Ma1550
+            - Ma1640
+            - Vi1400
+            - Vi1450
+        B:
+          Docente: O. Ramirez
+          Horas:
+            - Ma1740
+            - Ma1830
+            - Vi1550
+            - Vi1640
+        C:
+          Docente: O. Ramirez
+          Horas:
+            - Mi1740
+            - Mi1830
+            - Vi1740
+            - Vi1830
   4to año:
     Sistemas Distribuidos:
       nombre: Sistemas Distribuidos
@@ -461,6 +626,17 @@ años:
             - Ma1450
             - Ju1550
             - Ju1640
+      Laboratorio:
+        A:
+          Docente: J. Silvia
+          Horas:
+            - Vi0700
+            - Vi0750
+        B:
+          Docente: F. Calienes
+          Horas:
+            - Vi1400
+            - Vi1450
     Inteligencia Artificial:
       nombre: Inteligencia Artificial
       abreviado: IA
@@ -523,6 +699,17 @@ años:
             - Ju1450
             - Vi1400
             - Vi1450
+      Laboratorio:
+        A:
+          Docente: P. Huertas
+          Horas:
+            - Vi1130
+            - Vi1220
+        B:
+          Docente: P. Huertas
+          Horas:
+            - Vi1740
+            - Vi1830
     Pruebas de Software:
       nombre: Pruebas de Software
       abreviado: PS
@@ -537,6 +724,17 @@ años:
           Horas:
             - Ma1550
             - Ma1640
+      Laboratorio:
+        A:
+          Docente: D. Iquira
+          Horas:
+            - Mi0850
+            - Mi0940
+        B:
+          Docente: D. Iquira
+          Horas:
+            - Lu1740
+            - Lu1830
     Tecnologias de Informacion:
       nombre: Tecnologías de Información
       abreviado: TI
@@ -555,7 +753,22 @@ años:
             - Lu1450
             - Vi1550
             - Vi1640
-
+      Laboratorio:
+        A:
+          Docente: J. Silvia
+          Horas:
+            - Vi1040
+            - Vi1130
+        B:
+          Docente: E. Suarez
+          Horas:
+            - Ma1220
+            - Ma1310
+        C:
+          Docente: L. Delgado
+          Horas:
+            - Mi0850
+            - Mi0940
     Fisica Computacional:
       nombre: Física Computacional
       abreviado: FC
@@ -625,6 +838,21 @@ años:
           Horas:
             - Ju0850
             - Ju0940
+      Laboratorio:
+        A:
+          Docente: F. Gonzales
+          Horas:
+            - Lu1220
+            - Lu1310
+            - Mi1220
+            - Mi1310
+        B:
+          Docente: F. Gonzales
+          Horas:
+            - Ma1220
+            - Ma1310
+            - Ju1220
+            - Ju1310
     Sistemas de Seguridad Critica:
       nombre: Sistemas de Seguridad Crítica
       abreviado: SSC
@@ -643,6 +871,12 @@ años:
             - Ma1040
             - Vi0850
             - Vi0940
+      Laboratorio:
+        A:
+          Docente: L. Delgado
+          Horas:
+            - Mi1040
+            - Mi1130
     Gestion Sw:
       nombre: Gestion de Emprendimiento de Software
       abreviado: GES
@@ -675,6 +909,17 @@ años:
             - Mi1400
             - Mi1450
             - Mi1550
+      Laboratorio:
+        A:
+          Docente: E. Zarate
+          Horas:
+            - Ma1400
+            - Ma1450
+        B:
+          Docente: E. Zarate
+          Horas:
+            - Ma1830
+            - Ma1920
     Multimedia:
       nombre: Multimedia y Realidad Virtual (e)
       abreviado: MRVe
@@ -689,6 +934,17 @@ años:
           Horas:
             - Vi1400
             - Vi1450
+      Laboratorio:
+        A:
+          Docente: D. Iquira
+          Horas:
+            - Ju0850
+            - Ju0940
+        B:
+          Docente: D. Iquira
+          Horas:
+            - Lu1550
+            - Lu1640
     Gestion Sis:
       nombre: Gestión de Sistemas y Tecnologías de Informacion (e)
       abreviado: GSTIe
@@ -703,6 +959,17 @@ años:
           Horas:
             - Ju1400
             - Ju1450
+      Laboratorio:
+        A:
+          Docente: Richard Escobedo
+          Horas:
+            - Ma1220
+            - Ma1310
+        B:
+          Docente: Richard Escobedo
+          Horas:
+            - Ju1550
+            - Ju1640
     Desarrollo Plat:
       nombre: Desarrollo de Nuevas Plataformas Avanzado (e)
       abreviado: DNPAe
@@ -717,3 +984,14 @@ años:
           Horas:
             - Vi1550
             - Vi1640
+      Laboratorio:
+        A:
+          Docente: E. Suarez
+          Horas:
+            - Ma0850
+            - Ma0940
+        B:
+          Docente: E. Suarez
+          Horas:
+            - Ma1040
+            - Ma1130
