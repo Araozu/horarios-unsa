@@ -168,7 +168,7 @@ años:
             - Lu0750
             - Lu0850
         B:
-          Docente: "?"
+          Docente: E. Suarez
           Horas:
             - Lu1640
             - Lu1740
@@ -442,6 +442,28 @@ años:
           Horas:
             - Ju0700
             - Ju0750
+      Laboratorio:
+        A:
+          Docente: O. Ramirez
+          Horas:
+            - Ma1550
+            - Ma1640
+            - Vi1400
+            - Vi1450
+        B:
+          Docente: O. Ramirez
+          Horas:
+            - Ma1740
+            - Ma1830
+            - Vi1550
+            - Vi1640
+        C:
+          Docente: O. Ramirez
+          Horas:
+            - Mi1740
+            - Mi1830
+            - Vi1740
+            - Vi1830
   4to año:
     Sistemas Distribuidos:
       nombre: Sistemas Distribuidos
