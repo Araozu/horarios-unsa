@@ -6,9 +6,11 @@
             h1 Horarios UNSA
             br
             br
-            p Agregado horarios de laborotario de Teoria de la Computación.
-            p Si sabes el horario del laboratorio de algun curso, abre
-                | un issue en GitHub y lo añadiré.
+            p Los horarios están completos. Fuente:
+            a.link_github(href="https://drive.google.com/file/d/1DqAkbDtcVjAWhEb6YwMpFWUkXGpgeQt1/view"
+                target="_blank")
+                | Google Drive
+            br
             br
             v-check-box(txt="Mostrar descansos de 10m" v-model="mostrarDescansos")
             br
