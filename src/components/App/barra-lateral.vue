@@ -1,57 +1,58 @@
 <template lang="pug">
-    div.lateral(:style="'height: ' + alto + 'px;'")
-        div.mostrar-bajo-1000.boton-lateral(:style="'height: ' + alto + 'px;'")
+    div.lateral
+        div.mostrar-bajo-1000.boton-lateral
             div »
         div.barra
-            h1 Horarios UNSA
-            br
-            br
-            p Los horarios están completos. Fuente:
-            a.link_github(href="https://drive.google.com/file/d/1DqAkbDtcVjAWhEb6YwMpFWUkXGpgeQt1/view"
-                target="_blank")
-                | Google Drive
-            br
-            br
-            v-check-box(txt="Mostrar descansos de 10m" v-model="mostrarDescansos")
-            br
-            v-check-box(txt="Tema oscuro" v-model="temaOscuro")
-            // div.info
-                p
-                    i Solo algunos horarios están implementados*
-                // p {{ año }}-{{ periodo }}
-                div
-                    select(v-model.number="añoSeleccionado")
-                        option 2018
-                        option 2019
-                        option 2020
-                    select(v-model.number="periodoSeleccionado")
-                        option 1
-                        option 2
+            template(v-if="!barraOculta")
+                h1 Horarios UNSA
+                br
+                br
+                p Los horarios están completos. Fuente:
+                a.link_github(href="https://drive.google.com/file/d/1DqAkbDtcVjAWhEb6YwMpFWUkXGpgeQt1/view"
+                    target="_blank")
+                    | Google Drive
+                br
+                br
+                v-check-box(txt="Mostrar descansos de 10m" v-model="mostrarDescansos")
+                br
+                v-check-box(txt="Tema oscuro" v-model="temaOscuro")
+                // div.info
+                    p
+                        i Solo algunos horarios están implementados*
+                    // p {{ año }}-{{ periodo }}
+                    div
+                        select(v-model.number="añoSeleccionado")
+                            option 2018
+                            option 2019
+                            option 2020
+                        select(v-model.number="periodoSeleccionado")
+                            option 1
+                            option 2
 
-                // p {{ datos.facultad? datos.facultad.nombre: facultad }}
-                div
-                    select(v-model="areaSeleccionada")
-                        option(v-for="(_, nombre) in escuelas") {{ nombre }}
+                    // p {{ datos.facultad? datos.facultad.nombre: facultad }}
+                    div
+                        select(v-model="areaSeleccionada")
+                            option(v-for="(_, nombre) in escuelas") {{ nombre }}
 
-                div
-                    select(v-model="facultadSeleccionada")
-                        option(v-for="(facultad, nombre) in escuelas[areaSeleccionada]" :value="nombre") {{ facultad.nombre }}
+                    div
+                        select(v-model="facultadSeleccionada")
+                            option(v-for="(facultad, nombre) in escuelas[areaSeleccionada]" :value="nombre") {{ facultad.nombre }}
 
-                div(v-if="escuelas[areaSeleccionada][facultadSeleccionada]")
-                    select(v-model="escuelaSeleccionada")
-                        option(v-for="(escuela, nombre) in escuelas[areaSeleccionada][facultadSeleccionada].escuelas" :value="nombre")
-                            | {{ escuela.nombre }}
+                    div(v-if="escuelas[areaSeleccionada][facultadSeleccionada]")
+                        select(v-model="escuelaSeleccionada")
+                            option(v-for="(escuela, nombre) in escuelas[areaSeleccionada][facultadSeleccionada].escuelas" :value="nombre")
+                                | {{ escuela.nombre }}
 
-                div
-                    a(:href="urlEscuela" target="_blank") Página de la escuela
-                // p {{ datos.escuela? datos.escuela.nombre: escuela }}
-            br
-            br
-            a.link_github(href="https://github.com/Araozu/horarios-unsa" target="_blank").
-                Código fuente en GitHub
-            // modo-color
-            // h2 Inicio
-            // h2 Otros
+                    div
+                        a(:href="urlEscuela" target="_blank") Página de la escuela
+                    // p {{ datos.escuela? datos.escuela.nombre: escuela }}
+                br
+                br
+                a.link_github(href="https://github.com/Araozu/horarios-unsa" target="_blank").
+                    Código fuente en GitHub
+
+            div.boton-ocultar(@click="fnCambiarEstadoBarra")
+                span.material-icons {{ barraOculta? "keyboard_arrow_right": "keyboard_arrow_left" }}
 
     //
 </template>
@@ -70,8 +71,14 @@
             areaSeleccionada: "Ingenierías"
             facultadSeleccionada: "fips"
             escuelaSeleccionada: "ingenieriadesistemas"
+        props:
+            barraOculta:
+                type: Boolean
+                required: true
+            fnCambiarEstadoBarra:
+                type: Function
+                required: true
         computed:
-            alto: -> @$store.state.altoPantalla
             año: -> @$store.state.año
             periodo: -> @$store.state.periodo
             facultad: -> @$store.state.facultad
@@ -98,6 +105,28 @@
 
 <style scoped lang="sass">
 
+    .boton-ocultar
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 3rem
+        border-top: solid 1px var(--colorBorde)
+        text-align: right
+        display: inline-table
+        padding-right: 1rem
+        box-sizing: border-box
+        cursor: pointer
+        opacity: 0.6
+        &:hover
+            background-color: var(--colorHover)
+            opacity: 1
+        .material-icons
+            display: table-cell
+            vertical-align: middle
+            font-size: 2rem
+
+
     .link_github
         color: var(--colorTexto)
 
@@ -115,17 +144,17 @@
             vertical-align: middle
 
 
-
     .lateral
         display: block
         position: relative
+        height: 100vh
         top: 0
         box-shadow: 2px 0 5px 0 rgb(122, 122, 122)
         z-index: 1
         margin-right: 0.5rem
         background-color: var(--colorFondo)
         color: var(--colorTexto)
-        transition: background-color 250ms
+        // transition: background-color 250ms
 
 
     h1

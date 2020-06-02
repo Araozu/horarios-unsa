@@ -73,14 +73,15 @@
 
     .tabla_horario
         width: 100%
-        border-color: rgba(135, 135, 135, 0.51)
-
+        border-color: var(--colorBorde) // rgba(135, 135, 135, 0.51)
+        border: none
         tr
             vertical-align: middle
             text-align: center
             td:first-child
                 width: 8rem
-
+        td
+            border: solid 1px var(--colorBorde)
 
 
     @media only screen and (max-width: 700px)

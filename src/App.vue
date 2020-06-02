@@ -1,7 +1,7 @@
 <template lang="pug">
-    div.contenedor
+    div.contenedor(:style="anchoBarraLateral")
         template(v-if="ancho > 500")
-            barra-lateral
+            barra-lateral(:barraOculta="barraLateralOculta" :fnCambiarEstadoBarra="cambiarEstadoBarraLateral")
             div.der(:style="'max-height: ' + alto + 'px;'")
                 router-view
         template(v-else)
@@ -25,6 +25,8 @@
     export default
         name: "App"
         components: { barraLateral }
+        data: ->
+            barraLateralOculta: false
         computed:
             alto: -> @$store.state.altoPantalla
             ancho: -> @$store.state.anchoPantalla
@@ -32,6 +34,12 @@
             periodo: -> @$store.state.periodo
             facultad: -> @$store.state.facultad
             escuela: -> @$store.state.escuela
+            anchoBarraLateral: ->
+                if @barraLateralOculta then { gridTemplateColumns: "4rem auto" }
+                else { gridTemplateColumns: "20rem auto" }
+        methods:
+            cambiarEstadoBarraLateral: ->
+                @barraLateralOculta = !@barraLateralOculta
         created: ->
             vm = this
             resRaw = await fetch "/horarios/#{@año}_#{@periodo}_#{@facultad}_#{@escuela}.yaml"
@@ -48,7 +56,7 @@
         grid-template-columns: 20rem auto
         background-color: var(--colorFondo)
         color: var(--colorTexto)
-        transition: background-color 250ms
+        // transition: background-color 250ms
 
     .der
         position: relative
