@@ -9,7 +9,7 @@
     "test": "vue-cli-service build --modern"
   },
   "dependencies": {
-    "@babel/compat-data": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
     "core-js": "^3.3.2",
     "register-service-worker": "^1.6.2",
     "vue": "^2.6.10",
