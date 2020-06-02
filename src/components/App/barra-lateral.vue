@@ -118,6 +118,7 @@
         box-sizing: border-box
         cursor: pointer
         opacity: 0.6
+        user-select: none
         &:hover
             background-color: var(--colorHover)
             opacity: 1
