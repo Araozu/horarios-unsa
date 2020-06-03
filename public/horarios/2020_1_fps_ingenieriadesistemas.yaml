@@ -495,6 +495,11 @@ años:
             - Lu1640
             - Lu1740
       Laboratorio:
+        A:
+          Docente: Juan C. Juarez
+          Horas:
+            - Lu0850
+            - Lu0940
         C:
           Docente: T. Ramires (?)
           Horas:

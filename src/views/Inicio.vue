@@ -16,6 +16,7 @@
         br
 
         anio(:año="horarioUsuario" nombreAño="Mi horario")
+
         anio(v-for="(año, i) in datos.años" :key="i"
             :año="año" :nombreAño="i"
         )

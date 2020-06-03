@@ -1,10 +1,9 @@
 <template lang="pug">
-    div.info_curso
+    div.info_curso(:style="estiloCurso")
         h4.titulo_curso(@mouseenter="resaltarTodasCeldas" @mouseleave="quitarResaltadoCeldas"
-            :title="cursoAgregado? 'Remover de mi horario': 'Agregar curso a mi horario'"
-            @click.stop="agregarCursoAMiHorario"
+
         )
-            input.marcador_curso(type="checkbox" v-model="cursoAgregado")
+            // input.marcador_curso(type="checkbox" v-model="cursoAgregado")
             span.ancho {{ curso.abreviado }} >&nbsp;
             | {{ curso.nombre }}
         table.datos
@@ -31,6 +30,11 @@
                 template(v-else)
                     td
                         span.ancho | _
+
+        div.acciones-cursos
+            span.material-icons(@click.stop="agregarCursoAMiHorario" :title="cursoAgregado? 'Quitar': 'Agregar'")
+                | {{ cursoAgregado? "remove": "add" }}
+
 
     //
 </template>
@@ -103,6 +107,9 @@
                     if idCurso is @idCurso then return true
 
                 false
+            estiloCurso: ->
+                if @cursoAgregado then { backgroundColor: "var(--colorHover)" }
+                else {}
         methods:
             agregarCursoAMiHorario: ->
                 if @cursoAgregado
@@ -171,6 +178,21 @@
 
 <style scoped lang="sass">
 
+    .acciones-cursos
+        margin-top: 0.15rem
+        display: inline-table
+        .material-icons
+            display: table-cell
+            user-select: none
+            cursor: pointer
+            font-size: 1.5rem
+            border: solid 1px transparent
+            border-radius: 2px
+            &:hover
+                border: solid 1px var(--colorTexto)
+                background-color: var(--colorHover)
+
+
     .marcador_curso
         display: inline-block
         margin-right: 0.45rem
@@ -186,11 +208,14 @@
 
     .info_curso
         display: inline-block
-        padding: 1rem
+        padding: 0.5rem 0.75rem
         vertical-align: top
+        border-radius: 2px
+        margin-right: 0.2rem
+        margin-bottom: 0.2rem
 
         h4
-            margin-top: 1rem
+            margin-top: 0.5rem
             margin-bottom: 0.25rem
 
     .teoria, .laboratorio, .datos
