@@ -1,8 +1,8 @@
 <template lang="pug">
-    td(:class="clases")
-        celda-curso(v-for="(datos, i) in datosCeldas" :key="i" :datos="datos" :nombreAño="nombreAño")
-    
-    //
+td(:class="clases")
+    celda-curso(v-for="(datos, i) in datosCeldas" :key="i" :datos="datos" :nombreAño="nombreAño")
+
+//
 </template>
 
 <script lang="coffee">

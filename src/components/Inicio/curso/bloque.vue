@@ -1,17 +1,17 @@
 <template lang="pug">
-    td
-        span.ancho |&nbsp;
-        | {{ profesor }}
-        span.ancho.cursor_click(
-            v-for="grupo in grupos"
-                :class="obtenerClase(grupo)"
-                @mouseenter="resaltarCeldasGrupo(grupo)"
-                @mouseleave="quitarResaltadoGrupo(grupo)"
-                @click="toggleActivo(grupo)"
-        )
-            |  {{ esLab? 'L': 'T' }}{{ grupo }}&nbsp;
+td
+    span.ancho |&nbsp;
+    | {{ profesor }}
+    span.ancho.cursor_click(
+        v-for="grupo in grupos"
+            :class="obtenerClase(grupo)"
+            @mouseenter="resaltarCeldasGrupo(grupo)"
+            @mouseleave="quitarResaltadoGrupo(grupo)"
+            @click="toggleActivo(grupo)"
+    )
+        |  {{ esLab? 'L': 'T' }}{{ grupo }}&nbsp;
 
-    //
+//
 </template>
 
 <script lang="coffee">

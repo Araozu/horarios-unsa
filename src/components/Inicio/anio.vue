@@ -1,17 +1,17 @@
 <template lang="pug">
-    div
-        v-checkbox(:txt="''" v-model="abierto")
-        h3.titulo_anio {{ nombreAño }}
-            div.reiniciar(@click="reiniciarTablaVue") Reiniciar
+div
+    v-checkbox(:txt="''" v-model="abierto")
+    h3.titulo_anio {{ nombreAño }}
+        div.reiniciar(@click="reiniciarTablaVue") Reiniciar
 
-        div(v-show="abierto")
-            tabla-horarios(:nombreAño="nombreAño")
-            curso(v-for="(curso, nombre) in año" :key="nombre"
-                :curso="curso"
-                :nombreAño="nombreAño"
-                :nombreCurso="nombre")
+    div(v-show="abierto")
+        tabla-horarios(:nombreAño="nombreAño")
+        curso(v-for="(curso, nombre) in año" :key="nombre"
+            :curso="curso"
+            :nombreAño="nombreAño"
+            :nombreCurso="nombre")
 
-    //
+//
 </template>
 
 <script lang="coffee">

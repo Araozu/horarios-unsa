@@ -1,12 +1,12 @@
 <template lang="pug">
-    span.celda(:class="clases" :eslab="datos.esLab? 'true': 'false'"
-        @mouseenter="resaltarCeldasGrupo"
-        @mouseleave="quitarResaltadoGrupo"
-        @click="toggleActivo")
-        |  {{ datos.cursoAbreviado }}
-        span  {{ (datos.esLab? "L": "") + datos.nombreGrupo }}&nbsp;
+span.celda(:class="clases" :eslab="datos.esLab? 'true': 'false'"
+    @mouseenter="resaltarCeldasGrupo"
+    @mouseleave="quitarResaltadoGrupo"
+    @click="toggleActivo")
+    |  {{ datos.cursoAbreviado }}
+    span  {{ (datos.esLab? "L": "") + datos.nombreGrupo }}&nbsp;
 
-    //
+//
 </template>
 
 <script lang="coffee">

@@ -1,8 +1,4 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
-
-Vue.use(Vuex);
-
+import Vuex from 'vuex'
 
 const cambiarModoColor = modo => {
     const clases = document.body.classList;
@@ -25,8 +21,7 @@ const cambiarModoColor = modo => {
     clases.add(modo);
 };
 
-
-const store = new Vuex.Store({
+export default Vuex.createStore({
     state: {
         celdas: {},
         horarioUsuario: {},
@@ -86,11 +81,9 @@ const store = new Vuex.Store({
             localStorage.setItem("color", valor);
         }
     },
-    actions: {
-
-    }
+    actions: {},
+    modules: {}
 });
 
-store.commit("registrarListenerTamanoPantalla");
-
-export default store;
+// TODO: Mover esto al componente App
+// store.commit("registrarListenerTamanoPantalla");

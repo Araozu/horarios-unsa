@@ -1,22 +1,22 @@
 <template lang="pug">
-    table.tabla_horario(border="1")
-        thead
-            tr
-                td Hora
-                td(v-for="dia in dias") {{ dia }}
-        tbody
-            template(v-for="hora in horas")
-                tr.fila(v-show="!(horasDescanso.find(x => x === hora)) || $store.state.mostrarDescansos")
-                    td
-                        span {{ hora.substring(0, 5) }}
-                        span.ocultar-en-movil {{ hora.substr(5) }}
-                    celda(v-for="(dia, i) in dias" :key="i"
-                        :dia="dia"
-                        :hora="hora"
-                        :nombreAño="nombreAño"
-                        :nombreStore="nombreStore")
-    
-    //
+table.tabla_horario(border="1")
+    thead
+        tr
+            td Hora
+            td(v-for="dia in dias") {{ dia }}
+    tbody
+        template(v-for="hora in horas")
+            tr.fila(v-show="!(horasDescanso.find(x => x === hora)) || $store.state.mostrarDescansos")
+                td
+                    span {{ hora.substring(0, 5) }}
+                    span.ocultar-en-movil {{ hora.substr(5) }}
+                celda(v-for="(dia, i) in dias" :key="i"
+                    :dia="dia"
+                    :hora="hora"
+                    :nombreAño="nombreAño"
+                    :nombreStore="nombreStore")
+
+//
 </template>
 
 <script lang="coffee">

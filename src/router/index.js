@@ -1,19 +1,17 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Inicio from '../views/Inicio.vue'
-
-Vue.use(VueRouter);
+import {createRouter, createWebHistory} from 'vue-router';
+import Inicio from "../views/Inicio.vue";
 
 const routes = [
-  {
-    path: '/',
-    name: 'Inicio',
-    component: Inicio
-  }
+    {
+        path: '/',
+        name: 'Inicio',
+        component: Inicio
+    }
 ];
 
-const router = new VueRouter({
-  routes
+const router = createRouter({
+    history: createWebHistory(process.env.BASE_URL),
+    routes
 });
 
-export default router
+export default router;

@@ -1,42 +1,42 @@
 <template lang="pug">
-    div.info_curso(:style="estiloCurso")
-        h4.titulo_curso(@mouseenter="resaltarTodasCeldas" @mouseleave="quitarResaltadoCeldas"
+div.info_curso(:style="estiloCurso")
+    h4.titulo_curso(@mouseenter="resaltarTodasCeldas" @mouseleave="quitarResaltadoCeldas"
 
-        )
-            // input.marcador_curso(type="checkbox" v-model="cursoAgregado")
-            span.ancho {{ curso.abreviado }} >&nbsp;
-            | {{ curso.nombre }}
-        table.datos
-            tr
-                bloque(v-for="(grupos, profesor) in teoria"
+    )
+        // input.marcador_curso(type="checkbox" v-model="cursoAgregado")
+        span.ancho {{ curso.abreviado }} >&nbsp;
+        | {{ curso.nombre }}
+    table.datos
+        tr
+            bloque(v-for="(grupos, profesor) in teoria"
+                :grupos="grupos"
+                :profesor="profesor"
+                :nombreAño="nombreAño"
+                :abreviado="curso.abreviado"
+                :key="profesor"
+            )
+
+        tr
+            template(v-if="!laboratorioVacio")
+                bloque(v-for="(grupos, profesor) in laboratorio"
                     :grupos="grupos"
                     :profesor="profesor"
+                    :esLab="true"
                     :nombreAño="nombreAño"
                     :abreviado="curso.abreviado"
                     :key="profesor"
                 )
 
-            tr
-                template(v-if="!laboratorioVacio")
-                    bloque(v-for="(grupos, profesor) in laboratorio"
-                        :grupos="grupos"
-                        :profesor="profesor"
-                        :esLab="true"
-                        :nombreAño="nombreAño"
-                        :abreviado="curso.abreviado"
-                        :key="profesor"
-                    )
+            template(v-else)
+                td
+                    span.ancho | _
 
-                template(v-else)
-                    td
-                        span.ancho | _
-
-        div.acciones-cursos
-            span.material-icons(@click.stop="agregarCursoAMiHorario" :title="cursoAgregado? 'Quitar': 'Agregar'")
-                | {{ cursoAgregado? "remove": "add" }}
+    div.acciones-cursos
+        span.material-icons(@click.stop="agregarCursoAMiHorario" :title="cursoAgregado? 'Quitar': 'Agregar'")
+            | {{ cursoAgregado? "remove": "add" }}
 
 
-    //
+//
 </template>
 
 <script lang="coffee">

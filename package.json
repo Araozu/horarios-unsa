@@ -1,45 +1,39 @@
 {
-  "name": "horarios",
+  "name": "horarios-unsa",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --modern",
-    "deploy": "vue-cli-service build --modern & cd dist & surge",
     "test": "vue-cli-service build --modern"
   },
   "dependencies": {
-    "@babel/preset-env": "^7.10.2",
-    "core-js": "^3.3.2",
-    "register-service-worker": "^1.6.2",
-    "vue": "^2.6.10",
-    "vue-router": "^3.1.3",
-    "vuex": "^3.0.1",
-    "yaml": "^1.7.2"
+    "@babel/preset-env": "^7.10.4",
+    "coffee-loader": "^1.0.0",
+    "coffeescript": "^2.5.1",
+    "json-loader": "^0.5.7",
+    "normalize.css": "^8.0.1",
+    "pug": "2.0.4",
+    "pug-plain-loader": "^1.0.0",
+    "vue": "^3.0.0-rc.4",
+    "vue-gtag": "^1.8.0",
+    "vue-router": "^4.0.0-alpha.6",
+    "vuex": "^4.0.0-alpha.1",
+    "yaml": "^1.10.0",
+    "yaml-loader": "^0.6.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.0.0",
-    "@vue/cli-plugin-pwa": "^4.0.0",
-    "@vue/cli-service": "^4.0.0",
-    "coffee-loader": "^0.9.0",
-    "coffeescript": "^2.4.1",
-    "json-loader": "^0.5.7",
-    "normalize-css": "^2.3.1",
-    "pug": "^2.0.4",
-    "pug-plain-loader": "^1.0.0",
-    "sass": "^1.19.0",
-    "sass-loader": "^8.0.0",
-    "vue-gtag": "^1.6.2",
-    "vue-template-compiler": "^2.6.10",
-    "yaml-loader": "^0.5.0"
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
+    "@vue/cli-plugin-router": "~4.4.0",
+    "@vue/cli-plugin-vuex": "~4.4.0",
+    "@vue/cli-service": "~4.4.0",
+    "@vue/compiler-sfc": "^3.0.0-rc.4",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "vue-cli-plugin-vue-next": "~0.1.3"
   },
   "browserslist": [
     "> 1%",
-    "last 2 versions"
+    "last 2 versions",
+    "not dead"
   ]
 }

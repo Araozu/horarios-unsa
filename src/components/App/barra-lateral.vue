@@ -1,60 +1,60 @@
 <template lang="pug">
-    div.lateral
-        div.mostrar-bajo-1000.boton-lateral
-            div »
-        div.barra
-            template(v-if="!barraOculta")
-                h1 Horarios UNSA
-                br
-                br
-                p Los horarios están completos. Fuente:
-                a.link_github(href="https://drive.google.com/file/d/1DqAkbDtcVjAWhEb6YwMpFWUkXGpgeQt1/view"
-                    target="_blank")
-                    | Google Drive
-                br
-                br
-                v-check-box(txt="Mostrar descansos de 10m" v-model="mostrarDescansos")
-                br
-                v-check-box(txt="Tema oscuro" v-model="temaOscuro")
-                // div.info
-                    p
-                        i Solo algunos horarios están implementados*
-                    // p {{ año }}-{{ periodo }}
-                    div
-                        select(v-model.number="añoSeleccionado")
-                            option 2018
-                            option 2019
-                            option 2020
-                        select(v-model.number="periodoSeleccionado")
-                            option 1
-                            option 2
+div.lateral
+    div.mostrar-bajo-1000.boton-lateral
+        div »
+    div.barra
+        template(v-if="!barraOculta")
+            h1 Horarios UNSA
+            br
+            br
+            p Los horarios están completos. Fuente:
+            a.link_github(href="https://drive.google.com/file/d/1DqAkbDtcVjAWhEb6YwMpFWUkXGpgeQt1/view"
+                target="_blank")
+                | Google Drive
+            br
+            br
+            v-check-box(txt="Mostrar descansos de 10m" v-model="mostrarDescansos")
+            br
+            v-check-box(txt="Tema oscuro" v-model="temaOscuro")
+            // div.info
+                p
+                    i Solo algunos horarios están implementados*
+                // p {{ año }}-{{ periodo }}
+                div
+                    select(v-model.number="añoSeleccionado")
+                        option 2018
+                        option 2019
+                        option 2020
+                    select(v-model.number="periodoSeleccionado")
+                        option 1
+                        option 2
 
-                    // p {{ datos.facultad? datos.facultad.nombre: facultad }}
-                    div
-                        select(v-model="areaSeleccionada")
-                            option(v-for="(_, nombre) in escuelas") {{ nombre }}
+                // p {{ datos.facultad? datos.facultad.nombre: facultad }}
+                div
+                    select(v-model="areaSeleccionada")
+                        option(v-for="(_, nombre) in escuelas") {{ nombre }}
 
-                    div
-                        select(v-model="facultadSeleccionada")
-                            option(v-for="(facultad, nombre) in escuelas[areaSeleccionada]" :value="nombre") {{ facultad.nombre }}
+                div
+                    select(v-model="facultadSeleccionada")
+                        option(v-for="(facultad, nombre) in escuelas[areaSeleccionada]" :value="nombre") {{ facultad.nombre }}
 
-                    div(v-if="escuelas[areaSeleccionada][facultadSeleccionada]")
-                        select(v-model="escuelaSeleccionada")
-                            option(v-for="(escuela, nombre) in escuelas[areaSeleccionada][facultadSeleccionada].escuelas" :value="nombre")
-                                | {{ escuela.nombre }}
+                div(v-if="escuelas[areaSeleccionada][facultadSeleccionada]")
+                    select(v-model="escuelaSeleccionada")
+                        option(v-for="(escuela, nombre) in escuelas[areaSeleccionada][facultadSeleccionada].escuelas" :value="nombre")
+                            | {{ escuela.nombre }}
 
-                    div
-                        a(:href="urlEscuela" target="_blank") Página de la escuela
-                    // p {{ datos.escuela? datos.escuela.nombre: escuela }}
-                br
-                br
-                a.link_github(href="https://github.com/Araozu/horarios-unsa" target="_blank").
-                    Código fuente en GitHub
+                div
+                    a(:href="urlEscuela" target="_blank") Página de la escuela
+                // p {{ datos.escuela? datos.escuela.nombre: escuela }}
+            br
+            br
+            a.link_github(href="https://github.com/Araozu/horarios-unsa" target="_blank").
+                Código fuente en GitHub
 
-            div.boton-ocultar(@click="fnCambiarEstadoBarra")
-                span.material-icons {{ barraOculta? "keyboard_arrow_right": "keyboard_arrow_left" }}
+        div.boton-ocultar(@click="fnCambiarEstadoBarra")
+            span.material-icons {{ barraOculta? "keyboard_arrow_right": "keyboard_arrow_left" }}
 
-    //
+//
 </template>
 
 <script lang="coffee">

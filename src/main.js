@@ -1,21 +1,18 @@
-import Vue from 'vue'
-import App from './App.vue'
-import VueGtag from "vue-gtag"
-import router from './router'
-import store from './store'
-import './registerServiceWorker'
-import "normalize-css"
-import "./sass/Global.sass"
-import "./sass/colores.sass"
+import { createApp } from 'vue';
+import App from './App.vue';
+import VueGtag from "vue-gtag";
+import router from './router';
+import store from './store';
+import "normalize.css";
+import "./sass/Global.sass";
+import "./sass/colores.sass";
 
-Vue.config.productionTip = false;
-
-Vue.use(VueGtag, {
-    config: { id: "UA-113477820-2" }
+const app = createApp(App);
+app.use(router);
+app.use(store);
+/*
+app.use(VueGtag, {
+    config: {id: "UA-113477820-2"}
 }, router);
-
-new Vue({
-    router,
-    store,
-    render: h => h(App)
-}).$mount('#app');
+ */
+app.mount('#app');

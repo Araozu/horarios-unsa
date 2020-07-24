@@ -1,9 +1,9 @@
 <template lang="pug">
-    label.container {{ txt }}
-        input(type="checkbox" :checked="checked" @input="$emit('change', $event.target.checked)")
-        span.checkmark
-    
-    //
+label.container {{ txt }}
+    input(type="checkbox" :checked="checked" @input="$emit('change', $event.target.checked)")
+    span.checkmark
+
+//
 </template>
 
 <script lang="coffee">
@@ -20,7 +20,7 @@
             checked:
                 type: Boolean
                 required: true
-    
+
 #
 </script>
 

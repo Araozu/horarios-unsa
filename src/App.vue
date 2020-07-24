@@ -1,21 +1,21 @@
 <template lang="pug">
-    div.contenedor(:style="anchoBarraLateral")
-        template(v-if="ancho > 500")
-            barra-lateral(:barraOculta="barraLateralOculta" :fnCambiarEstadoBarra="cambiarEstadoBarraLateral")
-            div.der(:style="'max-height: ' + alto + 'px;'")
-                router-view
-        template(v-else)
-            br
-            div
-                h1 Horarios UNSA
-                p Parece que estás usando un celular.
-                p Rota tu celular para poder usar el sistema de horarios.
-                p.
-                    Recomendamos un computador o laptop para obtener
-                    el funcionamiento completo.
+div.contenedor(:style="anchoBarraLateral")
+    template(v-if="ancho > 500")
+        barra-lateral(:barraOculta="barraLateralOculta" :fnCambiarEstadoBarra="cambiarEstadoBarraLateral")
+        div.der(:style="'max-height: ' + alto + 'px;'")
+            router-view
+    template(v-else)
+        br
+        div
+            h1 Horarios UNSA
+            p Parece que estás usando un celular.
+            p Rota tu celular para poder usar el sistema de horarios.
+            p.
+                Recomendamos un computador o laptop para obtener
+                el funcionamiento completo.
 
 
-    //
+//
 </template>
 
 <script lang="coffee">
