@@ -14,7 +14,6 @@ div.contenedor(:style="anchoBarraLateral")
                 Recomendamos un computador o laptop para obtener
                 el funcionamiento completo.
 
-
 //
 </template>
 
@@ -58,6 +57,7 @@ div.contenedor(:style="anchoBarraLateral")
             facultad
             escuela
             anchoBarraLateral
+            cambiarEstadoBarraLateral
         }
 
     export default {

@@ -15,16 +15,26 @@ div
 </template>
 
 <script lang="coffee">
+    import {ref} from "vue"
     import curso from "./curso.vue"
     import tablaHorarios from "./tabla-horarios.vue"
     import vCheckbox from "../v-checkbox.vue"
     import { reiniciarTabla } from "./tablaHorarios/funcionesResaltado.coffee"
 
-    export default
+    setup = (props) =>
+        abierto = ref true
+
+        reiniciarTablaVue = =>
+            nombreAño = "_" + (props.nombreAño.substring 0, (props.nombreAño.indexOf " "))
+            reiniciarTabla nombreAño
+
+        {
+            abierto
+        }
+
+    export default {
         name: "Anio"
-        components: { curso, tablaHorarios, vCheckbox }
-        data: ->
-            abierto: true
+        components: {curso, tablaHorarios, vCheckbox}
         props:
             año:
                 type: Object
@@ -32,10 +42,8 @@ div
             nombreAño:
                 type: String
                 required: true
-        methods:
-            reiniciarTablaVue: ->
-                nombreAño = "_" + (@nombreAño.substring 0, (@nombreAño.indexOf " "))
-                reiniciarTabla nombreAño
+        setup
+    }
 
 #
 </script>

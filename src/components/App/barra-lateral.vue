@@ -58,19 +58,59 @@ div.lateral
 </template>
 
 <script lang="coffee">
+    import {ref, computed} from "vue"
+    import {useStore} from "vuex"
     import vCheckBox from "../v-checkbox.vue"
     escuelas = require "json-loader!yaml-loader!../../assets/escuelas.yaml"
 
-    export default
+    setup = =>
+        store = useStore()
+
+        escuelas = ref escuelas
+        anioSeleccionado = ref 2018
+        periodoSeleccionado = ref 2
+        areaSeleccionada = ref "Ingenierías"
+        facultadSeleccionada = ref "fips"
+        escuelaSeleccionada = ref "ingenieriadesistemas"
+
+        año = computed (=> store.state.año)
+        periodo = computed (=> store.state.periodo)
+        facultad = computed (=> store.state.facultad)
+        escuela = computed (=> store.state.escuela)
+        datos = computed (=> store.state.datos)
+        urlEscuela = computed (=>
+            "http://" + facultadSeleccionada.value + ".unsa.edu.pe/" + escuelaSeleccionada.value + "/")
+        mostrarDescansos = computed ({
+            get: -> store.state.mostrarDescansos
+            set: (value) -> store.commit "cambiarMostrarDescansos", value
+        })
+        temaOscuro = computed({
+            get: -> store.state.color == "oscuro"
+            set: (value) ->
+                store.commit "cambiarColor", (if value == true then "oscuro" else "claro")
+        })
+
+
+        {
+            escuelas
+            anioSeleccionado
+            periodoSeleccionado
+            areaSeleccionada
+            facultadSeleccionada
+            escuelaSeleccionada
+            año
+            periodo
+            facultad
+            escuela
+            datos
+            urlEscuela
+            mostrarDescansos
+            temaOscuro
+        }
+
+    export default {
         name: "barra-lateral"
-        components: { vCheckBox }
-        data: ->
-            escuelas: escuelas
-            añoSeleccionado: 2018
-            periodoSeleccionado: 2
-            areaSeleccionada: "Ingenierías"
-            facultadSeleccionada: "fips"
-            escuelaSeleccionada: "ingenieriadesistemas"
+        components: {vCheckBox}
         props:
             barraOculta:
                 type: Boolean
@@ -78,27 +118,8 @@ div.lateral
             fnCambiarEstadoBarra:
                 type: Function
                 required: true
-        computed:
-            año: -> @$store.state.año
-            periodo: -> @$store.state.periodo
-            facultad: -> @$store.state.facultad
-            escuela: -> @$store.state.escuela
-            datos: -> @$store.state.datos
-            urlEscuela: ->
-                "http://" + @facultadSeleccionada + ".unsa.edu.pe/" + @escuelaSeleccionada + "/"
-            mostrarDescansos:
-                get: -> @$store.state.mostrarDescansos
-                set: (value) -> @$store.commit "cambiarMostrarDescansos", value
-            temaOscuro:
-                get: -> @$store.state.color == "oscuro"
-                set: (value) ->
-                    @$store.commit "cambiarColor",
-                        if value == true then "oscuro"
-                        else "claro"
-
-        watch:
-            escuelaSeleccionada: (n) ->
-                console.log "Cambiado a #{n}"
+        setup
+    }
 
 #
 </script>
