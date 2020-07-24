@@ -19,32 +19,52 @@ div.contenedor(:style="anchoBarraLateral")
 </template>
 
 <script lang="coffee">
+    import {ref, computed} from "vue"
+    import {useStore} from "vuex"
     import barraLateral from "./components/App/barra-lateral.vue"
     import YAML from "yaml"
 
-    export default
-        name: "App"
-        components: { barraLateral }
-        data: ->
-            barraLateralOculta: false
-        computed:
-            alto: -> @$store.state.altoPantalla
-            ancho: -> @$store.state.anchoPantalla
-            año: -> @$store.state.año
-            periodo: -> @$store.state.periodo
-            facultad: -> @$store.state.facultad
-            escuela: -> @$store.state.escuela
-            anchoBarraLateral: ->
-                if @barraLateralOculta then { gridTemplateColumns: "4rem auto" }
-                else { gridTemplateColumns: "20rem auto" }
-        methods:
-            cambiarEstadoBarraLateral: ->
-                @barraLateralOculta = !@barraLateralOculta
-        created: ->
-            vm = this
-            resRaw = await fetch "/horarios/#{@año}_#{@periodo}_#{@facultad}_#{@escuela}.yaml"
+    setup = =>
+        store = useStore()
+
+        barraLateralOculta = ref false
+        alto = computed (=> store.state.altoPantalla)
+        ancho = computed (=> store.state.anchoPantalla)
+        año = computed (=> store.state.año)
+        periodo = computed (=> store.state.periodo)
+        facultad = computed (=> store.state.facultad)
+        escuela = computed (=> store.state.escuela)
+        anchoBarraLateral = computed (=>
+            if barraLateralOculta.value
+                {gridTemplateColumns: "4rem auto"}
+            else
+                {gridTemplateColumns: "20rem auto"}
+        )
+
+        cambiarEstadoBarraLateral = => barraLateralOculta.value = !barraLateralOculta.value
+
+        setTimeout (=>
+            resRaw = await fetch "/horarios/#{año}_#{periodo}_#{facultad}_#{escuela}.yaml"
             res = YAML.parse await resRaw.text()
-            @$store.commit "cambiarDatos", res
+            store.commit "cambiarDatos", res
+        ), 0
+
+        {
+            barraLateralOculta
+            alto
+            ancho
+            año
+            periodo
+            facultad
+            escuela
+            anchoBarraLateral
+        }
+
+    export default {
+        name: "App"
+        components: {barraLateral}
+        setup
+    }
 
 #
 </script>
