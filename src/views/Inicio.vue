@@ -25,19 +25,27 @@ div.home
 </template>
 
 <script lang="coffee">
+    import {computed} from "vue"
+    import {useStore} from "vuex"
     import anio from "../components/Inicio/anio.vue"
     import vCheckBox from "../components/v-checkbox.vue"
     import YAML from "yaml"
 
-    export default
+    setup = =>
+        store = useStore()
+        horarioUsuario = computed (=> store.state.horarioUsuario)
+        datos = computed (=> store.state.datos)
+
+        {
+            horarioUsuario
+            datos
+        }
+
+    export default {
         name: 'home'
-        components: { anio, vCheckBox }
-        computed:
-            horarioUsuario: -> @$store.state.horarioUsuario
-            datos: -> @$store.state.datos
-
-
-
+        components: {anio, vCheckBox}
+        setup
+    }
 
 #
 </script>
