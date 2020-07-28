@@ -1,10 +1,8 @@
 <template lang="pug">
 div.info_curso(:style="estiloCurso")
-    h4.titulo_curso(@mouseenter="resaltarTodasCeldas" @mouseleave="quitarResaltadoCeldas"
-
-    )
+    h4.titulo_curso(@mouseenter="resaltarTodasCeldas" @mouseleave="quitarResaltadoCeldas")
         // input.marcador_curso(type="checkbox" v-model="cursoAgregado")
-        span.ancho | {{ curso.abreviado }} >&nbsp;
+        span.ancho {{ curso.abreviado }} >&nbsp;
         | {{ curso.nombre }}
     table.datos
         tr
@@ -93,7 +91,7 @@ div.info_curso(:style="estiloCurso")
             else
                 "_" + nombreAñoMin.value + props.curso.abreviado
         )
-        cursoAgregado = computed(=>
+        cursoAgregado = computed (=>
             cursosUsuario = store.state.horarioUsuario
 
             for idCurso, _ of cursosUsuario
@@ -101,7 +99,7 @@ div.info_curso(:style="estiloCurso")
 
             false
         )
-        estiloCurso = computed(=>
+        estiloCurso = computed (=>
             if cursoAgregado.value then { backgroundColor: "var(--colorHover)" }
             else {}
         )
@@ -112,7 +110,7 @@ div.info_curso(:style="estiloCurso")
             else
                 store.commit "agregarCursoAMiHorario", {
                     nombre: idCurso.value
-                    datos: curso.value
+                    datos: props.curso
                 }
 
         obtenerClase = (grupo, esLab) =>
