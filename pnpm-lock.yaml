@@ -3,7 +3,7 @@ dependencies:
   coffee-loader: 1.0.0_f473fea5d69d100879c6b4e11cc445d4
   coffeescript: 2.5.1
   json-loader: 0.5.7
-  normalize.css: 8.0.1
+  normalize-css: 2.3.1
   pug: 2.0.4
   pug-plain-loader: 1.0.0_pug@2.0.4
   vue: 3.0.0-rc.4
@@ -4027,6 +4027,10 @@ packages:
   /inherits/2.0.4:
     resolution:
       integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
+  /insert-css/0.0.0:
+    dev: false
+    resolution:
+      integrity: sha1-IwS/pviTq+y4/5yo2cdgXZTPKRE=
   /internal-ip/4.3.0:
     dependencies:
       default-gateway: 4.2.0
@@ -5052,6 +5056,12 @@ packages:
   /node-releases/1.1.60:
     resolution:
       integrity: sha512-gsO4vjEdQaTusZAEebUWp2a5d7dF5DYoIpDG7WySnk7BuZDW+GPpHXoXXuYawRBr/9t5q54tirPz79kFIWg4dA==
+  /normalize-css/2.3.1:
+    dependencies:
+      insert-css: 0.0.0
+    dev: false
+    resolution:
+      integrity: sha1-/APjuR46Uap6GDa657K2rG1R4VY=
   /normalize-package-data/2.5.0:
     dependencies:
       hosted-git-info: 2.8.8
@@ -5096,10 +5106,6 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-U+JJi7duF1o+u2pynbp2zXDW2/PADgC30f0GsHZtRh+HOcXHnw137TrNlyxxRvWW5fjKd3bcLHPxofWuCjaeZg==
-  /normalize.css/8.0.1:
-    dev: false
-    resolution:
-      integrity: sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==
   /npm-run-path/2.0.2:
     dependencies:
       path-key: 2.0.1
@@ -7999,7 +8005,7 @@ specifiers:
   coffee-loader: ^1.0.0
   coffeescript: ^2.5.1
   json-loader: ^0.5.7
-  normalize.css: ^8.0.1
+  normalize-css: ^2.3.1
   pug: 2.0.4
   pug-plain-loader: ^1.0.0
   sass: ^1.26.5

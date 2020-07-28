@@ -12,7 +12,7 @@ module.exports = {
         },
         plugins: [
             new webpack.DefinePlugin({
-                __VUE_OPTIONS_API__: false,
+                __VUE_OPTIONS_API__: true,
                 __VUE_PROD_DEVTOOLS__: true
             })
         ],
@@ -21,11 +21,5 @@ module.exports = {
             disableHostCheck: true
         }
     },
-    productionSourceMap: false,
-    pwa: {
-        workboxPluginMode: "InjectManifest",
-        workboxOptions: {
-            swSrc: __dirname + "/public/service-worker.js"
-        }
-    }
+    productionSourceMap: false
 };

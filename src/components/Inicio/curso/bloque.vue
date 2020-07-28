@@ -9,7 +9,7 @@ td
             @mouseleave="quitarResaltadoGrupo(grupo)"
             @click="toggleActivo(grupo)"
     )
-        |  {{ esLab? 'L': 'T' }}{{ grupo }}&nbsp;
+        | &nbsp;{{ esLab? 'L': 'T' }}{{ grupo }}&nbsp;
 
 //
 </template>
@@ -61,10 +61,9 @@ td
 
 <style scoped lang="sass">
 
-
     .ancho
         font:
-            family: "Fira Code", monospace
+            family: "JetBrains Mono", monospace
         user-select: none
 
     //

@@ -109,7 +109,6 @@ div.lateral
         }
 
     export default {
-        name: "barra-lateral"
         components: {vCheckBox}
         props:
             barraOculta:

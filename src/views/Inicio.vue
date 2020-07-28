@@ -42,7 +42,6 @@ div.home
         }
 
     export default {
-        name: 'home'
         components: {anio, vCheckBox}
         setup
     }

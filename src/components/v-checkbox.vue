@@ -1,6 +1,6 @@
 <template lang="pug">
 label.container {{ txt }}
-    input(type="checkbox" :checked="checked" @input="$emit('change', $event.target.checked)")
+    input(type="checkbox" :checked="modelValue" @input="$emit('update:modelValue', $event.target.checked)")
     span.checkmark
 
 //
@@ -10,14 +10,14 @@ label.container {{ txt }}
 
     export default
         name: "v-checkbox"
-        model:
-            prop: "checked"
-            event: "change"
         props:
             txt:
                 type: String
                 required: true
             checked:
+                type: Boolean
+                required: true
+            modelValue:
                 type: Boolean
                 required: true
 

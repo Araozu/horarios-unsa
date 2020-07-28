@@ -43,7 +43,7 @@ div.contenedor(:style="anchoBarraLateral")
         cambiarEstadoBarraLateral = => barraLateralOculta.value = !barraLateralOculta.value
 
         setTimeout (=>
-            resRaw = await fetch "/horarios/#{año}_#{periodo}_#{facultad}_#{escuela}.yaml"
+            resRaw = await fetch "/horarios/#{año.value}_#{periodo.value}_#{facultad.value}_#{escuela.value}.yaml"
             res = YAML.parse await resRaw.text()
             store.commit "cambiarDatos", res
         ), 0

@@ -30,6 +30,7 @@ div
 
         {
             abierto
+            reiniciarTablaVue
         }
 
     export default {

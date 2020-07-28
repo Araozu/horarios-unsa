@@ -4,7 +4,7 @@ div.info_curso(:style="estiloCurso")
 
     )
         // input.marcador_curso(type="checkbox" v-model="cursoAgregado")
-        span.ancho {{ curso.abreviado }} >&nbsp;
+        span.ancho | {{ curso.abreviado }} >&nbsp;
         | {{ curso.nombre }}
     table.datos
         tr
@@ -40,6 +40,8 @@ div.info_curso(:style="estiloCurso")
 </template>
 
 <script lang="coffee">
+    import {computed, onMounted, onUnmounted} from "vue"
+    import {useStore} from "vuex"
     import {
         resaltarCurso
         removerResaltadoCurso
@@ -47,12 +49,143 @@ div.info_curso(:style="estiloCurso")
         removerResaltadoGrupo
         obtenerClaseGrupoCurso
     } from "./tablaHorarios/funcionesResaltado.coffee"
-
     import bloque from "./curso/bloque"
 
-    export default
+    setup = (props) =>
+        store = useStore()
+
+        esMiHorario = computed (=> props.nombreAño is "Mi horario")
+        teoria = computed (=>
+            profesores = {}
+            for n, grupo of props.curso.Teoria
+                docente = grupo.Docente
+                unless profesores[docente]?
+                    profesores[docente] = []
+                profesores[docente].push(n)
+            profesores
+        )
+        laboratorio = computed (=>
+            profesores = {}
+            for n, grupo of props.curso.Laboratorio
+                docente = grupo.Docente
+                unless profesores[docente]?
+                    profesores[docente] = []
+                profesores[docente].push(n)
+            profesores
+        )
+        laboratorioVacio = computed (=>
+            labs = laboratorio.value
+            estaVacio = yes
+
+            for i of labs
+                estaVacio = no
+                break
+
+            estaVacio
+        )
+        nombreAñoMin = computed (=>
+            nombreAño = props.nombreAño
+            nombreAño.substring 0, nombreAño.indexOf " "
+        )
+        idCurso = computed (=>
+            if nombreAñoMin.value is "Mi"
+                props.nombreCurso
+            else
+                "_" + nombreAñoMin.value + props.curso.abreviado
+        )
+        cursoAgregado = computed(=>
+            cursosUsuario = store.state.horarioUsuario
+
+            for idCurso, _ of cursosUsuario
+                if idCurso is idCurso.value then return true
+
+            false
+        )
+        estiloCurso = computed(=>
+            if cursoAgregado.value then { backgroundColor: "var(--colorHover)" }
+            else {}
+        )
+
+        agregarCursoAMiHorario = =>
+            if cursoAgregado.value
+                store.commit "removerCursoMiHorario", idCurso.value
+            else
+                store.commit "agregarCursoAMiHorario", {
+                    nombre: idCurso.value
+                    datos: curso.value
+                }
+
+        obtenerClase = (grupo, esLab) =>
+            obtenerClaseGrupoCurso props.nombreAño, props.curso.abreviado, grupo, esLab
+
+        procesarTeoria = =>
+            cursoAbreviado = props.curso.abreviado
+            curso = props.curso
+            nombreStore = "_" + nombreAñoMin.value
+
+            for nombreGrupo, { Horas } of curso.Teoria
+                for horaId in Horas
+                    datos = { cursoAbreviado, nombreGrupo, esLab: false }
+                    idCelda = nombreStore + horaId
+
+                    store.commit "agregarACelda", {idCelda, datos}
+
+            for nombreGrupo, { Horas } of curso.Laboratorio
+                for horaId in Horas
+                    datos = { cursoAbreviado, nombreGrupo, esLab: true }
+                    idCelda = nombreStore + horaId
+
+                    store.commit "agregarACelda", {idCelda, datos}
+
+        desprocesarTeoria = =>
+            cursoAbreviado = props.curso.abreviado
+            curso = props.curso
+            nombreStore = "_" + nombreAñoMin.value
+
+            for nombreGrupo, { Horas } of curso.Teoria
+                for horaId in Horas
+                    datos = { cursoAbreviado, nombreGrupo, esLab: no }
+                    idCelda = nombreStore + horaId
+
+                    store.commit "quitarDeCelda", idCelda
+
+            for nombreGrupo, { Horas } of curso.Laboratorio
+                for horaId in Horas
+                    datos = { cursoAbreviado, nombreGrupo, esLab: yes }
+                    idCelda = nombreStore + horaId
+
+                    store.commit "quitarDeCelda", idCelda
+
+        resaltarTodasCeldas = =>
+            resaltarCurso props.nombreAño, props.curso.abreviado
+
+        quitarResaltadoCeldas = =>
+            removerResaltadoCurso props.nombreAño, props.curso.abreviado
+
+        onMounted procesarTeoria
+
+        onUnmounted desprocesarTeoria
+
+        {
+            esMiHorario
+            teoria
+            laboratorio
+            laboratorioVacio
+            nombreAñoMin
+            idCurso
+            cursoAgregado
+            estiloCurso
+            agregarCursoAMiHorario
+            obtenerClase
+            procesarTeoria
+            desprocesarTeoria
+            resaltarTodasCeldas
+            quitarResaltadoCeldas
+        }
+
+    export default {
         name: "curso"
-        components: { bloque }
+        components: {bloque}
         props:
             curso:
                 type: Object
@@ -63,115 +196,8 @@ div.info_curso(:style="estiloCurso")
             nombreCurso:
                 type: String
                 required: true
-        computed:
-            esMiHorario: -> @nombreAño is "Mi horario"
-            teoria: ->
-                vm = this
-                profesores = {}
-                for n, grupo of vm.curso.Teoria
-                    docente = grupo.Docente
-                    unless profesores[docente]?
-                        profesores[docente] = []
-                    profesores[docente].push(n)
-                profesores
-            laboratorio: ->
-                vm = this
-                profesores = {}
-                for n, grupo of vm.curso.Laboratorio
-                    docente = grupo.Docente
-                    unless profesores[docente]?
-                        profesores[docente] = []
-                    profesores[docente].push(n)
-                profesores
-            laboratorioVacio: ->
-                labs = this.laboratorio
-                estaVacio = yes
-
-                for i of labs
-                    estaVacio = no
-                    break
-
-                estaVacio
-            nombreAñoMin: ->
-                nombreAño = @nombreAño
-                nombreAño.substring 0, nombreAño.indexOf " "
-            idCurso: ->
-                if @nombreAñoMin is "Mi"
-                    @nombreCurso
-                else
-                    "_" + @nombreAñoMin + @curso.abreviado
-            cursoAgregado: ->
-                cursosUsuario = @$store.state.horarioUsuario
-
-                for idCurso, _ of cursosUsuario
-                    if idCurso is @idCurso then return true
-
-                false
-            estiloCurso: ->
-                if @cursoAgregado then { backgroundColor: "var(--colorHover)" }
-                else {}
-        methods:
-            agregarCursoAMiHorario: ->
-                if @cursoAgregado
-                    @$store.commit "removerCursoMiHorario", @idCurso
-                else
-                    idCurso = @idCurso
-                    nombre = @nombreCurso
-                    datos = @curso
-                    @$store.commit "agregarCursoAMiHorario", { nombre: idCurso, datos: datos }
-
-            obtenerClase: (grupo, esLab) ->
-                obtenerClaseGrupoCurso @nombreAño, @curso.abreviado, grupo, esLab
-
-            procesarTeoria: () ->
-                cursoAbreviado = @curso.abreviado
-                curso = @curso
-                nombreStore = "_" + @nombreAñoMin
-
-                for nombreGrupo, { Horas } of curso.Teoria
-                    for horaId in Horas
-                        datos = { cursoAbreviado, nombreGrupo, esLab: no }
-                        idCelda = nombreStore + horaId
-
-                        @$store.commit "agregarACelda", {idCelda, datos}
-
-                for nombreGrupo, { Horas } of curso.Laboratorio
-                    for horaId in Horas
-                        datos = { cursoAbreviado, nombreGrupo, esLab: yes }
-                        idCelda = nombreStore + horaId
-
-                        @$store.commit "agregarACelda", {idCelda, datos}
-
-            desprocesarTeoria: () ->
-                cursoAbreviado = @curso.abreviado
-                curso = @curso
-                nombreStore = "_" + @nombreAñoMin
-
-                for nombreGrupo, { Horas } of curso.Teoria
-                    for horaId in Horas
-                        datos = { cursoAbreviado, nombreGrupo, esLab: no }
-                        idCelda = nombreStore + horaId
-
-                        @$store.commit "quitarDeCelda", idCelda
-
-                for nombreGrupo, { Horas } of curso.Laboratorio
-                    for horaId in Horas
-                        datos = { cursoAbreviado, nombreGrupo, esLab: yes }
-                        idCelda = nombreStore + horaId
-
-                        @$store.commit "quitarDeCelda", idCelda
-
-            resaltarTodasCeldas: () ->
-                resaltarCurso @nombreAño, @curso.abreviado
-
-            quitarResaltadoCeldas: () ->
-                removerResaltadoCurso @nombreAño, @curso.abreviado
-
-        mounted: ->
-            @procesarTeoria()
-
-        beforeDestroy: ->
-            @desprocesarTeoria()
+        setup
+    }
 
 #
 </script>
@@ -223,11 +249,8 @@ div.info_curso(:style="estiloCurso")
 
     .ancho
         font:
-            family: "Fira Code", monospace
+            family: "JetBrains Mono", monospace
         user-select: none
-
-
-
 
 //
 </style>
