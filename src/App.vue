@@ -23,10 +23,13 @@ div.contenedor(:style="anchoBarraLateral")
     import barraLateral from "./components/App/barra-lateral.vue"
     import YAML from "yaml"
 
+    obtenerEstadoBarraLateralOculta = =>
+        (localStorage?.getItem "barra-oculta") == "true"
+
     setup = =>
         store = useStore()
 
-        barraLateralOculta = ref false
+        barraLateralOculta = ref (obtenerEstadoBarraLateralOculta())
         alto = computed (=> store.state.altoPantalla)
         ancho = computed (=> store.state.anchoPantalla)
         año = computed (=> store.state.año)
@@ -40,7 +43,10 @@ div.contenedor(:style="anchoBarraLateral")
                 {gridTemplateColumns: "20rem auto"}
         )
 
-        cambiarEstadoBarraLateral = => barraLateralOculta.value = !barraLateralOculta.value
+        cambiarEstadoBarraLateral = =>
+            nuevoVal = !barraLateralOculta.value
+            localStorage?.setItem "barra-oculta", nuevoVal
+            barraLateralOculta.value = nuevoVal
 
         setTimeout (=>
             resRaw = await fetch "/horarios/#{año.value}_#{periodo.value}_#{facultad.value}_#{escuela.value}.yaml"

@@ -1,4 +1,4 @@
-import Vuex from 'vuex'
+import {createStore} from 'vuex'
 
 const cambiarModoColor = modo => {
     const clases = document.body.classList;
@@ -21,7 +21,7 @@ const cambiarModoColor = modo => {
     clases.add(modo);
 };
 
-export default Vuex.createStore({
+export default createStore({
     state: {
         celdas: {},
         horarioUsuario: {},
