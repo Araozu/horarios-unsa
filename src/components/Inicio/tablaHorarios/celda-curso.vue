@@ -1,15 +1,16 @@
 <template lang="pug">
-span.celda(:class="clases" :eslab="datos.esLab? 'true': 'false'"
+span.celda(:class="clases" :eslab="esLab? 'true': 'false'"
     @mouseenter="resaltarCeldasGrupo"
     @mouseleave="quitarResaltadoGrupo"
     @click="toggleActivo")
-    | &nbsp;{{ datos.cursoAbreviado }}
-    span &nbsp;{{ (datos.esLab? "L": "") + datos.nombreGrupo }}&nbsp;
+    | &nbsp;{{ cursoAbreviado }}
+    span &nbsp;{{ (esLab? "L": "") + nombreGrupo }}&nbsp;
 
 //
 </template>
 
 <script lang="coffee">
+    import {ref, computed} from "vue"
     import {
         resaltarGrupoCurso
         removerResaltadoGrupo
@@ -17,47 +18,63 @@ span.celda(:class="clases" :eslab="datos.esLab? 'true': 'false'"
         obtenerClaseGrupoCurso
     } from "./funcionesResaltado.coffee"
 
-    export default
+    setup = (props) =>
+        celdaCursoActiva = ref false
+
+        clases = computed (=>
+            res = []
+            esLab = props.datos.esLab
+            cursoAbreviado = props.datos.cursoAbreviado
+            nombreGrupo = props.datos.nombreGrupo
+            nombreAño = props.nombreAño.substring 0, (props.nombreAño.indexOf " ")
+
+            res.push if esLab then "celda__lab" else "celda__teoria"
+
+            # _PW1
+            res.push "_#{ nombreAño }_#{ cursoAbreviado }"
+
+            # _PW1_LB
+            res.push "_#{ nombreAño }_#{ cursoAbreviado }_#{ if esLab then 'L' else '' }#{ nombreGrupo }"
+
+            res
+        )
+        cursoAbreviado = computed (=> props.datos.cursoAbreviado)
+        nombreGrupo = computed (=> props.datos.nombreGrupo)
+        esLab = computed (=> props.datos.esLab)
+        claseCursoGeneral = computed (=>
+            obtenerClaseGrupoCurso props.nombreAño, cursoAbreviado.value, nombreGrupo.value, esLab.value
+        )
+
+        resaltarCeldasGrupo = =>
+            resaltarGrupoCurso props.nombreAño, cursoAbreviado.value, nombreGrupo.value, esLab.value
+        quitarResaltadoGrupo = =>
+            removerResaltadoGrupo props.nombreAño, cursoAbreviado.value, nombreGrupo.value, esLab.value
+        toggleActivo = =>
+            activarGrupoCursoStr claseCursoGeneral.value
+
+        {
+            celdaCursoActiva
+            clases
+            cursoAbreviado
+            nombreGrupo
+            esLab
+            claseCursoGeneral
+            resaltarCeldasGrupo
+            quitarResaltadoGrupo
+            toggleActivo
+        }
+
+    export default {
         name: "celda-curso"
         props:
             datos:
                 type: Object
-                required: yes
+                required: true
             nombreAño:
                 type: String
-                required: yes
-        data: ->
-            celdaCursoActiva: no
-        computed:
-            clases: ->
-                res = []
-                esLab = @datos.esLab
-                cursoAbreviado = @datos.cursoAbreviado
-                nombreGrupo = @datos.nombreGrupo
-                nombreAño = @nombreAño.substring 0, (@nombreAño.indexOf " ")
-
-                res.push if esLab then "celda__lab" else "celda__teoria"
-
-                # _PW1
-                res.push "_#{ nombreAño }_#{ cursoAbreviado }"
-
-                # _PW1_LB
-                res.push "_#{ nombreAño }_#{ cursoAbreviado }_#{ if esLab then 'L' else '' }#{ nombreGrupo }"
-
-                res
-            cursoAbreviado: -> @datos.cursoAbreviado
-            nombreGrupo: -> @datos.nombreGrupo
-            esLab: -> @datos.esLab
-            claseCursoGeneral: ->
-                obtenerClaseGrupoCurso @nombreAño, @cursoAbreviado, @nombreGrupo, @esLab
-        methods:
-            resaltarCeldasGrupo: ->
-                resaltarGrupoCurso @nombreAño, @cursoAbreviado, @nombreGrupo, @esLab
-            quitarResaltadoGrupo: ->
-                removerResaltadoGrupo @nombreAño, @cursoAbreviado, @nombreGrupo, @esLab
-            toggleActivo: ->
-                activarGrupoCursoStr @claseCursoGeneral
-
+                required: true
+        setup
+    }
 
 #
 </script>

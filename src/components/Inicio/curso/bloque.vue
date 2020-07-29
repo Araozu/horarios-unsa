@@ -23,7 +23,30 @@ td
         obtenerClaseCursoGeneral
     } from "../tablaHorarios/funcionesResaltado.coffee"
 
-    export default
+    setup = (props) =>
+
+        obtenerClase = (grupo) =>
+            claseEspecifica = obtenerClaseGrupoCurso props.nombreAño, props.abreviado, grupo, props.esLab
+            claseGeneral = obtenerClaseCursoGeneral claseEspecifica
+
+            [claseEspecifica, claseGeneral]
+
+        resaltarCeldasGrupo = (grupo) =>
+            resaltarGrupoCurso props.nombreAño, props.abreviado, grupo, props.esLab
+
+        quitarResaltadoGrupo = (grupo) =>
+            removerResaltadoGrupo props.nombreAño, props.abreviado, grupo, props.esLab
+        toggleActivo = (grupo) =>
+            activarGrupoCurso props.nombreAño, props.abreviado, grupo, props.esLab
+
+        {
+            obtenerClase
+            resaltarCeldasGrupo
+            quitarResaltadoGrupo
+            toggleActivo
+        }
+
+    export default {
         name: "bloque"
         props:
             grupos:
@@ -41,20 +64,8 @@ td
             abreviado:
                 type: String
                 required: true
-        methods:
-            obtenerClase: (grupo) ->
-                claseEspecifica = obtenerClaseGrupoCurso @nombreAño, @abreviado, grupo, @esLab
-                claseGeneral = obtenerClaseCursoGeneral claseEspecifica
-
-                [claseEspecifica, claseGeneral]
-
-            resaltarCeldasGrupo: (grupo) ->
-                resaltarGrupoCurso @nombreAño, @abreviado, grupo, @esLab
-
-            quitarResaltadoGrupo: (grupo) ->
-                removerResaltadoGrupo @nombreAño, @abreviado, grupo, @esLab
-            toggleActivo: (grupo) ->
-                activarGrupoCurso @nombreAño, @abreviado, grupo, @esLab
+        setup
+    }
 
 #
 </script>
