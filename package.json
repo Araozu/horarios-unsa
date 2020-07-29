@@ -15,7 +15,7 @@
     "normalize-css": "^2.3.1",
     "pug": "2.0.4",
     "pug-plain-loader": "^1.0.0",
-    "vue": "^3.0.0-rc.4",
+    "vue": "^3.0.0-rc.5",
     "vue-router": "^4.0.0-alpha.6",
     "vuex": "^4.0.0-alpha.1",
     "webpack": "^4.43.0",
@@ -26,7 +26,7 @@
     "@vue/cli-plugin-router": "~4.4.0",
     "@vue/cli-plugin-vuex": "~4.4.0",
     "@vue/cli-service": "~4.4.0",
-    "@vue/compiler-sfc": "^3.0.0-rc.4",
+    "@vue/compiler-sfc": "^3.0.0-rc.5",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "vue-cli-plugin-vue-next": "~0.1.3"
