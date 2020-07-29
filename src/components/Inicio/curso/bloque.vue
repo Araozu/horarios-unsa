@@ -74,7 +74,7 @@ td
 
     .ancho
         font:
-            family: "JetBrains Mono", monospace
+            family: var(--fuente-monoespacio)
         user-select: none
 
     //

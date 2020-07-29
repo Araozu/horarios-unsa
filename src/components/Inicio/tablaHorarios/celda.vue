@@ -82,10 +82,3 @@ td(:class="clases")
 #
 </script>
 
-<style scoped lang="sass">
-
-
-
-
-//
-</style>

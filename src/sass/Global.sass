@@ -19,16 +19,19 @@
   --colorFondo: #0E1419
   --colorTeoria: #3f77f3
   --colorLab: #e4564a
+  --fuente-titulos: "Open Sans", sans-serif
+  --fuente-textos: "Open Sans", sans-serif
+  --fuente-monoespacio: "JetBrains Mono", monospace
 
 /* black white */
 
 html
-  font-family: "Roboto", sans-serif
+  font-family: var(--fuente-textos)
   color: var(--colorTexto)
   background-color: var(--colorFondo)
 
 h1, h2, h3
-  font-family: "Product Sans", Roboto, sans-serif
+  font-family: var(--fuente-titulos)
 
 // Varios
 
@@ -42,7 +45,7 @@ $duracionTransicion: 100ms
 
 .celda
   white-space: pre
-  font-family: "JetBrains Mono", monospace
+  font-family: var(--fuente-monoespacio)
   cursor: pointer
   user-select: none
   // transition: background-color $duracionTransicion linear, color $duracionTransicion linear

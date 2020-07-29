@@ -1,7 +1,5 @@
 <template lang="pug">
 div.lateral
-    div.mostrar-bajo-1000.boton-lateral
-        div »
     div.barra
         template(v-if="!barraOculta")
             h1 Horarios UNSA
@@ -187,17 +185,7 @@ div.lateral
     .info
         p, div
             margin: 10px 20px
-            font-family: "Product Sans", Roboto, sans-serif
-
-
-
-    @media only screen and (max-width: 1000px)
-        .barra
-            position: absolute
-            right: 2rem
-
-        .lateral
-            overflow-y: scroll
+            font-family: var(--fuente-titulos)
 
 //
 </style>

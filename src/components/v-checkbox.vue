@@ -26,7 +26,6 @@ label.container {{ txt }}
 
 <style scoped lang="sass">
 
-
     /* Customize the label (the container) */
     .container
         display: block

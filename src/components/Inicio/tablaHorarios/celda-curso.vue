@@ -85,7 +85,6 @@ span.celda(:class="clases" :eslab="esLab? 'true': 'false'"
         display: inline-block
 
 
-
     .elementoOpaco
         opacity: 0.3
 
