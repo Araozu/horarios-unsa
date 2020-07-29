@@ -134,7 +134,6 @@ div.lateral
         border-top: solid 1px var(--colorBorde)
         text-align: right
         display: inline-table
-        padding-right: 1rem
         box-sizing: border-box
         cursor: pointer
         opacity: 0.6

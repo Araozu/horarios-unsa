@@ -38,7 +38,7 @@ div.contenedor(:style="anchoBarraLateral")
         escuela = computed (=> store.state.escuela)
         anchoBarraLateral = computed (=>
             if barraLateralOculta.value
-                {gridTemplateColumns: "4rem auto"}
+                {gridTemplateColumns: "2.5rem auto"}
             else
                 {gridTemplateColumns: "20rem auto"}
         )
