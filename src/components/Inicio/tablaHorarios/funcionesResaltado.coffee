@@ -4,6 +4,22 @@ ejecutarEnElementos = (clase, funcion) =>
         funcion elemento
 
 
+#: Txt -> Txt -> ()
+export ocultar_mostrarCurso = (nombreAnio, cursoAbreviado) =>
+    nombreAnioF = nombreAnio.substring 0, (nombreAnio.indexOf " ")
+    clase = "_#{ nombreAnioF }_#{ cursoAbreviado }"
+
+    ejecutarEnElementos clase, (el) =>
+        clases = el.className
+        if (clases.indexOf "cursor_click") == -1
+            if (el.getAttribute "oculto") == "true"
+                el.removeAttribute "oculto"
+                clases = clases.replace "celda-oculta", ""
+                el.className = clases
+            else
+                el.setAttribute "oculto", "true"
+                el.className += " celda-oculta"
+
 
 #: Txt -> Txt -> ()
 export resaltarCurso = (nombreAño, cursoAbreviado) =>

@@ -1,44 +1,47 @@
 <template lang="pug">
 div.info_curso(:style="estiloCurso")
-    h4.titulo_curso(@mouseenter="resaltarTodasCeldas" @mouseleave="quitarResaltadoCeldas")
-        // input.marcador_curso(type="checkbox" v-model="cursoAgregado")
-        span.ancho {{ curso.abreviado }} >&nbsp;
-        | {{ curso.nombre }}
-    table.datos
-        tr
-            bloque(v-for="(grupos, profesor) in teoria"
-                :grupos="grupos"
-                :profesor="profesor"
-                :nombreAño="nombreAño"
-                :abreviado="curso.abreviado"
-                :key="profesor"
-            )
-
-        tr
-            template(v-if="!laboratorioVacio")
-                bloque(v-for="(grupos, profesor) in laboratorio"
+    div(:style="cursoOculto? {opacity: '0.5'}: {}")
+        h4.titulo_curso(@mouseenter="resaltarTodasCeldas" @mouseleave="quitarResaltadoCeldas")
+            // input.marcador_curso(type="checkbox" v-model="cursoAgregado")
+            span.ancho {{ curso.abreviado }} >&nbsp;
+            | {{ curso.nombre }}
+        table.datos
+            tr
+                bloque(v-for="(grupos, profesor) in teoria"
                     :grupos="grupos"
                     :profesor="profesor"
-                    :esLab="true"
                     :nombreAño="nombreAño"
                     :abreviado="curso.abreviado"
                     :key="profesor"
                 )
 
-            template(v-else)
-                td
-                    span.ancho | _
+            tr
+                template(v-if="!laboratorioVacio")
+                    bloque(v-for="(grupos, profesor) in laboratorio"
+                        :grupos="grupos"
+                        :profesor="profesor"
+                        :esLab="true"
+                        :nombreAño="nombreAño"
+                        :abreviado="curso.abreviado"
+                        :key="profesor"
+                    )
+
+                template(v-else)
+                    td
+                        span.ancho | _
 
     div.acciones-cursos
         span.material-icons(@click.stop="agregarCursoAMiHorario" :title="cursoAgregado? 'Quitar': 'Agregar'")
             | {{ cursoAgregado? "remove": "add" }}
+        span.material-icons(@click.stop="ocultar_mostrarCursoV" :title="cursoOculto? 'Mostrar': 'Ocultar'")
+            | {{ cursoOculto? 'visibility_off': 'visibility' }}
 
 
 //
 </template>
 
 <script lang="coffee">
-    import {computed, onMounted, onUnmounted} from "vue"
+    import {ref, computed, onMounted, onUnmounted} from "vue"
     import {useStore} from "vuex"
     import {
         resaltarCurso
@@ -46,11 +49,13 @@ div.info_curso(:style="estiloCurso")
         resaltarGrupoCurso
         removerResaltadoGrupo
         obtenerClaseGrupoCurso
+        ocultar_mostrarCurso
     } from "./tablaHorarios/funcionesResaltado.coffee"
     import bloque from "./curso/bloque"
 
     setup = (props) =>
         store = useStore()
+        cursoOculto = ref false
 
         esMiHorario = computed (=> props.nombreAño is "Mi horario")
         teoria = computed (=>
@@ -113,6 +118,10 @@ div.info_curso(:style="estiloCurso")
                     datos: props.curso
                 }
 
+        ocultar_mostrarCursoV = =>
+            cursoOculto.value = !cursoOculto.value
+            ocultar_mostrarCurso props.nombreAño, props.curso.abreviado
+
         obtenerClase = (grupo, esLab) =>
             obtenerClaseGrupoCurso props.nombreAño, props.curso.abreviado, grupo, esLab
 
@@ -165,6 +174,7 @@ div.info_curso(:style="estiloCurso")
         onUnmounted desprocesarTeoria
 
         {
+            cursoOculto
             esMiHorario
             teoria
             laboratorio
@@ -179,6 +189,7 @@ div.info_curso(:style="estiloCurso")
             desprocesarTeoria
             resaltarTodasCeldas
             quitarResaltadoCeldas
+            ocultar_mostrarCursoV
         }
 
     export default {
