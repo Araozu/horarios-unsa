@@ -2,7 +2,8 @@
 div.lateral
     div.barra
         template(v-if="!barraOculta")
-            h1 Horarios UNSA
+            router-link.link_github(to="/")
+                h1 Horarios UNSA
             br
             br
             p Los horarios están completos. Fuente:
@@ -14,6 +15,8 @@ div.lateral
             v-check-box(txt="Mostrar descansos de 10m" v-model="mostrarDescansos")
             br
             v-check-box(txt="Tema oscuro" v-model="temaOscuro")
+            br
+            router-link.link_github(to="/acerca-de/") Acerca de
             // div.info
                 p
                     i Solo algunos horarios están implementados*
