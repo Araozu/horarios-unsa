@@ -1,5 +1,5 @@
 <template lang="pug">
-td(:class="clases")
+div(:class="clases")
     celda-curso(v-for="(datos, i) in datosCeldas" :key="i" :datos="datos" :nombreAño="nombreAño")
 
 //

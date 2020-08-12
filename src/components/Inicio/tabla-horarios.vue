@@ -1,20 +1,21 @@
 <template lang="pug">
-table.tabla_horario(border="1")
-    thead
-        tr
-            td Hora
-            td(v-for="dia in dias") {{ dia }}
-    tbody
-        template(v-for="hora in horas")
-            tr.fila(v-show="!(horasDescanso.find(x => x === hora)) || $store.state.mostrarDescansos")
-                td
-                    span {{ hora.substring(0, 5) }}
-                    span.ocultar-en-movil {{ hora.substr(5) }}
-                celda(v-for="(dia, i) in dias" :key="i"
-                    :dia="dia"
-                    :hora="hora"
-                    :nombreAño="nombreAño"
-                    :nombreStore="nombreStore")
+div
+    div.contenedor_horario
+        div.cabeza
+            div.fila-d
+                div Hora
+                div(v-for="dia in dias") {{ dia }}
+        div.cuerpo
+            template(v-for="hora in horas")
+                div.fila-d(v-show="!(horasDescanso.find(x => x === hora)) || $store.state.mostrarDescansos")
+                    div
+                        span {{ hora.substring(0, 5) }}
+                        span.ocultar-en-movil {{ hora.substr(5) }}
+                    celda(v-for="(dia, i) in dias" :key="i"
+                        :dia="dia"
+                        :hora="hora"
+                        :nombreAño="nombreAño"
+                        :nombreStore="nombreStore")
 
 //
 </template>
@@ -77,21 +78,16 @@ table.tabla_horario(border="1")
 
 <style scoped lang="sass">
 
-    .fila:hover
-        background-color: var(--colorFondoFila)
-
-
-    .tabla_horario
-        width: 100%
-        border-color: var(--colorBorde) // rgba(135, 135, 135, 0.51)
-        border: none
-        tr
-            vertical-align: middle
-            text-align: center
-            td:first-child
-                width: 8rem
-        td
+    .fila-d
+        display: grid
+        grid-template-columns: 7rem repeat(5, calc((100% - 7rem) / 5))
+        text-align: center
+        div
             border: solid 1px var(--colorBorde)
+
+
+    .fila-d:hover
+        background-color: var(--colorFondoFila)
 
 
     @media only screen and (max-width: 700px)
