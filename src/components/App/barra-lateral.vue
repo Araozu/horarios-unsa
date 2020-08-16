@@ -16,13 +16,12 @@ div.lateral
             br
             v-check-box(txt="Tema oscuro" v-model="temaOscuro")
             br
-            router-link.link_github(to="/acerca-de/") Acerca de
-            // div.info
+            div.info
                 p
-                    i Solo algunos horarios están implementados*
+                    i Solo implementado para Ingeniería de Sistemas*
                 // p {{ año }}-{{ periodo }}
                 div
-                    select(v-model.number="añoSeleccionado")
+                    select(v-model.number="anioSeleccionado")
                         option 2018
                         option 2019
                         option 2020
@@ -32,15 +31,15 @@ div.lateral
 
                 // p {{ datos.facultad? datos.facultad.nombre: facultad }}
                 div
-                    select(v-model="areaSeleccionada")
+                    select.select_area-fac-esc(v-model="areaSeleccionada")
                         option(v-for="(_, nombre) in escuelas") {{ nombre }}
 
                 div
-                    select(v-model="facultadSeleccionada")
+                    select.select_area-fac-esc(v-model="facultadSeleccionada")
                         option(v-for="(facultad, nombre) in escuelas[areaSeleccionada]" :value="nombre") {{ facultad.nombre }}
 
                 div(v-if="escuelas[areaSeleccionada][facultadSeleccionada]")
-                    select(v-model="escuelaSeleccionada")
+                    select.select_area-fac-esc(v-model="escuelaSeleccionada")
                         option(v-for="(escuela, nombre) in escuelas[areaSeleccionada][facultadSeleccionada].escuelas" :value="nombre")
                             | {{ escuela.nombre }}
 
@@ -48,6 +47,7 @@ div.lateral
                     a(:href="urlEscuela" target="_blank") Página de la escuela
                 // p {{ datos.escuela? datos.escuela.nombre: escuela }}
             br
+            router-link.link_github(to="/acerca-de/") Acerca de
             br
             a.link_github(href="https://github.com/Araozu/horarios-unsa" target="_blank").
                 Código fuente en GitHub
@@ -68,7 +68,7 @@ div.lateral
         store = useStore()
 
         escuelas = ref escuelas
-        anioSeleccionado = ref 2018
+        anioSeleccionado = ref 2020
         periodoSeleccionado = ref 2
         areaSeleccionada = ref "Ingenierías"
         facultadSeleccionada = ref "fips"
@@ -125,6 +125,10 @@ div.lateral
 </script>
 
 <style scoped lang="sass">
+
+    .select_area-fac-esc
+        width: 100%
+
 
     .boton-ocultar
         position: absolute
