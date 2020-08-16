@@ -5,45 +5,37 @@ div.lateral
             router-link.link_github(to="/")
                 h1 Horarios UNSA
             br
-            br
-            p Los horarios están completos. Fuente:
-            a.link_github(href="https://drive.google.com/file/d/1DqAkbDtcVjAWhEb6YwMpFWUkXGpgeQt1/view"
-                target="_blank")
-                | Google Drive
-            br
-            br
             v-check-box(txt="Mostrar descansos de 10m" v-model="mostrarDescansos")
             br
             v-check-box(txt="Tema oscuro" v-model="temaOscuro")
             br
-            div.info
+            // div.info
                 p
                     i Solo implementado para Ingeniería de Sistemas*
                 // p {{ año }}-{{ periodo }}
                 div
-                    select(v-model.number="anioSeleccionado")
+                    select(v-model.number="anioSeleccionado" @input="actualizarAnio($event)")
                         option 2018
                         option 2019
                         option 2020
-                    select(v-model.number="periodoSeleccionado")
+                    select(v-model.number="periodoSeleccionado" @input="actualizarPeriodo($event)")
                         option 1
                         option 2
 
-                // p {{ datos.facultad? datos.facultad.nombre: facultad }}
-                div
+                // div
                     select.select_area-fac-esc(v-model="areaSeleccionada")
                         option(v-for="(_, nombre) in escuelas") {{ nombre }}
 
-                div
+                // div
                     select.select_area-fac-esc(v-model="facultadSeleccionada")
                         option(v-for="(facultad, nombre) in escuelas[areaSeleccionada]" :value="nombre") {{ facultad.nombre }}
 
-                div(v-if="escuelas[areaSeleccionada][facultadSeleccionada]")
+                // div(v-if="escuelas[areaSeleccionada][facultadSeleccionada]")
                     select.select_area-fac-esc(v-model="escuelaSeleccionada")
                         option(v-for="(escuela, nombre) in escuelas[areaSeleccionada][facultadSeleccionada].escuelas" :value="nombre")
                             | {{ escuela.nombre }}
 
-                div
+                // div
                     a(:href="urlEscuela" target="_blank") Página de la escuela
                 // p {{ datos.escuela? datos.escuela.nombre: escuela }}
             br
@@ -91,6 +83,15 @@ div.lateral
                 store.commit "cambiarColor", (if value == true then "oscuro" else "claro")
         })
 
+        actualizarAnio = (ev) =>
+            valor = ev.target.value
+            console.log valor
+            store.commit "cambiarAnioHorario", valor
+
+        actualizarPeriodo = (ev) =>
+            valor = ev.target.value
+            console.log valor
+            store.commit "cambiarPeriodoHorario", valor
 
         {
             escuelas
@@ -107,6 +108,8 @@ div.lateral
             urlEscuela
             mostrarDescansos
             temaOscuro
+            actualizarAnio
+            actualizarPeriodo
         }
 
     export default {

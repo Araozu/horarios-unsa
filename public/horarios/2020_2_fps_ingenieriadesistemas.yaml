@@ -6,3 +6,224 @@ descripcion: |
   Ultima actualizacion: 16 de agosto de 2020.
   <br>
   Puedes ver el historial de cambios en GitHub.
+años:
+  3er año:
+    FSI:
+      nombre: Fundamentos de Sistemas de Informacion
+      abreviado: FSI
+      Teoria:
+        A:
+          Docente: Juan Carlos Juarez
+          Horas:
+            - Lu0850
+            - Lu0940
+            - Lu1040
+            - Mi1040
+            - Mi1130
+        B:
+          Docente: Juan Carlos Juarez
+          Horas:
+            - Mi1550
+            - Mi1640
+            - Mi1740
+            - Ju1740
+            - Ju1830
+    Redes:
+      nombre: Redes y Comunicación de Datos
+      abreviado: RCD
+      Teoria:
+        A:
+          Docente: Lucy Delgado
+          Horas:
+            - Ma1220
+            - Ma1310
+            - Mi0850
+            - Mi0940
+        B:
+          Docente: Lucy Delgado
+          Horas:
+            - Lu1310
+            - Lu1400
+            - Ma1400
+            - Ma1540
+    Metodos Num:
+      nombre: Métodos numéricos
+      abreviado: MN
+      Teoria:
+        A:
+          Docente: Olha Sharhorodska
+          Horas:
+            - Vi1040
+            - Vi1130
+            - Vi1220
+        B:
+          Docente: Olha Sharhorodska
+          Horas:
+            - Lu1550
+            - Lu1640
+            - Lu1740
+    SO:
+      nombre: Sistemas Operativos
+      abreviado: SO
+      Teoria:
+        A:
+          Docente: Karim Guevara
+          Horas:
+            - Ma0700
+            - Ma0750
+            - Ju0850
+            - Ju0940
+        B:
+          Docente: Karim Guevara
+          Horas:
+            - Ma1550
+            - Ma1640
+            - Ju1550
+            - Ju1640
+    Construccion Soft:
+      nombre: Construccion de Software
+      abreviado: CS
+      Teoria:
+        A:
+          Docente: Jorge Chamby
+          Horas:
+            - Ma0850
+            - Ma0940
+        B:
+          Docente: Jorge Chamby
+          Horas:
+            - Ju1400
+            - Ju1450
+    TecDat:
+      nombre: Tecnologia de Datos
+      abreviado: TD
+      Teoria:
+        A:
+          Docente: Oscar Ramírez
+          Horas:
+            - Ma1040
+            - Ma1130
+            - Ju1040
+            - Ju1130
+        B:
+          Docente: Oscar Ramírez
+          Horas:
+            - Mi1400
+            - Mi1450
+            - Vi1400
+            - Vi1450
+  4to año:
+    Intro Soft Ent:
+      nombre: Introduccion a Software de Entetenimiento
+      abreviado: IDSEe
+      Teoria:
+        A:
+          Docente: Diego Iquira
+          Horas:
+            - Lu0750
+            - Lu0850
+            - Lu0940
+        B:
+          Docente: Diego Iquira
+          Horas:
+            - Mi1550
+            - Mi1640
+            - Mi1740
+    Diseno y Arquitectura:
+      nombre: Diseño Y Arquitectura de Software
+      abreviado: DAS
+      Teoria:
+        A:
+          Docente: Percy Huertas
+          Horas:
+            - Lu1040
+            - Lu1130
+            - Mi1040
+            - Mi1130
+        B:
+          Docente: Percy Huertas
+          Horas:
+            - Mi1400
+            - Mi1450
+            - Ju1400
+            - Ju1450
+    Gestion Proyecto Soft:
+      nombre: Gestion de Proyectos de Software
+      abreviado: GPS
+      Teoria:
+        A:
+          Docente: Jesús Silva
+          Horas:
+            - Vi1040
+            - Vi1130
+        B:
+          Docente: Oscar Ramírez
+          Horas:
+            - Lu1400
+            - Lu1450
+    Negocios Electronicos:
+      nombre: Negocios Electrónicos
+      abreviado: NE
+      Teoria:
+        A:
+          Docente: Cesar Baluarte
+          Horas:
+            - Mi0750
+            - Mi0850
+            - Mi0940
+        B:
+          Docente: Oscar Ramírez
+          Horas:
+            - Lu1550
+            - Lu1640
+            - Lu1740
+    Auditoria:
+      nombre: Auditoría de Sistemas
+      abreviado: AS
+      Teoria:
+        A:
+          Docente: Edward Zarate
+          Horas:
+            - Ma0700
+            - Ma0750
+            - Ma0850
+            - Ju0700
+            - Ju0750
+        B:
+          Docente: Edward Zarate
+          Horas:
+            - Ma1400
+            - Ma1450
+            - Ma1550
+            - Ju1550
+            - Ju1640
+    Aspectos Formales:
+      nombre: Aspectos Formales de Verificación y Especificación
+      abreviado: AFVE
+      Teoria:
+        A:
+          Docente: Elizabet Vidal
+          Horas:
+            - Ju0850
+            - Ju0940
+        B:
+          Docente: Maribel Molina
+          Horas:
+            - Vi1550
+            - Vi1640
+    Calidad Soft:
+      nombre: Calidad de Software
+      abreviado: CS
+      Teoria:
+        A:
+          Docente: Jesús Silva
+          Horas:
+            - Ju1040
+            - Ju1130
+        B:
+          Docente: Maribel Molina
+          Horas:
+            - Vi1400
+            - Vi1450
+
+

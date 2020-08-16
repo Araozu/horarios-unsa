@@ -5,7 +5,7 @@ const cambiarModoColor = modo => {
 
     bucle: for (const pos in clases) {
         if (clases.hasOwnProperty(pos)) {
-            const clase =  clases[pos];
+            const clase = clases[pos];
 
             switch (clase) {
                 case "tema-claro":
@@ -28,7 +28,7 @@ export default createStore({
         anchoPantalla: window.innerWidth,
         altoPantalla: window.innerHeight,
         año: 2020,
-        periodo: 1,
+        periodo: 2,
         facultad: "fps",
         escuela: "ingenieriadesistemas",
         datos: {
@@ -38,7 +38,7 @@ export default createStore({
         mostrarDescansos: true,
         color: (() => {
             const modo = localStorage.getItem("color") || "oscuro";
-            cambiarModoColor(`tema-${ modo }`);
+            cambiarModoColor(`tema-${modo}`);
             return modo
         })()
     },
@@ -53,7 +53,7 @@ export default createStore({
             const ref = state.celdas[idCelda];
             while (ref.length > 0) ref.pop()
         },
-        agregarCursoAMiHorario(state, {nombre, datos} ) {
+        agregarCursoAMiHorario(state, {nombre, datos}) {
             if (!state.horarioUsuario[nombre]) {
                 state.horarioUsuario[nombre] = datos;
                 state.horarioUsuario = Object.assign({}, state.horarioUsuario);
@@ -66,7 +66,7 @@ export default createStore({
         registrarListenerTamanoPantalla(state) {
             window.addEventListener("resize", (ev) => {
                 state.anchoPantalla = window.innerWidth;
-                state.altoPantalla  = window.innerHeight
+                state.altoPantalla = window.innerHeight
             });
         },
         cambiarDatos(state, datos) {
@@ -75,10 +75,16 @@ export default createStore({
         cambiarMostrarDescansos(state, dato) {
             state.mostrarDescansos = !!dato
         },
-        cambiarColor (state, valor) {
+        cambiarColor(state, valor) {
             state.color = valor;
             cambiarModoColor(`tema-${valor}`);
             localStorage.setItem("color", valor);
+        },
+        cambiarAnioHorario(state, valor) {
+            state.año = valor;
+        },
+        cambiarPeriodoHorario(state, valor) {
+            state.periodo = valor;
         }
     },
     actions: {},

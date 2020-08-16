@@ -18,7 +18,7 @@ div.contenedor(:style="anchoBarraLateral")
 </template>
 
 <script lang="coffee">
-    import {ref, computed} from "vue"
+    import {ref, computed, watchEffect} from "vue"
     import {useStore} from "vuex"
     import barraLateral from "./components/App/barra-lateral.vue"
     import YAML from "yaml"
@@ -48,11 +48,12 @@ div.contenedor(:style="anchoBarraLateral")
             localStorage?.setItem "barra-oculta", nuevoVal
             barraLateralOculta.value = nuevoVal
 
-        setTimeout (=>
+        watchEffect (=>
+            console.log "Cargando horario..."
             resRaw = await fetch "/horarios/#{año.value}_#{periodo.value}_#{facultad.value}_#{escuela.value}.yaml"
             res = YAML.parse await resRaw.text()
             store.commit "cambiarDatos", res
-        ), 0
+        )
 
         {
             barraLateralOculta

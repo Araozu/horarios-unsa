@@ -77,13 +77,11 @@ e incluyen los descansos de 10m.
 
 ## Herramientas usadas
 
-- Vue.js 2 con:
+- Vue.js 3 con:
     - Pug (Jade)
     - Coffeescript
     - SASS
 - Vue Router
 - Vue CLI
 - pnpm
-
-¿Por qué pug/coffee/sass? Porque odio las llaves/punto y coma/parentesis.
 
