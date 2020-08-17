@@ -7,7 +7,141 @@ descripcion: |
   <br>
   Puedes ver el historial de cambios en GitHub.
 años:
-
+  2do año:
+    Ecologia:
+      nombre: Ecologia y Medio Ambiente
+      abreviado: ECA
+      Teoria:
+        A:
+          Docente: Marco Valdivia
+          Horas:
+            - Ju0940
+            - Ju1040
+            - Ju1130
+        B:
+          Docente: Luis Mendoza
+          Horas:
+            - Ju1400
+            - Ju1450
+            - Ju1540
+    Estadistica:
+      nombre: Estadistica y Matematica
+      abreviado: EMAT
+      Teoria:
+        A:
+          Docente: Julieta Flores
+          Horas:
+            - Mi0850
+            - Mi0940
+            - Ju1220
+            - Ju1310
+        B:
+          Docente: Julieta Flores
+          Horas:
+            - Mi1040
+            - Mi1130
+            - Ju1640
+            - Ju1740
+    Arquitectura de Computadoras:
+      nombre: Arquitectura de Computadoras
+      abreviado: AC
+      Teoria:
+        A:
+          Docente: Pedro Rodriguez
+          Horas:
+            - Vi1220
+            - Vi1310
+            - Vi1400
+        B:
+          Docente: Pedro Rodriguez
+          Horas:
+            - Ju1830
+            - Ju1920
+            - Ju2010
+    Metodos de Investigacion y Redaccion:
+      nombre: Metodos de Investigacion y Redaccion
+      abreviado: MIR
+      Teoria:
+        A:
+          Docente: Norka Bedregal
+          Horas:
+            - Lu0750
+            - Lu0850
+            - Lu0940
+        B:
+          Docente: Norka Bedregal
+          Horas:
+            - Ma1740
+            - Ma1830
+            - Ma1920
+        C:
+          Docente: Rolando Cárdenas
+          Horas:
+            - Vi0750
+            - Vi0850
+    Interaccion Humano Computador:
+      nombre: Interaccion Humano Computador
+      abreviado: IHC
+      Teoria:
+        A:
+          Docente: Richart Escobedo
+          Horas:
+            - Ma0700
+            - Ma0750
+            - Mi0700
+            - Mi0750
+        B:
+          Docente: Richart Escobedo
+          Horas:
+            - Ma1550
+            - Ma1640
+            - Mi1550
+            - Mi1640
+    Enfoque Empresarial:
+      nombre: Enfoque Empresarial
+      abreviado: EE
+      Teoria:
+        A:
+          Docente: Juan Carlos Juarez
+          Horas:
+            - Lu1740
+            - Lu1830
+            - Vi1740
+            - Vi1830
+            - Vi1920
+        B:
+          Docente: Juan C. Juarez Bueno
+          Horas:
+            - Mi1740
+            - Mi1830
+            - Mi1920
+            - Vi1450
+            - Vi1550
+    Analisis y Disenio de Algoritmos:
+      nombre: Analisis y Diseño de Algoritmos
+      abreviado: ADA
+      Teoria:
+        A:
+          Docente: Aurea Soriano
+          Horas:
+            - Ma0850
+            - Ma0940
+            - Ju0750
+            - Ju0850
+        B:
+          Docente: Aurea Soriano
+          Horas:
+            - Lu1550
+            - Lu1640
+            - Mi1220
+            - Mi1310
+        C:
+          Docente: Rolando Cárdenas
+          Horas:
+            - Mi1400
+            - Mi1450
+            - Vi1040
+            - Vi1130
   3er año:
     FSI:
       nombre: Fundamentos de Sistemas de Informacion
