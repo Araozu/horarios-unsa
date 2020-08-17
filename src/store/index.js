@@ -54,6 +54,8 @@ export default createStore({
             while (ref.length > 0) ref.pop()
         },
         agregarCursoAMiHorario(state, {nombre, datos}) {
+            console.log(nombre);
+            if (nombre === undefined) throw new Error("Error al agregar curso al horario. Nombre undefined.");
             if (!state.horarioUsuario[nombre]) {
                 state.horarioUsuario[nombre] = datos;
                 state.horarioUsuario = Object.assign({}, state.horarioUsuario);
