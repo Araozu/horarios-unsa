@@ -7,6 +7,7 @@ descripcion: |
   <br>
   Puedes ver el historial de cambios en GitHub.
 años:
+
   3er año:
     FSI:
       nombre: Fundamentos de Sistemas de Informacion
@@ -225,5 +226,97 @@ años:
           Horas:
             - Vi1400
             - Vi1450
+  5to año:
+    Practicas:
+      nombre: Prácticas Pre Profesionales
+      abreviado: PPP
+      Teoria:
+        A:
+          Docente: Fabrizio Calienes
+          Horas:
+            - Lu0750
+            - Lu0850
+            - Ju0700
+            - Ju0750
+            - Vi0700
+            - Vi0750
+        B:
+          Docente: Carlo Corrales
+          Horas:
+            - Lu1400
+            - Lu1450
+            - Vi1400
+            - Vi1450
+            - Vi1550
+    Gestion:
+      nombre: Gestion de Emprendimiento de Software 2
+      abreviado: GES2
+      Teoria:
+        A:
+          Docente: Juan Carlos Zuñiga
+          Horas:
+            - Ma0850
+            - Ma0940
+            - Ma1030
+        B:
+          Docente: Juan Carlos Zuñiga
+          Horas:
+            - Ju1400
+            - Ju1450
+            - Ju1550
+    Proyecto Ing Soft:
+      nombre: Proyecto de Ingeniería de Software 2
+      abreviado: PIS2
+      Teoria:
+        A:
+          Docente: Freddy Gonzales
+          Horas:
+            - Ma1310
+            - Ma1400
+            - Ju0850
+            - Ju0940
+    Topicos Avanzados:
+      nombre: Tópicos Avanzados de Ing. de Software
+      abreviado: TAIS
+      Teoria:
+        A:
+          Docente: Robert Arisaca
+          Horas:
+            - Mi0940
+            - Mi1040
+            - Mi1130
+        B:
+          Docente: Robert Arisaca
+          Horas:
+            - Ma1450
+            - Ma1550
+            - Ma1640
+    Juegos:
+      nombre: Desarrollo de Software para Juegos
+      abreviado: DSJe
+      Teoria:
+        A:
+          Docente: José Sulla
+          Horas:
+            - Mi1450
+            - Mi1550
+    Inteligencia:
+      nombre: Inteligencia de Negocios
+      abreviado: IEe
+      Teoria:
+        A:
+          Docente: Yasiel Pérez
+          Horas:
+            - Vi0850
+            - Vi0940
+    Plataformas Emergentes:
+      nombre: Plataformas Emergentes
+      abreviado: PEe
+      Teoria:
+        A:
+          Docente: Yasiel Pérez
+          Horas:
+            - Vi1040
+            - Vi1130
 
 
