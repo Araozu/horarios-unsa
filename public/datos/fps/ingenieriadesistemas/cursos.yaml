@@ -1,0 +1,725 @@
+# 1 año 1er semestre
+1701102:
+  componente: D
+  tipo: Obligatorio
+  nombre: Razonamiento Lógico Matemático
+  abreviado: RM
+  departamentos:
+    - MS
+  creditos: 3
+  prerrequisitos: []
+1701103:
+  componente: D
+  tipo: Obligatorio
+  nombre: Matemática Básica
+  abreviado: MB
+  departamentos:
+    - MS
+  creditos: 4
+  prerrequisitos: []
+1701104:
+  componente: F
+  tipo: Obligatorio
+  nombre: Estructuras Discretas 1
+  abreviado: ED1
+  departamentos:
+    - SI
+  creditos: 3
+  prerrequisitos: []
+1701105:
+  componente: F
+  tipo: Obligatorio
+  nombre: Introducción a la Computación
+  abreviado: IC
+  departamentos:
+    - SI
+  creditos: 2
+  prerrequisitos: []
+1701106:
+  componente: F
+  tipo: Obligatorio
+  nombre: Fundamentos de la Programación 1
+  abreviado: FP1
+  departamentos:
+    - SI
+  creditos: 5
+  prerrequisitos: []
+1701114:
+  componente: D
+  tipo: Obligatorio
+  nombre: Metodología del Trabajo Intelectual Universitario
+  abreviado: MTI
+  departamentos:
+    - ED
+    - FL
+  creditos: 2
+  prerrequisitos: []
+1701115:
+  componente: E
+  tipo: Obligatorio
+  nombre: Relaciones Humanas
+  abreviado: RH
+  departamentos:
+    - SI
+  creditos: 2
+  prerrequisitos: []
+
+# 1er año 2do semestre
+1701210:
+  componente: D
+  tipo: Obligatorio
+  nombre: Cálculo en Una Variable
+  abreviado: C1V
+  departamentos:
+    - MS
+  creditos: 4
+  prerrequisitos:
+    - 1701103
+1701211:
+  componente: F
+  tipo: Obligatorio
+  nombre: Estructuras Discretas 2
+  abreviado: ED2
+  departamentos:
+    - SI
+  creditos: 3
+  prerrequisitos:
+    - 1701104
+1701212:
+  componente: F
+  tipo: Obligatorio
+  nombre: Programación Web 1
+  abreviado: PW1
+  departamentos:
+    - SI
+  creditos: 4
+  prerrequisitos:
+    - 1701106
+1701213:
+  componente: F
+  tipo: Obligatorio
+  nombre: Fundamentos de Programación 2
+  abreviado: FP2
+  departamentos:
+    - SI
+  creditos: 5
+  prerrequisitos:
+    - 1701106
+1701216:
+  componente: D
+  tipo: Obligatorio
+  nombre: Comunicación Integral
+  abreviado: CI
+  departamentos:
+    - LL
+  creditos: 3
+  prerrequisitos: []
+1701217:
+  componente: E
+  tipo: Obligatorio
+  nombre: Realidad Nacional
+  abreviado: RN
+  departamentos:
+    - HG
+    - SO
+  creditos: 2
+  prerrequisitos: []
+
+# 2do año 1er semestre
+1702118:
+  componente: E
+  tipo: Obligatorio
+  nombre: Talleres de Psicología
+  abreviado: Psi
+  departamentos:
+    - PS
+  creditos: 2
+  prerrequisitos: []
+1702119:
+  componente: D
+  tipo: Obligatorio
+  nombre: Cálculo en Varias Variables
+  abreviado: CVV
+  departamentos:
+    - MS
+  creditos: 4
+  prerrequisitos:
+    - 1701210
+1702120:
+  componente: E
+  tipo: Obligatorio
+  nombre: Taller de Liderazgo y Colaboración
+  abreviado: TLC
+  departamentos:
+    - SI
+  creditos: 2
+  prerrequisitos:
+    - 1701115
+1702121:
+  componente: E
+  tipo: Obligatorio
+  nombre: Innovación y Creatividad
+  abreviado: IC
+  departamentos:
+    - SI
+  creditos: 3
+  prerrequisitos: []
+1702122:
+  componente: F
+  tipo: Obligatorio
+  nombre: Programación Web 2
+  abreviado: PW2
+  departamentos:
+    - SI
+  creditos: 4
+  prerrequisitos:
+    - 1701212
+1702123:
+  componente: F
+  tipo: Obligatorio
+  nombre: Redacción de Artículos e Informes de Investigación
+  abreviado: RAII
+  departamentos:
+    - SI
+  creditos: 2
+  prerrequisitos:
+    - 1701216
+1702124:
+  componente: F
+  tipo: Obligatorio
+  nombre: Estructura de Datos y Algoritmos
+  abreviado: EDAT
+  departamentos:
+    - SI
+  creditos: 4
+  prerrequisitos:
+    - 1701211
+    - 1701213
+1702125:
+  componente: E
+  tipo: Obligatorio
+  nombre: Ciudadanía e Interculturalidad
+  abreviado: CI
+  departamentos:
+    - HG
+    - SO
+    - PR
+  creditos: 2
+  prerrequisitos: []
+
+# 2do año 2do semestre
+1702226:
+  componente: D
+  tipo: Obligatorio
+  nombre: Estadística Matemática, Probabilidad y Métodos Empíricos
+  abreviado: EMAT
+  departamentos:
+    - ES
+  creditos: 4
+  prerrequisitos:
+    - 1702119
+1702227:
+  componente: F
+  tipo: Obligatorio
+  nombre: Arquitectura de Computadoras
+  abreviado: AC
+  departamentos:
+    - SI
+  creditos: 3
+  prerrequisitos:
+    - 1702124
+1702228:
+  componente: F
+  tipo: Obligatorio
+  nombre: Métodos de Investigación y Redacción
+  abreviado: MIR
+  departamentos:
+    - SI
+  creditos: 2
+  prerrequisitos:
+    - 1702124
+1702229:
+  componente: F
+  tipo: Obligatorio
+  nombre: Interacción Humano Computador
+  abreviado: IHC
+  departamentos:
+    - SI
+  creditos: 4
+  prerrequisitos:
+    - 1702118
+    - 1702122
+1702230:
+  componente: F
+  tipo: Obligatorio
+  nombre: Enfoque Empresarial
+  abreviado: EE
+  departamentos:
+    - SI
+  creditos: 3
+  prerrequisitos:
+    - 1702120
+1702231:
+  componente: F
+  tipo: Obligatorio
+  nombre: Análisis y Diseño de Algoritmos
+  abreviado: ADA
+  departamentos:
+    - SI
+  creditos: 4
+  prerrequisitos:
+    - 1702124
+1702232:
+  componente: E
+  tipo: Obligatorio
+  nombre: Ecología y Medio Ambiente
+  abreviado: ECA
+  departamentos:
+    - BI
+  creditos: 2
+  prerrequisitos: []
+
+# 3er año 1er semestre
+1703133:
+  componente: F
+  tipo: Obligatorio
+  nombre: Base de Datos
+  abreviado: BD
+  departamentos:
+    - SI
+  creditos: 4
+  prerrequisitos:
+    - 1702230
+1703134:
+  componente: F
+  tipo: Obligatorio
+  nombre: Programación de Sistemas
+  abreviado: PS
+  departamentos:
+    - SI
+  creditos: 4
+  prerrequisitos:
+    - 1702227
+1703135:
+  componente: F
+  tipo: Obligatorio
+  nombre: Ingeniería y Procesos de Software
+  abreviado: IPS
+  departamentos:
+    - SI
+  creditos: 3
+  prerrequisitos:
+    - 1702229
+1703136:
+  componente: F
+  tipo: Obligatorio
+  nombre: Teoría de la Computación
+  abreviado: TC
+  departamentos:
+    - SI
+  creditos: 3
+  prerrequisitos:
+    - 1702231
+1703137:
+  componente: F
+  tipo: Obligatorio
+  nombre: Organización y Métodos
+  abreviado: OM
+  departamentos:
+    - SI
+  creditos: 3
+  prerrequisitos:
+    - 1702230
+1703138:
+  componente: F
+  tipo: Obligatorio
+  nombre: Investigación de Operaciones
+  abreviado: IO
+  departamentos:
+    - SI
+  creditos: 4
+  prerrequisitos:
+    - 1702119
+
+# 3er año 2do semestre
+1703239:
+  componente: F
+  tipo: Obligatorio
+  nombre: Redes y Comunicación de Datos
+  abreviado: RCD
+  departamentos:
+    - SI
+  creditos: 4
+  prerrequisitos:
+    - 1702227
+1703240:
+  componente: F
+  tipo: Obligatorio
+  nombre: Tecnología de Objetos
+  abreviado: TO
+  departamentos:
+    - SI
+  creditos: 4
+  prerrequisitos:
+    - 1703135
+1703241:
+  componente: F
+  tipo: Obligatorio
+  nombre: Sistemas Operativos
+  abreviado: SO
+  departamentos:
+    - SI
+  creditos: 4
+  prerrequisitos:
+    - 1703134
+1703242:
+  componente: F
+  tipo: Obligatorio
+  nombre: Fundamentos de Sistemas de Información
+  abreviado: FSI
+  departamentos:
+    - SI
+  creditos: 3
+  prerrequisitos:
+    - 1703133
+    - 1703137
+1703243:
+  componente: F
+  tipo: Obligatorio
+  nombre: Construcción de Software
+  abreviado: CS
+  departamentos:
+    - SI
+  creditos: 4
+  prerrequisitos:
+    - 1703135
+    - 1703136
+1703244:
+  componente: F
+  tipo: Obligatorio
+  nombre: Métodos Numéricos
+  abreviado: MN
+  departamentos:
+    - SI
+  creditos: 3
+  prerrequisitos:
+    - 1703138
+
+# 4to año 1er semestre
+1704145:
+  componente: D
+  tipo: Obligatorio
+  nombre: Física Computacional
+  abreviado: FC
+  departamentos:
+    - FS
+  creditos: 3
+  prerrequisitos:
+    - 1703244
+1704146:
+  componente: F
+  tipo: Obligatorio
+  nombre: Tecnologías de Información
+  abreviado: TI
+  departamentos:
+    - SI
+  creditos: 4
+  prerrequisitos:
+    - 1703242
+1704147:
+  componente: F
+  tipo: Obligatorio
+  nombre: Inteligencia Artificial
+  abreviado: IA
+  departamentos:
+    - SI
+  creditos: 3
+  prerrequisitos:
+    - 1702226
+1704255:
+  componente: F
+  tipo: Obligatorio
+  nombre: Ingeniería de Requerimientos
+  abreviado: IR
+  departamentos:
+    - SI
+  creditos: 4
+  prerrequisitos:
+    - 1703240
+    - 1703243
+1704149:
+  componente: F
+  tipo: Obligatorio
+  nombre: Sistemas Distribuidos
+  abreviado: SD
+  departamentos:
+    - SI
+  creditos: 4
+  prerrequisitos:
+    - 1703239
+    - 1703241
+1704254:
+  componente: F
+  tipo: Obligatorio
+  nombre: Pruebas de Software
+  abreviado: PS
+  departamentos:
+    - SI
+  creditos: 3
+  prerrequisitos:
+    - 1703243
+1704151:
+  componente: D
+  tipo: Obligatorio
+  nombre: Inglés
+  abreviado: ING
+  departamentos:
+    - LL
+  creditos: 2
+  prerrequisitos: []
+
+# 4to año 2do semestre
+1704252:
+  componente: F
+  tipo: Obligatorio
+  nombre: Gestión de Proyectos de Software
+  abreviado: GPS
+  departamentos:
+    - SI
+  creditos: 3
+  prerrequisitos:
+    - 1704255
+1704253:
+  componente: F
+  tipo: Obligatorio
+  nombre: Calidad de Software
+  abreviado: CS
+  departamentos:
+    - SI
+  creditos: 3
+  prerrequisitos:
+    - 1704254
+1704150:
+  componente: F
+  tipo: Obligatorio
+  nombre: Auditoría de Sistemas
+  abreviado: AS
+  departamentos:
+    - SI
+  creditos: 3
+  prerrequisitos:
+    - 1703242
+1704148:
+  componente: F
+  tipo: Obligatorio
+  nombre: Diseño y Arquitectura de Software
+  abreviado: DAS
+  departamentos:
+    - SI
+  creditos: 4
+  prerrequisitos:
+    - 1704255
+1704256:
+  componente: G
+  tipo: Electivo
+  nombre: Negocios Electrónicos
+  abreviado: NEe
+  departamentos:
+    - SI
+  creditos: 4
+  prerrequisitos:
+    - 1704146
+1704257:
+  componente: G
+  tipo: Electivo
+  nombre: Introducción al Desarrollo de Software de Entretenimiento
+  abreviado: IDSEe
+  departamentos:
+    - SI
+  creditos: 4
+  prerrequisitos:
+    - 1704147
+1704258:
+  componente: G
+  tipo: Electivo
+  nombre: Introducción al Desarrollo de Nuevas Plataformas
+  abreviado: IDNPe
+  departamentos:
+    - SI
+  creditos: 4
+  prerrequisitos:
+    - 1704149
+1704259:
+  componente: G
+  tipo: Obligatorio
+  nombre: Aspectos Formales de Especificación y Verificación
+  abreviado: AFEV
+  departamentos:
+    - SI
+  creditos: 3
+  prerrequisitos:
+    - 1703136
+
+# 5to año 1er semestre
+1705160:
+  componente: G
+  tipo: Obligatorio
+  nombre: Proyecto de Ingeniería de Software 1
+  abreviado: PIS1
+  departamentos:
+    - SI
+  creditos: 3
+  prerrequisitos:
+    - 1704148
+1705161:
+  componente: F
+  tipo: Obligatorio
+  nombre: Seminario de Tesis 1
+  abreviado: ST1
+  departamentos:
+    - SI
+  creditos: 3
+  prerrequisitos:
+    - 1702228
+    - 1704252
+1705162:
+  componente: G
+  tipo: Obligatorio
+  nombre: Gestión de Emprendimiento de Software
+  abreviado: GES
+  departamentos:
+    - SI
+  creditos: 2
+  prerrequisitos:
+    - 1704252
+1705163:
+  componente: G
+  tipo: Obligatorio
+  nombre: Seguridad Informática
+  abreviado: SI
+  departamentos:
+    - SI
+  creditos: 3
+  prerrequisitos:
+    - 1703239
+1705264:
+  componente: G
+  tipo: Obligatorio
+  nombre: Mantenimiento, Configuración y Evolución de Software
+  abreviado: MCES
+  departamentos:
+    - SI
+  creditos: 3
+  prerrequisitos:
+    - 1704253
+1705165:
+  componente: E
+  tipo: Obligatorio
+  nombre: Ética General y Profesional
+  abreviado: EGP
+  departamentos:
+    - FL
+  creditos: 2
+  prerrequisitos: []
+1705166:
+  componente: G
+  tipo: Electivo
+  nombre: Tópicos Avanzados en Bases de Datos
+  abreviado: TABDe
+  departamentos:
+    - SI
+  creditos: 3
+  prerrequisitos:
+    - 1704256
+1705167:
+  componente: G
+  tipo: Electivo
+  nombre: Computación Gráfica, Visión Computacional y Multimedia
+  abreviado: CGVMe
+  departamentos:
+    - SI
+  creditos: 4
+  prerrequisitos:
+    - 1704257
+1705168:
+  componente: G
+  tipo: Electivo
+  nombre: Desarrollo Avanzado en Nuevas Plataformas
+  abreviado: DANPe
+  departamentos:
+    - SI
+  creditos: 4
+  prerrequisitos:
+    - 1704258
+
+# 5to año 2do semestre
+1705269:
+  componente: G
+  tipo: Obligatorio
+  nombre: Tópicos Avanzados en Ingeniería de Software
+  abreviado: TAIS
+  departamentos:
+    - SI
+  creditos: 3
+  prerrequisitos:
+    - 1705164
+1705270:
+  componente: G
+  tipo: Obligatorio
+  nombre: Prácticas Pre Profesionales
+  abreviado: PPP
+  departamentos:
+    - SI
+  creditos: 3
+  prerrequisitos:
+    - 1705160
+1705271:
+  componente: F
+  tipo: Obligatorio
+  nombre: Seminario de Tesis 2
+  abreviado: ST2
+  departamentos:
+    - SI
+  creditos: 4
+  prerrequisitos:
+    - 1705161
+1705272:
+  componente: G
+  tipo: Obligatorio
+  nombre: Proyecto de Ingeniería de Software 2
+  abreviado: PIS2
+  departamentos:
+    - SI
+  creditos: 3
+  prerrequisitos:
+    - 1705160
+1705273:
+  componente: G
+  tipo: Electivo
+  nombre: Gestión de Sistemas y Tecnologías de Información
+  abreviado: GSTIe
+  departamentos:
+    - SI
+  creditos: 3
+  prerrequisitos:
+    - 1705166
+1705274:
+  componente: G
+  tipo: Electivo
+  nombre: Desarrollo de Software para Juegos
+  abreviado: DSJe
+  departamentos:
+    - SI
+  creditos: 3
+  prerrequisitos:
+    - 1705167
+1705275:
+  componente: G
+  tipo: Electivo
+  nombre: Plataformas Emergentes
+  abreviado: PEe
+  departamentos:
+    - SI
+  creditos: 3
+  prerrequisitos:
+    - 1705168
