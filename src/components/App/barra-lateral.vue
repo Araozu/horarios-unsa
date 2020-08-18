@@ -5,7 +5,7 @@ div.lateral
             router-link.link_github(to="/")
                 h1 Horarios UNSA
             br
-            v-check-box(txt="Mostrar descansos de 10m" v-model="mostrarDescansos")
+            v-check-box(txt="Mostrar descansos" v-model="mostrarDescansos")
             br
             v-check-box(txt="Tema oscuro" v-model="temaOscuro")
             br

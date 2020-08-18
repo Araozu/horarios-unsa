@@ -1,12 +1,122 @@
 titulo: Horarios 2020-2, Ingeniería de Sistemas.
 descripcion: |
-  Horario incompleto. Datos extraidos de fotos publicadas en la página de Facebook de la escuela.
+  Faltan Laboratorios.
+  Datos extraidos de fotos publicadas en la página de Facebook de la escuela.
   <br>
   <br>
-  Ultima actualizacion: 16 de agosto de 2020.
+  Ultima actualizacion: 18 de agosto de 2020.
   <br>
   Puedes ver el historial de cambios en GitHub.
 años:
+  1er año:
+    Realidad Nacional:
+      nombre: Realidad Nacional
+      abreviado: RN
+      Teoria:
+        A:
+          Docente: Hilda Rodriguez
+          Horas:
+            - Ma0940
+            - Ma1040
+            - Ma1130
+        B:
+          Docente: Amparto Yto
+          Horas:
+            - Ma1400
+            - Ma1450
+            - Ma1550
+    Calculo 1:
+      nombre: Cálculo en 1 variable
+      abreviado: C1V
+      Teoria:
+        A:
+          Docente: Paul Cheneaux
+          Horas:
+            - Ma1220
+            - Ma1310
+            - Mi0850
+            - Mi0940
+            - Mi1040
+            - Vi0700
+            - Vi0750
+        B:
+          Docente: Jorge Tarqui
+          Horas:
+            - Lu1550
+            - Lu1640
+            - Mi1550
+            - Mi1640
+            - Vi1400
+            - Vi1450
+            - Vi1550
+    Discretas 2:
+      nombre: Estructuras Discretas 2
+      abreviado: ED2
+      Teoria:
+        A:
+          Docente: Olha Sharhorodska
+          Horas:
+            - Vi0850
+            - Vi0940
+            - Ju1040
+            - Ju1130
+        B:
+          Docente: Olha Sharhorodska
+          Horas:
+            - Lu1400
+            - Lu1450
+            - Ju1400
+            - Ju1450
+    Web 1:
+      nombre: Programacion Web 1
+      abreviado: PW1
+      Teoria:
+        A:
+          Docente: Alfredo Paz
+          Horas:
+            - Lu1040
+            - Lu1130
+        B:
+          Docente: Carlo Corrales
+          Horas:
+            - Ma1640
+            - Ma1740
+    FP2:
+      nombre: Fundamentos de Programacion 2
+      abreviado: FP2
+      Teoria:
+        A:
+          Docente: Marco Aedo
+          Horas:
+            - Lu0850
+            - Lu0940
+            - Ju0850
+            - Ju0940
+        B:
+          Docente: Marco Aedo
+          Horas:
+            - Ma1830
+            - Ma1920
+            - Vi1640
+            - Vi1740
+    Comunicacion Integral:
+      nombre: Comunicacion Integral
+      abreviado: CI
+      Teoria:
+        A:
+          Docente: Ana Álvarez
+          Horas:
+            - Lu0700
+            - Lu0750
+            - Ju0700
+            - Ju0750
+        B:
+          Docente: Ana Álvarez
+          Horas:
+            - Lu1740
+            - Lu1830
+            - Mi1400
+            - Mi1450
   2do año:
     Ecologia:
       nombre: Ecologia y Medio Ambiente
@@ -23,7 +133,7 @@ años:
           Horas:
             - Ju1400
             - Ju1450
-            - Ju1540
+            - Ju1550
     Estadistica:
       nombre: Estadistica y Matematica
       abreviado: EMAT
@@ -79,6 +189,7 @@ años:
           Horas:
             - Vi0750
             - Vi0850
+            - Vi0940
     Interaccion Humano Computador:
       nombre: Interaccion Humano Computador
       abreviado: IHC
@@ -180,7 +291,7 @@ años:
             - Lu1310
             - Lu1400
             - Ma1400
-            - Ma1540
+            - Ma1450
     Metodos Num:
       nombre: Métodos numéricos
       abreviado: MN
@@ -360,6 +471,22 @@ años:
           Horas:
             - Vi1400
             - Vi1450
+    Intro Nueva Plat:
+      nombre: Introduccion al Desarrollo de Nuevas Plataformas
+      abreviado: IDNP
+      Teoria:
+        A:
+          Docente: Ernesto Suarez
+          Horas:
+            - Vi0700
+            - Vi0750
+            - Vi0850
+        B:
+          Docente: Ernesto Suarez
+          Horas:
+            - Vi1740
+            - Vi1830
+            - Vi1920
   5to año:
     Practicas:
       nombre: Prácticas Pre Profesionales
