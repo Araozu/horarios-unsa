@@ -35,6 +35,7 @@ div.info_curso(:style="estiloCurso")
             | {{ cursoAgregado? "remove": "add" }}
         span.material-icons(@click.stop="ocultar_mostrarCursoV" :title="cursoOculto? 'Mostrar': 'Ocultar'")
             | {{ cursoOculto? 'visibility_off': 'visibility' }}
+        span {{ idCurso }}
 
 
 //
@@ -99,8 +100,8 @@ div.info_curso(:style="estiloCurso")
         cursoAgregado = computed (=>
             cursosUsuario = store.state.horarioUsuario
 
-            for idCurso, _ of cursosUsuario
-                if idCurso is idCurso.value then return true
+            for idCursoC, _ of cursosUsuario
+                if idCursoC is idCurso.value then return true
 
             false
         )
