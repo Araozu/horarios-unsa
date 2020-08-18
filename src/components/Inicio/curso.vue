@@ -35,7 +35,6 @@ div.info_curso(:style="estiloCurso")
             | {{ cursoAgregado? "remove": "add" }}
         span.material-icons(@click.stop="ocultar_mostrarCursoV" :title="cursoOculto? 'Mostrar': 'Ocultar'")
             | {{ cursoOculto? 'visibility_off': 'visibility' }}
-        span {{ idCurso }}
 
 
 //
