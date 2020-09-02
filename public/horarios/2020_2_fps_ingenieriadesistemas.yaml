@@ -1,10 +1,12 @@
 titulo: Horarios 2020-2, Ingeniería de Sistemas.
 descripcion: |
-  Faltan Laboratorios.
+  Parece que algunos laboratorios estan incompletos, y algunos docentes erroneos.
+  No tengo idea.
+  <br>
   Datos extraidos de fotos publicadas en la página de Facebook de la escuela.
   <br>
   <br>
-  Ultima actualizacion: 18 de agosto de 2020.
+  Ultima actualizacion: 02 de septiembre de 2020.
   <br>
   Puedes ver el historial de cambios en GitHub.
 años:
@@ -81,6 +83,36 @@ años:
           Horas:
             - Ma1640
             - Ma1740
+      Laboratorio:
+        A:
+          Docente: Alfredo Paz
+          Horas:
+            - Ju1040
+            - Ju1130
+            - Vi1040
+            - Vi1130
+        B:
+          Docente: Alfredo Paz
+          Horas:
+            - Lu1550
+            - Lu1640
+            - Ju1550
+            - Ju1640
+        C:
+          Docente: Alfredo Paz
+          Horas:
+            - Mi0850
+            - Mi0940
+            - Vi0850
+            - Vi0940
+        D:
+          Docente: Carlo Corrales
+          Horas:
+            - Ma1830
+            - Ma1920
+            - Ju0850
+            - Ju0940
+
     FP2:
       nombre: Fundamentos de Programacion 2
       abreviado: FP2
@@ -99,6 +131,33 @@ años:
             - Ma1920
             - Vi1640
             - Vi1740
+      Laboratorio:
+        A:
+          Docente: Marco Aedo
+          Horas:
+            - Lu1040
+            - Lu1130
+            - Ju1040
+            - Ju1130
+        B:
+          Docente: Marco Aedo
+          Horas:
+            - Ma1640
+            - Ma1740
+            - Vi1830
+            - Vi1920
+        C:
+          Docente: R. Calienes
+          Horas:
+            - Lu1220
+            - Lu1310
+        D:
+          Docente: Y. Yari
+          Horas:
+            - Mi1220
+            - Mi1310
+            - Ju1550
+            - Ju1640
     Comunicacion Integral:
       nombre: Comunicacion Integral
       abreviado: CI
