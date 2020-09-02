@@ -627,6 +627,22 @@ años:
             - Mi1550
             - Mi1640
             - Mi1740
+      Laboratorio:
+        A:
+          Docente: D. Iquira
+          Horas:
+            - Lu1220
+            - Lu1310
+        B:
+          Docente: D. Iquira
+          Horas:
+            - Ju1920
+            - Ju2010
+        C:
+          Docente: M. Galarza
+          Horas:
+            - Ju1400
+            - Ju1450
     Diseno y Arquitectura:
       nombre: Diseño Y Arquitectura de Software
       abreviado: DAS
@@ -645,6 +661,22 @@ años:
             - Mi1450
             - Ju1400
             - Ju1450
+      Laboratorio:
+        A:
+          Docente: P. Huertas
+          Horas:
+            - Ma1740
+            - Ma1830
+        B:
+          Docente: Roni Apaza
+          Horas:
+            - Ma1830
+            - Ma1920
+        C:
+          Docente: Roni Apaza
+          Horas:
+            - Ju1740
+            - Ju1830
     Gestion Proyecto Soft:
       nombre: Gestion de Proyectos de Software
       abreviado: GPS
@@ -659,6 +691,27 @@ años:
           Horas:
             - Lu1400
             - Lu1450
+      Laboratorio:
+        A:
+          Docente: J. Silva
+          Horas:
+            - Ma1130
+            - Ma1220
+        B:
+          Docente: Oscar Ramírez
+          Horas:
+            - Ma1400
+            - Ma1450
+        C:
+          Docente: Oscar Ramírez
+          Horas:
+            - Ma1550
+            - Ma1640
+        D:
+          Docente: Oscar Ramírez
+          Horas:
+            - Vi0940
+            - Vi1040
     Negocios Electronicos:
       nombre: Negocios Electrónicos
       abreviado: NE
@@ -675,6 +728,22 @@ años:
             - Lu1550
             - Lu1640
             - Lu1740
+      Laboratorio:
+        A:
+          Docente: Cesar Baluarte
+          Horas:
+            - Ju1220
+            - Ju1310
+        B:
+          Docente: Oscar Ramírez
+          Horas:
+            - Mi1400
+            - Mi1450
+        C:
+          Docente: Oscar Ramírez
+          Horas:
+            - Vi1130
+            - Vi1220
     Auditoria:
       nombre: Auditoría de Sistemas
       abreviado: AS
@@ -697,7 +766,7 @@ años:
             - Ju1640
     Aspectos Formales:
       nombre: Aspectos Formales de Verificación y Especificación
-      abreviado: AFVE
+      abreviado: AFV
       Teoria:
         A:
           Docente: Elizabet Vidal
@@ -706,6 +775,22 @@ años:
             - Ju0940
         B:
           Docente: Maribel Molina
+          Horas:
+            - Vi1550
+            - Vi1640
+      Laboratorio:
+        A:
+          Docente: M. Molina
+          Horas:
+            - Mi1220
+            - Mi1310
+        B:
+          Docente: M. Molina
+          Horas:
+            - Mi1830
+            - Mi1920
+        C:
+          Docente: M. Molina
           Horas:
             - Vi1550
             - Vi1640
@@ -723,6 +808,22 @@ años:
           Horas:
             - Vi1400
             - Vi1450
+      Laboratorio:
+        A:
+          Docente: J. Silva
+          Horas:
+            - Ju1220
+            - Ju1310
+        B:
+          Docente: J. Silva
+          Horas:
+            - Mi1550
+            - Mi1640
+        C:
+          Docente: M. Molina
+          Horas:
+            - Ma0700
+            - Ma0750
     Intro Nueva Plat:
       nombre: Introduccion al Desarrollo de Nuevas Plataformas
       abreviado: IDNP
@@ -739,6 +840,17 @@ años:
             - Vi1740
             - Vi1830
             - Vi1920
+      Laboratorio:
+        A:
+          Docente: Ernesto Suarez
+          Horas:
+            - Ju0850
+            - Ju0940
+        B:
+          Docente: Ernesto Suarez
+          Horas:
+            - Ju1550
+            - Ju1640
   5to año:
     Practicas:
       nombre: Prácticas Pre Profesionales
