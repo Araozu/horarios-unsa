@@ -523,6 +523,11 @@ años:
           Horas:
             - Ma1400
             - Ma1450
+        B:
+          Docente: Karim Guevara
+          Horas:
+            - Ju1040
+            - Ju1130
         C:
           Docente: Karim Guevara
           Horas:
@@ -533,8 +538,6 @@ años:
           Horas:
             - Ma1740
             - Ma1830
-            - Ju1040
-            - Ju1130
     Construccion Soft:
       nombre: Construccion de Software
       abreviado: CS
