@@ -211,6 +211,27 @@ años:
             - Mi1130
             - Ju1640
             - Ju1740
+      Laboratorio:
+        A:
+          Docente: "?"
+          Horas:
+            - Lu1400
+            - Lu1450
+        B:
+          Docente: "?"
+          Horas:
+            - Mi1040
+            - Mi1130
+        C:
+          Docente: "?"
+          Horas:
+            - Ma1400
+            - Ma1450
+        D:
+          Docente: "?"
+          Horas:
+            - Lu1040
+            - Lu1130
     Arquitectura de Computadoras:
       nombre: Arquitectura de Computadoras
       abreviado: AC
@@ -227,6 +248,28 @@ años:
             - Ju1830
             - Ju1920
             - Ju2010
+      Laboratorio:
+        A:
+          Docente: Pedro Rodriguez
+          Horas:
+            - Vi1040
+            - Vi1130
+        B:
+          Docente: Pedro Rodriguez
+          Horas:
+            - Ju1400
+            - Ju1450
+            - Ju1550
+        C:
+          Docente: Pedro Rodriguez
+          Horas:
+            - Ju1640
+            - Ju1740
+        D:
+          Docente: Pedro Rodriguez
+          Horas:
+            - Vi0850
+            - Vi0940
     Metodos de Investigacion y Redaccion:
       nombre: Metodos de Investigacion y Redaccion
       abreviado: MIR
@@ -267,6 +310,27 @@ años:
             - Ma1640
             - Mi1550
             - Mi1640
+      Laboratorio:
+        A:
+          Docente: Richart Escobedo
+          Horas:
+            - Ma0850
+            - Ma0940
+        B:
+          Docente: Richart Escobedo
+          Horas:
+            - Ma1740
+            - Ma1830
+        C:
+          Docente: Richart Escobedo
+          Horas:
+            - Mi0850
+            - Mi0940
+        D:
+          Docente: Richart Escobedo
+          Horas:
+            - Mi1740
+            - Mi1830
     Enfoque Empresarial:
       nombre: Enfoque Empresarial
       abreviado: EE
@@ -312,6 +376,37 @@ años:
             - Mi1450
             - Vi1040
             - Vi1130
+      Laboratorio:
+        A:
+          Docente: J. Cárdenas
+          Horas:
+            - Lu1220
+            - Lu1310
+        B:
+          Docente: J. Cárdenas
+          Horas:
+            - Ma1550
+            - Ma1640
+        C:
+          Docente: J. Cárdenas
+          Horas:
+            - Vi1310
+            - Vi1400
+        D:
+          Docente: J. Cárdenas
+          Horas:
+            - Mi1550
+            - Mi1640
+        E:
+          Docente: J. Cárdenas
+          Horas:
+            - Ma1040
+            - Ma1130
+        F:
+          Docente: J. Cárdenas
+          Horas:
+            - Vi1450
+            - Vi1640
   3er año:
     FSI:
       nombre: Fundamentos de Sistemas de Informacion
