@@ -446,6 +446,22 @@ años:
             - Lu1400
             - Ma1400
             - Ma1450
+      Laboratorio:
+        A:
+          Docente: L. Laura
+          Horas:
+            - Mi1040
+            - Mi1130
+        B:
+          Docente: L. Laura
+          Horas:
+            - Ju1550
+            - Ju1640
+        C:
+          Docente: L. Laura
+          Horas:
+            - Mi1220
+            - Mi1310
     Metodos Num:
       nombre: Métodos numéricos
       abreviado: MN
@@ -462,6 +478,27 @@ años:
             - Lu1550
             - Lu1640
             - Lu1740
+      Laboratorio:
+        A:
+          Docente: Olha Sharodovska
+          Horas:
+            - Lu1130
+            - Lu1220
+        B:
+          Docente: Roni Apaza
+          Horas:
+            - Vi1550
+            - Vi1640
+        C:
+          Docente: Roni Apaza
+          Horas:
+            - Vi1740
+            - Vi1830
+        D:
+          Docente: Roni Apaza
+          Horas:
+            - Mi1830
+            - Mi1920
     SO:
       nombre: Sistemas Operativos
       abreviado: SO
@@ -480,6 +517,24 @@ años:
             - Ma1640
             - Ju1550
             - Ju1640
+      Laboratorio:
+        A:
+          Docente: Karim Guevara
+          Horas:
+            - Ma1400
+            - Ma1450
+        C:
+          Docente: Karim Guevara
+          Horas:
+            - Ju1400
+            - Ju1450
+        D:
+          Docente: Karim Guevara
+          Horas:
+            - Ma1740
+            - Ma1830
+            - Ju1040
+            - Ju1130
     Construccion Soft:
       nombre: Construccion de Software
       abreviado: CS
@@ -494,9 +549,31 @@ años:
           Horas:
             - Ju1400
             - Ju1450
+      Laboratorio:
+        A:
+          Docente: Jorge Chambi
+          Horas:
+            - Mi0700
+            - Mi0750
+            - Vi0850
+            - Vi0940
+        B:
+          Docente: M. Galarza
+          Horas:
+            - Lu1830
+            - Lu1920
+            - Vi1830
+            - Vi1920
+        C:
+          Docente: M. Galarza
+          Horas:
+            - Ju0700
+            - Ju0750
+            - Vi0700
+            - Vi0750
     TecDat:
-      nombre: Tecnologia de Datos
-      abreviado: TD
+      nombre: Tecnologia de Objetos
+      abreviado: TO
       Teoria:
         A:
           Docente: Oscar Ramírez
@@ -512,6 +589,27 @@ años:
             - Mi1450
             - Vi1400
             - Vi1450
+      Laboratorio:
+        A:
+          Docente: J. Cárdenas
+          Horas:
+            - Lu0700
+            - Lu0750
+        B:
+          Docente: J. Cárdenas
+          Horas:
+            - Lu1550
+            - Lu1640
+        C:
+          Docente: J. Cárdenas
+          Horas:
+            - Ju0850
+            - Ju0940
+        D:
+          Docente: J. Cárdenas
+          Horas:
+            - Ju1220
+            - Ju1310
   4to año:
     Intro Soft Ent:
       nombre: Introduccion a Software de Entetenimiento
