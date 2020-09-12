@@ -1,12 +1,11 @@
 titulo: Horarios 2020-2, Ingeniería de Sistemas.
 descripcion: |
-  Parece que algunos laboratorios estan incompletos, y algunos docentes erroneos.
-  No tengo idea.
+  <b>Hay horas distintas/grupos eliminados en lab.</b>
   <br>
-  Datos extraidos de fotos publicadas en la página de Facebook de la escuela.
+  Horarios de lab: https://drive.google.com/file/d/1SEYhSvpiWi2oplOSc9tkpVzPRpl91lLP/view
   <br>
   <br>
-  Ultima actualizacion: 02 de septiembre de 2020.
+  Ultima actualizacion: 12 de septiembre de 2020.
   <br>
   Puedes ver el historial de cambios en GitHub.
 años:
@@ -101,8 +100,8 @@ años:
         C:
           Docente: Alfredo Paz
           Horas:
-            - Mi0850
-            - Mi0940
+            - Ju0850
+            - Ju0940
             - Vi0850
             - Vi0940
         D:
@@ -151,6 +150,8 @@ años:
           Horas:
             - Lu1220
             - Lu1310
+            - Ju1220
+            - Ju1310
         D:
           Docente: Y. Yari
           Horas:
@@ -220,8 +221,8 @@ años:
         B:
           Docente: "?"
           Horas:
-            - Mi1040
-            - Mi1130
+            - Ma1040
+            - Ma1130
         C:
           Docente: "?"
           Horas:
@@ -259,17 +260,21 @@ años:
           Horas:
             - Ju1400
             - Ju1450
-            - Ju1550
         C:
           Docente: Pedro Rodriguez
           Horas:
+            - Ju1550
             - Ju1640
-            - Ju1740
         D:
           Docente: Pedro Rodriguez
           Horas:
             - Vi0850
             - Vi0940
+        E:
+          Docente: Pedro Rodriguez
+          Horas:
+            - Vi0700
+            - Vi0750
     Metodos de Investigacion y Redaccion:
       nombre: Metodos de Investigacion y Redaccion
       abreviado: MIR
@@ -402,11 +407,6 @@ años:
           Horas:
             - Ma1040
             - Ma1130
-        F:
-          Docente: J. Cárdenas
-          Horas:
-            - Vi1450
-            - Vi1640
   3er año:
     FSI:
       nombre: Fundamentos de Sistemas de Informacion
@@ -536,8 +536,8 @@ años:
         D:
           Docente: Karim Guevara
           Horas:
-            - Ma1740
-            - Ma1830
+            - Ju1220
+            - Ju1310
     Construccion Soft:
       nombre: Construccion de Software
       abreviado: CS
@@ -572,8 +572,15 @@ años:
           Horas:
             - Ju0700
             - Ju0750
-            - Vi0700
-            - Vi0750
+            - Ma0700
+            - Ma0750
+        D:
+          Docente: M. Galarza
+          Horas:
+            - Ma1920
+            - Ma2010
+            - Mi1400
+            - Mi1450
     TecDat:
       nombre: Tecnologia de Objetos
       abreviado: TO
@@ -641,11 +648,6 @@ años:
           Horas:
             - Ju1920
             - Ju2010
-        C:
-          Docente: M. Galarza
-          Horas:
-            - Ju1400
-            - Ju1450
     Diseno y Arquitectura:
       nombre: Diseño Y Arquitectura de Software
       abreviado: DAS
@@ -710,11 +712,6 @@ años:
           Horas:
             - Ma1550
             - Ma1640
-        D:
-          Docente: Oscar Ramírez
-          Horas:
-            - Vi0940
-            - Vi1040
     Negocios Electronicos:
       nombre: Negocios Electrónicos
       abreviado: NE
@@ -742,11 +739,6 @@ años:
           Horas:
             - Mi1400
             - Mi1450
-        C:
-          Docente: Oscar Ramírez
-          Horas:
-            - Vi1130
-            - Vi1220
     Auditoria:
       nombre: Auditoría de Sistemas
       abreviado: AS
@@ -769,7 +761,7 @@ años:
             - Ju1640
     Aspectos Formales:
       nombre: Aspectos Formales de Verificación y Especificación
-      abreviado: AFV
+      abreviado: AFEV
       Teoria:
         A:
           Docente: Elizabet Vidal
@@ -792,11 +784,6 @@ años:
           Horas:
             - Mi1830
             - Mi1920
-        C:
-          Docente: M. Molina
-          Horas:
-            - Vi1550
-            - Vi1640
     Calidad Soft:
       nombre: Calidad de Software
       abreviado: CS
