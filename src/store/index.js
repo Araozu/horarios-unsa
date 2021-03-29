@@ -27,8 +27,8 @@ export default createStore({
         horarioUsuario: {},
         anchoPantalla: window.innerWidth,
         altoPantalla: window.innerHeight,
-        año: 2020,
-        periodo: 2,
+        año: 2021,
+        periodo: 1,
         facultad: "fps",
         escuela: "ingenieriadesistemas",
         datos: {
